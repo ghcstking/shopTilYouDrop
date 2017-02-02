@@ -4,7 +4,7 @@
 package customer;
 
 /**
- * @author Student6
+ * @author Vicki
  *
  */
 public class VickiCheck {
