@@ -10,10 +10,12 @@ import gui.practice.GUIApplication;
  *
  */
 public class ShopTilYouDrop extends GUIApplication {
+	
 	/**
 	 * static fields
 	 */
 	public static ShopTilYouDrop game;
+	
 	public ShopTilYouDrop() {
 	}
 	
