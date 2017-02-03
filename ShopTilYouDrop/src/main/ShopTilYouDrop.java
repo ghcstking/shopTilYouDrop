@@ -14,7 +14,7 @@ public class ShopTilYouDrop extends GUIApplication {
 	 * static fields
 	 */
 	public static ShopTilYouDrop game;
-	public ShopTilYouDrop(int i, int j) {
+	public ShopTilYouDrop() {
 	}
 	
 	@Override
@@ -27,7 +27,7 @@ public class ShopTilYouDrop extends GUIApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		game = new ShopTilYouDrop(800, 700);
+		game = new ShopTilYouDrop();
 		Thread go = new Thread(game);
 	}
 
