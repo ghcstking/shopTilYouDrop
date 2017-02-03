@@ -1,18 +1,14 @@
-/**
- * 
- */
 package customer;
 
 /**
+ * 
  * @author Edwin Ma
  *
  */
-public class ShamalamaDingDong {
 
-	/**
-	 * 
-	 */
-	public ShamalamaDingDong() {
+public class EdwinThing {
+
+	public EdwinThing() {
 		// TODO Auto-generated constructor stub
 	}
 
