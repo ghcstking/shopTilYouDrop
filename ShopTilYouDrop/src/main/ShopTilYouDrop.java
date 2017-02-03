@@ -9,7 +9,7 @@ import gui6.GUIApplication;
  * @author Vicki
  *
  */
-public class ShopTilYouDrop extends gui6.GUIApplication {
+public class ShopTilYouDrop extends GUIApplication {
 	/**
 	 * static fields
 	 */
