@@ -7,6 +7,6 @@ package customer;
  * @author Vicki
  *
  */
-public class VickiProgressChecker {
+public class RyanCart {
 
 }
