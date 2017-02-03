@@ -12,8 +12,9 @@ import gui.practice.GUIApplication;
 public class ShopTilYouDrop extends GUIApplication {
 
 	/**
-	 * 
+	 * static fields
 	 */
+	public static ShopTilYouDrop game;
 	public ShopTilYouDrop() {
 		// TODO Auto-generated constructor stub
 	}
@@ -28,7 +29,8 @@ public class ShopTilYouDrop extends GUIApplication {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		game = new ShopTilYouDrop();
+		Thread go = new Thread(game);
 	}
 
 }
