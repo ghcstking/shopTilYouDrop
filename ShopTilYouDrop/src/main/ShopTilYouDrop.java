@@ -10,9 +10,11 @@ import frontEnd.MatthewMain;
  *
  */
 public class ShopTilYouDrop extends GUIApplication {
+	
 	/**
 	 * static fields
 	 */
+	
 	public static ShopTilYouDrop game;
 	public static MatthewMain main;
 	public static IramWorkerScreen worker;
@@ -23,10 +25,6 @@ public class ShopTilYouDrop extends GUIApplication {
 		super(width,height);
 	}
 	
-
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		game = new ShopTilYouDrop(800,700);
 		Thread go = new Thread(game);
