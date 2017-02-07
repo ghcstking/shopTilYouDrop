@@ -28,7 +28,6 @@ public class RyanCart extends ClickableScreen implements Runnable {
 	}
 
 	public void run() {
-		// TODO Auto-generated method stub
 		
 	}
 }
