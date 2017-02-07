@@ -21,6 +21,7 @@ public class DanielFreeMoney {
 		try {
 			Thread.sleep((long)(2000));
 			field[r][c] = moneyAvailable.get(0);
+			moneyAvailable.remove(0);
 			moneyAvailable.add(new Money(50, null));
 		} catch (InterruptedException e) {
 			e.printStackTrace();
