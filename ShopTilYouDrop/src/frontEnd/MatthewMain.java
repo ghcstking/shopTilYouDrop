@@ -27,9 +27,6 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
 		viewObjects.add(title);
 	}
-	
-	public void update(Graphics2D g) {
-		
-	}
+
 
 }
