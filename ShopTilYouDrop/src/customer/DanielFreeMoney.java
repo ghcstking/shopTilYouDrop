@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class DanielFreeMoney {
 
-	public static MoneySpace[][] field;	
-	public static ArrayList<Money> moneyAvailable;
+	private static MoneySpace[][] field;	
+	private static ArrayList<Money> moneyAvailable;
 	
 
 	public static void main(String[] args){
