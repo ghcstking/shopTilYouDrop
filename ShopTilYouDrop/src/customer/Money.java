@@ -2,7 +2,7 @@ package customer;
 
 import java.awt.image.BufferedImage;
 
-public class Money {
+public class Money implements MoneySpace {
 	private static int value;
 	private static BufferedImage image;
 	
