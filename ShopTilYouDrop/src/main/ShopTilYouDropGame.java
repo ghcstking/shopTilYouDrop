@@ -20,7 +20,6 @@ public class ShopTilYouDropGame extends GUIApplication {
 	public void initScreen() {
 		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
 		setScreen(screen);
-		//
 	}
 
 }
