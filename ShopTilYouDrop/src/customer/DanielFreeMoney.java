@@ -20,7 +20,7 @@ public class DanielFreeMoney {
 		int r = (int) (area.length * rand);
 		int c = (int) (area[0].length * rand);
 		
-		// check for contents of cell
+		// check for contents of cell 
 	
 
 	}

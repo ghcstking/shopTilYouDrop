@@ -8,7 +8,7 @@ public class Money {
 	
 	public Money(int value, BufferedImage image) {
 		this.value = value;
-		this.image = image;
+		this.image = image; 
 		
 		
 	}
