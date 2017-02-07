@@ -17,7 +17,7 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-		ShopTilYouDropScreen screen = new ShopTilYouDropScreen(getWidth(), getHeight());
+		MatthewShopTilYouDropScreen screen = new MatthewShopTilYouDropScreen(getWidth(), getHeight());
 		setScreen(screen);
 	}
 

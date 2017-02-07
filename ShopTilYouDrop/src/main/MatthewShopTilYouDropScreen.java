@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
-public class ShopTilYouDropScreen extends ClickableScreen implements Runnable{
+public class MatthewShopTilYouDropScreen extends ClickableScreen implements Runnable{
 
-	public ShopTilYouDropScreen(int width, int height) {
+	public MatthewShopTilYouDropScreen(int width, int height) {
 		super(width, height);
 		// TODO Auto-generated constructor stub
 	}
