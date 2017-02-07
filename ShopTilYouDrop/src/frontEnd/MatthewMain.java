@@ -29,7 +29,7 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
-		title.setFont("Arial");
+		title.setSize(40);
 		bg = new Graphic(0,0,"resources/background.png");
 		viewObjects.add(bg); 
 		viewObjects.add(title);
