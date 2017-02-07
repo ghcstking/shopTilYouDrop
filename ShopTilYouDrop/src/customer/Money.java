@@ -13,4 +13,21 @@ public class Money {
 		
 	}
 
+	public static int getValue() {
+		return value;
+	}
+
+	public static void setValue(int value) {
+		Money.value = value;
+	}
+
+	public static BufferedImage getImage() {
+		return image;
+	}
+
+	public static void setImage(BufferedImage image) {
+		Money.image = image;
+	}
+	
+
 }
