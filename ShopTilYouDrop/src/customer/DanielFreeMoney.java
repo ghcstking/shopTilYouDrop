@@ -1,11 +1,16 @@
 package customer;
 
+import java.util.ArrayList;
+
 public class DanielFreeMoney {
 
 	public static MoneySpace[][] field;	
+	public static ArrayList<Money> moneyAvailable;
+	
 
 	public static void main(String[] args){
 		field = new MoneySpace[5][5];
+		moneyAvailable.add(new Money(50, null));
 
 	}
 
