@@ -28,13 +28,14 @@ public class ShopTilYouDrop extends GUIApplication {
 	public static void main(String[] args) {
 		game = new ShopTilYouDrop(800,700);
 		Thread go = new Thread(game);
+		go.start();
 	}
 
 
 	@Override
 	public void initScreen() {
-		// TODO Auto-generated method stub
-		
+		ShopTilYouDrop screen = new ShopTilYouDrop(getWidth(), getHeight());
+		setScreen(screen);
 	}
 
 }
