@@ -31,7 +31,7 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
 		title.setFont("Arial");
 		bg = new Graphic(0,0,"resources/background.png");
-		viewObjects.add(bg); //dtfedf
+		viewObjects.add(bg); 
 		viewObjects.add(title);
 	}
 
