@@ -18,20 +18,21 @@ public class RyanCart extends ClickableGraphic {
 	public RyanCart(int x, int y) {
 		super(x, y, .5, "resources/sampleImages/cart.png");	
 		shoppingCart = new ArrayList<Component>();
-		
+		//screen should incorporate clicking an image to add an item to the cart
+		//and clicking an image in the cart to remove it
 	}
 
 	private void addItem(){
-		if(isFull(shoppingCart)){
-			
+		if(isFull(shoppingCart) == true){
+			//if full, item cannot be purchased
 		}else{
 			shoppingCart.add();
 		}
 	}
 	
 	private void removeItem(){
-		if(isEmpty(shoppingCart)){
-			
+		if(isEmpty(shoppingCart) == true){
+			//if empty, nothing will happen
 		}else{
 			shoppingCart.remove();
 		}
