@@ -1,9 +1,12 @@
 package frontEnd;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import gui.components.ClickableScreen;
-import gui.components.Visible;
+import gui6.components.Visible;
+import gui6.screens.ClickableScreen;
+
+
 
 public class SammyajitCustomerScreen extends ClickableScreen implements Runnable {
 
@@ -18,8 +21,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		
 	}
 
+	
+
 	@Override
-	public void initAllObjects(List<Visible> arg0) {
+	public void initAllObjects(ArrayList<Visible> arg0) {
 		// TODO Auto-generated method stub
 		
 	}
