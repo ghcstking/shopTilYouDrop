@@ -6,7 +6,7 @@ public class EdwinRequestGenerator implements VickiOrder {
 
 	private static String[] condiments = {"top_bun", "patty", "lettuce", "tomato", "pickles",
 			"cheese", "bottom bun"};
-	private static ArrayList<String> request;
+	private static ArrayList<String> request = new ArrayList<String>();
 	
 	@Override
 	public int tip() {
@@ -21,11 +21,11 @@ public class EdwinRequestGenerator implements VickiOrder {
 		request.add(0, condiments[0]);
 		int numberCondiments = (int) (Math.random()*3)+3;
 		for (int i = 0; i < numberCondiments; i++) {
-			String condiment = condiments[(int)Math.random()*condiments.length];
+			String condiment = condiments[(int)(Math.random()*condiments.length)];
 			request.add(condiment);
 		}
 		for (int i = 0; i < request.size(); i++) {
-			System.out.println(request);
+			System.out.println(request.get(i));
 		}
 	}
 	
