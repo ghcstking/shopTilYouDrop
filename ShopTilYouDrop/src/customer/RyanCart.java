@@ -18,6 +18,7 @@ public class RyanCart extends ClickableGraphic {
 	public RyanCart(int x, int y) {
 		super(x, y, .5, "resources/sampleImages/cart.png");	
 		shoppingCart = new ArrayList<Component>();
+		
 	}
 
 	private void addItem(){
