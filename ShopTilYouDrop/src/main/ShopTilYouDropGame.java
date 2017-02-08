@@ -10,7 +10,7 @@ public class ShopTilYouDropGame extends GUIApplication {
 	}
 	
 	public static void main(String[] args) {
-		ShopTilYouDropGame game = new ShopTilYouDropGame(800, 500);
+		ShopTilYouDropGame game = new ShopTilYouDropGame(800, 600);
 		Thread app = new Thread(game);
 		app.start();
 	}
