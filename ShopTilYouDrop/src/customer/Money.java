@@ -6,6 +6,10 @@ public class Money implements MoneySpace {
 	private static int value;
 	private static BufferedImage image;
 	
+	/**
+	 * @author Daniel Quinde
+	 *
+	 */
 	public Money(int value, BufferedImage image) {
 		this.value = value;
 		this.image = image; 
