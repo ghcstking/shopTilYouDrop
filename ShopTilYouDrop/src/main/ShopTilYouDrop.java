@@ -15,6 +15,7 @@ public class ShopTilYouDrop extends GUIApplication {
 	 */
 	public static ShopTilYouDrop game;
 	public ShopTilYouDrop(int i, int j) {
+		
 	}
 	
 	@Override
