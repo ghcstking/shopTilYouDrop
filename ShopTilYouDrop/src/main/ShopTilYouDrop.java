@@ -3,7 +3,7 @@
  */
 package main;
 
-import gui.practice.GUIApplication;
+import gui6.GUIApplication;
 
 /**
  * @author Vicki
@@ -15,11 +15,13 @@ public class ShopTilYouDrop extends GUIApplication {
 	 */
 	public static ShopTilYouDrop game;
 	public ShopTilYouDrop(int i, int j) {
+		super(i,j);
+			
 		
 	}
 	
 	@Override
-	protected void initScreen() {
+	public void initScreen() {
 		// TODO Auto-generated method stub
 
 	}
