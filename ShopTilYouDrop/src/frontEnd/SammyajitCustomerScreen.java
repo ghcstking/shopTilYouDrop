@@ -3,12 +3,20 @@ package frontEnd;
 import java.util.ArrayList;
 import java.util.List;
 
+import gui6.components.ClickableGraphic;
+import gui6.components.Graphic;
+import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
 
 
 public class SammyajitCustomerScreen extends ClickableScreen implements Runnable {
+	private TextLabel t;
+	private ClickableGraphic cg;
+	
+	private Graphic g;
+	
 
 	public SammyajitCustomerScreen(int width, int height) {
 		super(width, height);
@@ -25,7 +33,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
-		// TODO Auto-generated method stub
+		t = new TextLabel(20, 200, 500, 40, "You are a customer. Pick items to put in cart.");
 		
 	}
  
