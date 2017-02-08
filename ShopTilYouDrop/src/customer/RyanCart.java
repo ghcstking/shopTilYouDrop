@@ -2,23 +2,23 @@ package customer;
 
 import java.util.ArrayList;
 
+import gui6.components.ClickableGraphic;
+import gui6.components.Component;
+import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
-public class RyanCart extends ClickableScreen implements Runnable {
-	
-	public RyanCart(int width, int height) {
-		super(width, height);
-		// TODO Auto-generated constructor stub
-	}
+public class RyanCart extends ClickableGraphic {
 
-	private ArrayList<ShoppingCartRyan> itemsInCart;
+	private ArrayList<Component> itemsInCart;
 	private int numberOfItems;
-
-	public void initAllObjects(ArrayList<Visible> viewObjects){
+	private TextLabel label;
+	
+	public RyanCart(int x, int y) {
+		super(x, y, .5, "resources/sampleImages/cart.png");
 		
 	}
-	
+
 	private void addItem(){
 		
 	}
@@ -27,7 +27,8 @@ public class RyanCart extends ClickableScreen implements Runnable {
 		
 	}
 
-	public void run() {
-		
+	public ArrayList<Component> getCartItems() {
+		return itemsInCart;
 	}
+	
 }
