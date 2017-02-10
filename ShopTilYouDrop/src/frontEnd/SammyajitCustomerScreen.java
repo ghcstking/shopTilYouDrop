@@ -34,7 +34,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 		t = new TextLabel(20, 200, 500, 40, "You are a customer. Pick items to put in cart.");
-		
+		viewObjects.add(t);
 	}
  
 }
