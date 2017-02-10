@@ -1,6 +1,7 @@
 package worker;
 
 public interface VickiOrder {
-	int tip();
+	double tip();
+	//double price();
 	
 }
