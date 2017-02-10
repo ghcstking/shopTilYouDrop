@@ -1,16 +1,14 @@
-package frontEnd;
+package main;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
-
-
-public class SammyajitCustomerScreen extends ClickableScreen implements Runnable {
-
-	public SammyajitCustomerScreen(int width, int height) {
+public class MatthewShopTilYouDropScreen extends ClickableScreen implements Runnable{
+	
+	
+	public MatthewShopTilYouDropScreen(int width, int height) {
 		super(width, height);
 		// TODO Auto-generated constructor stub
 	}
@@ -21,12 +19,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		
 	}
 
-	
-
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
-		// TODO Auto-generated method stub
-		
 	}
- 
 }
