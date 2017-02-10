@@ -35,6 +35,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	public void initAllObjects(ArrayList<Visible> arg0) {
 		t = new TextLabel(20, 200, 500, 40, "You are a customer. Pick items to put in cart.");
 		viewObjects.add(t);
+		
+		g=new Graphic(5,25,"resources/CustomerBackground.png");
+		viewObjects.add(g);
+		//g.setSize();
 	}
  
 }
