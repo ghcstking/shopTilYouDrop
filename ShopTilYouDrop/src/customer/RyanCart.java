@@ -33,7 +33,7 @@ public class RyanCart extends ClickableGraphic {
 	private void removeItem(){
 		if(isEmpty(shoppingCart) == true){
 			//if empty, nothing will happen
-		}else{
+		}else{ 
 			shoppingCart.remove();
 		}
 	}
@@ -55,5 +55,6 @@ public class RyanCart extends ClickableGraphic {
 	public ArrayList<Component> getCartItems() {
 		return shoppingCart;
 	}
-	
+
 }
+
