@@ -43,6 +43,11 @@ public abstract class Screen implements Runnable{
 		return image.getHeight();
 	}
 
+	public void drawBackground(Graphics2D g){
+		g.setColor(Color.white);
+		g.fillRect(0, 0, image.getWidth(), image.getHeight());
+	}
+	
 	public void update() {
 		Graphics2D g = image.createGraphics();
 		//smooth the graphics
