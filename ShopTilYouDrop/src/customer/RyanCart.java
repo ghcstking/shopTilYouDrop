@@ -55,6 +55,5 @@ public class RyanCart extends ClickableGraphic {
 	public ArrayList<Component> getCartItems() {
 		return shoppingCart;
 	}
-
 }
 
