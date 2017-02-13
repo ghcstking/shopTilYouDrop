@@ -18,7 +18,7 @@ public class EdwinRequestGenerator implements VickiOrder {
 	public static double price() {
 		double price = 0;
 		for (int i = 0; i < request.size(); i++) {
-			request.get(i).
+			// match price with item
 		}
 		return price;
 	}
