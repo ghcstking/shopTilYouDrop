@@ -10,14 +10,16 @@ import worker.WorkerInterface;
 
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
 	private TextLabel title;
+	private ArrayList<TextLabel> orders;
 	private ClickableGraphic bottomBun;
 	private int countdown;
+	private int cashAmount;
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
 		Thread screen = new Thread(this);
 		screen.start();
-	
+		orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(50, 50, "resources/bottomBun.PNG");
 	}
 
@@ -25,6 +27,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void run() {
 		while (countdown > 0) {
 			countdown--;
+			System.out.println(countdown);
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -43,8 +46,10 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
-		// TODO Auto-generated method stub
-		
+		for(int i = 0; i < r.size(); i++){
+			orders.add(new TextLabel(325+i*50,50,300,40,r.get(i)));
+		}
+		update();
 	}
 
 	@Override
@@ -61,7 +66,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void cash() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }
