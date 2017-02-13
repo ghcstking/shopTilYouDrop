@@ -31,9 +31,9 @@ public class EdwinRequestGenerator implements VickiOrder {
 		int numberCondiments = (int) (Math.random()*3)+3;
 		for (int i = 0; i < numberCondiments; i++) {
 			String condiment = condiments[(int)(Math.random()*condiments.length)];
-//			while(request.contains(condiment)) {
-//				condiment = condiments[(int)(Math.random()*condiments.length-1)];
-//			}
+			while(condiment == "top_bun" || condiment == "bottom_bun"){
+				condiment = condiments[(int)(Math.random()*condiments.length)];
+			}
 			request.add(condiment);
 		}
 		request.add(condiments[condiments.length-1]);
