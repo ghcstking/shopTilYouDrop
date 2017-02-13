@@ -9,6 +9,11 @@ import gui6.screens.ClickableScreen;
 
 
 public class SammyajitCustomerScreen extends ClickableScreen implements Runnable {
+	private TextLabel t;
+	private ClickableGraphic cg;
+	
+	private Graphic g;
+	
 
 	public SammyajitCustomerScreen(int width, int height) {
 		super(width, height);
@@ -25,8 +30,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
-		// TODO Auto-generated method stub
+		t = new TextLabel(10, 50, 500, 40, "You are a customer. Pick items to put in cart.");
+		viewObjects.add(t);
 		
+		g=new Graphic(5,100,.82,"resources/CustomerBackground.png");
+		viewObjects.add(g);
+		//g.setSize();
 	}
  
 }
