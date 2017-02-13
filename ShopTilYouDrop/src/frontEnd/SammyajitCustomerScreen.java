@@ -3,6 +3,7 @@ package frontEnd;
 import java.util.ArrayList;
 import java.util.List;
 
+import customer.RyanCart;
 import gui6.components.ClickableGraphic;
 import gui6.components.Graphic;
 import gui6.components.TextLabel;
@@ -14,6 +15,7 @@ import gui6.screens.ClickableScreen;
 public class SammyajitCustomerScreen extends ClickableScreen implements Runnable {
 	private TextLabel t;
 	private ClickableGraphic cg;
+	private RyanCart cart;
 	
 	private Graphic g;
 	
@@ -35,7 +37,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	public void initAllObjects(ArrayList<Visible> arg0) {
 
 		t = new TextLabel(10, 50, 500, 40, "You are a customer. Pick items to put in cart.");
-
+		cart= new RyanCart(300,50);
 
 		viewObjects.add(t);
 		
