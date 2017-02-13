@@ -14,12 +14,20 @@ public class RyanCart extends ClickableGraphic {
 	private int numberOfItems;
 	private TextLabel label;
 	private double timeLeft;
+	private int budget;
 	
 	public RyanCart(int x, int y) {
 		super(x, y, .5, "resources/sampleImages/cart.png");	
 		shoppingCart = new ArrayList<Component>();
 		//screen should incorporate clicking an image to add an item to the cart
 		//and clicking an image in the cart to remove it
+	}
+	
+	
+	private void generateBudget(){
+		budget = ;
+		//generate a budget that will consist of different arrangements of the item prices,
+		//so that the customer can match the prices of the items exactly with the budget
 	}
 
 	private void addItem(){
