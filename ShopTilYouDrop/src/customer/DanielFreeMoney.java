@@ -24,7 +24,9 @@ public class DanielFreeMoney {
 		try {
 			Thread.sleep((long)(2000));
 			moneyAvailable.remove(0);
-			moneyAvailable.add( new Money( r, c, 10, 10, " "));
+			Money newMon = new Money( r, c, 10, 10, " ");
+			newMon.setValue(values[newValue]);
+			moneyAvailable.add(newMon);
 		} catch (InterruptedException e) { 
 			e.printStackTrace();
 		}

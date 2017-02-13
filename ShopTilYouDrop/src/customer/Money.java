@@ -25,11 +25,11 @@ public class Money extends Graphic implements MoneySpace {
 	
 
 
-	public static int getValue() {
+	public int getValue() {
 		return value;
 	}
 
-	public static void setValue(int value) {
+	public void setValue(int value) {
 		Money.value = value;
 	}
 
