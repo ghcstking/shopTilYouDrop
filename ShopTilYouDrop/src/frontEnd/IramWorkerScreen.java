@@ -10,14 +10,14 @@ import worker.WorkerInterface;
 
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
 	private TextLabel title;
-	private ClickableGraphic patty;
+	private ClickableGraphic bottomBun;
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
 		Thread screen = new Thread(this);
 		screen.start();
 	
-		patty = new ClickableGraphic(50, 50, "resources/patty.PNG");
+		bottomBun = new ClickableGraphic(50, 50, "resources/bottomBun.PNG");
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void initAllObjects(ArrayList<Visible> arg0) {
 		title = new TextLabel(325,50,300,40,"Worker");
 		viewObjects.add(title);
-		viewObjects.add(patty);
+		viewObjects.add(bottomBun);
 	}
 
 	@Override
