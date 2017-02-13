@@ -25,6 +25,7 @@ public class RyanCart extends ClickableGraphic {
 	}
 	
 	private void initializePrices(){
+		//16 items
 		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	}
 	
