@@ -3,7 +3,9 @@ import worker.EdwinRequestGenerator;
 
 public class VickiProgressChecker implements EdwinProgress {
 	
-	private boolean orderComplete
+	
+	private ArrayList<String>
+	private boolean orderComplete;
 	
 	public VickiProgressChecker(){
 		
@@ -11,11 +13,6 @@ public class VickiProgressChecker implements EdwinProgress {
 
 	@Override
 	public int points() {
-		return 0;
-	}
-
-	@Override
-	public void getRequest() {
 		
 	}
 }

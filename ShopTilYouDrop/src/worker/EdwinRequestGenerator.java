@@ -25,8 +25,8 @@ public class EdwinRequestGenerator implements VickiOrder {
 		return price;
 	}
 
-	public void generate(ArrayList<String> request) {
-		request.clear();
+	public void generate(WorkerInterface w) {
+		ArrayList<String> request = new ArrayList<String>();
 		request.add(0, condiments[0]);
 		int numberCondiments = (int) (Math.random()*3)+3;
 		for (int i = 0; i < numberCondiments; i++) {
@@ -37,5 +37,6 @@ public class EdwinRequestGenerator implements VickiOrder {
 			request.add(condiment);
 		}
 		request.add(condiments[condiments.length-1]);
+		w.displayNewRequest(request);
 	}
 }
