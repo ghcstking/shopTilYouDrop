@@ -5,3 +5,4 @@ public interface VickiOrder {
 	//double price();
 	
 }
+
