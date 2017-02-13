@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
-import worker.EdwinRequestGenerator;
-import worker.VickiProgressChecker;
-
 
 public class IramWorkerScreen extends ClickableScreen {
 	private TextLabel title;
