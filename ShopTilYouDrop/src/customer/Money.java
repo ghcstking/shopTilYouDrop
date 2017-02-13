@@ -12,7 +12,7 @@ import gui6.components.Graphic;
 
 
 
-public class Money extends Graphic implements MoneySpace {
+public class Money extends Graphic {
 	private static int value;
 	private static BufferedImage image;
 	private static String imageLoc;
@@ -20,6 +20,8 @@ public class Money extends Graphic implements MoneySpace {
 	public Money(int x, int y, int w, int h, String imageLocation) {
 		super(x, y, w, h, imageLocation);
 		imageLocation = imageLoc;
+		x = DanielFreeMoney.getX();
+		y = DanielFreeMoney.getY();
 	}
 
 	
