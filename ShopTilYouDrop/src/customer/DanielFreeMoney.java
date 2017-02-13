@@ -8,9 +8,6 @@ public class DanielFreeMoney {
 
 	private static ArrayList<Money> moneyAvailable;
 	private static int[] values;
-	private static int x;
-	private static int y;
-
 
 	public static void main(String[] args){
 		int[] values = {5,10,20,50,100};
