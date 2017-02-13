@@ -13,3 +13,4 @@ public interface MoneySpace {
 	void addMoney();
 	void isTouched();
 }
+ 
