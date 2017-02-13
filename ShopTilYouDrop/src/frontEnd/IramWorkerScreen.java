@@ -60,7 +60,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayBurger() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub//
 		
 	}
 
