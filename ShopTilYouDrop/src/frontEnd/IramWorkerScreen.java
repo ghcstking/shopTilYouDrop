@@ -11,6 +11,7 @@ import worker.WorkerInterface;
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
 	private TextLabel title;
 	private ClickableGraphic bottomBun;
+	private int countdown;
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -22,7 +23,15 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void run() {
-		
+		while (countdown > 0) {
+			countdown--;
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	@Override
@@ -40,8 +49,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayTime() {
-		// TODO Auto-generated method stub
-		
+		countdown = 15;
+		new Thread(this).start();
 	}
 
 	@Override
