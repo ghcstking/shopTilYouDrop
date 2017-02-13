@@ -1,11 +1,18 @@
 package worker;
+import worker.EdwinRequestGenerator;
 
 public class VickiProgressChecker implements EdwinProgress {
-
-	// create timer
-	@Override
-	public int points() {
-		return 0;
+	
+	
+	private ArrayList<String>
+	private boolean orderComplete;
+	
+	public VickiProgressChecker(){
+		
 	}
 
+	@Override
+	public int points() {
+		
+	}
 }

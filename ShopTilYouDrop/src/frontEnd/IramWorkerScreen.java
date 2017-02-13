@@ -6,9 +6,9 @@ import gui6.components.ClickableGraphic;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
+import worker.WorkerInterface;
 
-
-public class IramWorkerScreen extends ClickableScreen {
+public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
 	private TextLabel title;
 	private ClickableGraphic patty;
 	
@@ -30,5 +30,29 @@ public class IramWorkerScreen extends ClickableScreen {
 		title = new TextLabel(325,50,300,40,"Worker");
 		viewObjects.add(title);
 		viewObjects.add(patty);
+	}
+
+	@Override
+	public void displayNewRequest(ArrayList<String> r) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayTime() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayBurger() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void cash() {
+		// TODO Auto-generated method stub
+		
 	}
 }
