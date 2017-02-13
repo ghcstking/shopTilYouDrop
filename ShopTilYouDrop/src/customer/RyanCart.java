@@ -16,6 +16,7 @@ public class RyanCart extends ClickableGraphic {
 	private double timeLeft;
 	private int budget;
 	
+	
 	public RyanCart(int x, int y) {
 		super(x, y, .5, "resources/sampleImages/cart.png");	
 		shoppingCart = new ArrayList<Component>();
@@ -23,6 +24,9 @@ public class RyanCart extends ClickableGraphic {
 		//and clicking an image in the cart to remove it
 	}
 	
+	private void initializePrices(){
+		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	}
 	
 	private void generateBudget(){
 		budget = ;
