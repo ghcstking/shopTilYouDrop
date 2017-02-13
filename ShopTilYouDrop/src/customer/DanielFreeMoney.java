@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import frontEnd.SammyajitCustomerScreen;
 
-public class DanielFreeMoney implements MoneySpace {
+public class DanielFreeMoney {
 
 	private static ArrayList<Money> moneyAvailable;
 	private static int[] values;
@@ -33,10 +33,12 @@ public class DanielFreeMoney implements MoneySpace {
 			e.printStackTrace();
 		}
 		
-		
+	
 		
 	
 
 	}
 
+	
+	
 }
