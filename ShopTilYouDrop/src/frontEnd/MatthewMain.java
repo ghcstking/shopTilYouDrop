@@ -76,7 +76,7 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 			if(e.getKeyCode() == KeyEvent.VK_ENTER){
 				System.out.println("Enter Key pressed");
 
-				customer.act();
+				customer.act();sdad
 			}
 		}else if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
 			System.out.println("Down Arrow Key pressed");
