@@ -22,6 +22,7 @@ public class MatthewChangeScreen extends GUIApplication {
 		mm = new MatthewMain(getWidth(), getHeight());
 		setScreen(mm);
 		customerScreen = new MatthewCustomerB(getWidth(), getHeight());
+		workerScreen = new MatthewWorkerB(getWidth(), getHeight());
 	}
 	public static void main(String[] args){
 		game = new MatthewChangeScreen(800,600);

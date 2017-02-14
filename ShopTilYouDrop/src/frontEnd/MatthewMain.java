@@ -30,18 +30,18 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 
 	@Override
 	public void run() {
-		
+
 	}
-	
+
 	public void drawBackground(Graphics2D g){
 		g.setColor(Color.green);
 		g.fillRect(0, 0, getWidth(), getHeight());
 	}
 
 	public void initAllObjects(ArrayList<Visible> arg0) {
-//		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
-//		viewObjects.add(title);
-		
+		//		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
+		//		viewObjects.add(title);
+
 		title = new TextLabel(175, 100, 500, 40, "Shop Til You Drop");
 		title.setSize(45);
 		open = new TextArea(100, 175, 600, 300, "Welcome to the Mall! Please select an option using the up/down arrow keys.");
@@ -61,9 +61,9 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 		viewObjects.add(customer);
 		viewObjects.add(worker);
 	}
-	
+
 	public void update(Graphics2D g) {
-		
+
 	}
 	public KeyListener getKeyListener(){
 		return this;
@@ -73,17 +73,24 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_UP){ 
 			System.out.println("Up Arrow Key pressed");
-			customer.act();
-			}else if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
+			if(e.getKeyCode() == KeyEvent.VK_ENTER){
+				System.out.println("Enter Key pressed");
+
+				customer.act();
+			}
+		}else if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
 			System.out.println("Down Arrow Key pressed");
 			worker.act();
-			} 
+			if(e.getKeyCode() == KeyEvent.VK_ENTER){
+				System.out.println("Enter Key pressed");
+			}
+		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
