@@ -15,8 +15,7 @@ public class Customer extends MovingComponent {
 		this.victim = v;
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
 	}
 	public void checkBehaviors(){
 		if(Math.abs(victim.getX() - getX()) < 5 &&
