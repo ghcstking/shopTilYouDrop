@@ -1,11 +1,11 @@
 package frontEnd;
 
-
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.util.ArrayList;
-
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import gui6.components.Action;
 import gui6.components.Button;
 import gui6.components.MovingComponent;
@@ -18,8 +18,9 @@ import gui6.screens.ClickableScreen;
 public class MatthewMain extends ClickableScreen implements Runnable{
 
 	private TextLabel title;
-	private TextLabel customer;
-	private TextLabel worker;
+	private TextArea open;
+	private Button customer;
+	private Button worker;
 
 	public MatthewMain(int width, int height) {
 		super(width, height);
@@ -37,18 +38,18 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 		g.fillRect(0, 0, getWidth(), getHeight());
 	}
 
-	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 //		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
 //		viewObjects.add(title);
 		
-		title = new TextLabel(100, 100, 500, 40, "Shop Til You Drop");
-		title.setSize(30);
-		customer = new TextLabel(100, 300, 500, 100, "Customer");
-		customer.setSize(30);
-		worker = new TextLabel(100, 400, 700, 100, "Worker");
-		worker.setSize(30);
+		title = new TextLabel(175, 100, 500, 40, "Shop Til You Drop");
+		title.setSize(45);
+		open = new TextArea(100, 175, 600, 300, "Welcome to the Mall! Please select an option using the up/down arrow keys.");
+		open.setSize(23);
+		customer = new Button(225, 250, 300, 100, "Customer", Color.blue, null);
+		worker = new Button(225, 325, 300, 100, "Worker", Color.blue, null);
 		viewObjects.add(title);
+		viewObjects.add(open);
 		viewObjects.add(customer);
 		viewObjects.add(worker);
 	}
@@ -56,5 +57,27 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	public void update(Graphics2D g) {
 		
 	}
+	public KeyListener getKeyListener(){
+		return this;
+	}
 
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_UP){ 
+			System.out.println("Up Arrow Key pressed");
+			}else if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
+			System.out.println("Down Arrow Key pressed");
+			} 
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		System.out.println("A key was typed!");
+	}
 }
