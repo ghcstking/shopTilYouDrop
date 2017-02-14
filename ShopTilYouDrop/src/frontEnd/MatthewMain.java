@@ -46,8 +46,16 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 		title.setSize(45);
 		open = new TextArea(100, 175, 600, 300, "Welcome to the Mall! Please select an option using the up/down arrow keys.");
 		open.setSize(23);
-		customer = new Button(225, 250, 300, 100, "Customer", Color.blue, null);
-		worker = new Button(225, 325, 300, 100, "Worker", Color.blue, null);
+		customer = new Button(225, 250, 300, 100, "Customer", Color.blue, new Action(){
+			public void act(){
+				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.customerScreen);
+			}
+		});
+		worker = new Button(225, 325, 300, 100, "Worker", Color.blue, new Action(){
+			public void act(){
+				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.workerScreen);
+			}
+		});
 		viewObjects.add(title);
 		viewObjects.add(open);
 		viewObjects.add(customer);
@@ -65,8 +73,10 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_UP){ 
 			System.out.println("Up Arrow Key pressed");
+			customer.act();
 			}else if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
 			System.out.println("Down Arrow Key pressed");
+			worker.act();
 			} 
 	}
 
