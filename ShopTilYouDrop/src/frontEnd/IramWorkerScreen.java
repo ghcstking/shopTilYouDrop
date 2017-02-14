@@ -13,7 +13,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ArrayList<TextLabel> orders;
 	private ClickableGraphic bottomBun;
 	private int countdown;
-	private int cashAmount;
+	private int cashamount;
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -47,7 +47,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for(int i = 0; i < r.size(); i++){
-			orders.add(new TextLabel(325+i*50,50,300,40,r.get(i)));
+			orders.add(new TextLabel(100+i*50,50,200,40,r.get(i)));
 		}
 		update();
 	}
@@ -60,13 +60,11 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayBurger() {
-		// TODO Auto-generated method stub//
 		
 	}
 
 	@Override
 	public void cash() {
-		
-		
+		//cashamount =
 	}
 }
