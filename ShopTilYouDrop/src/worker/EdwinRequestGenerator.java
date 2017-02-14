@@ -23,7 +23,7 @@ public class EdwinRequestGenerator implements VickiOrder {
 		for (int i = 0; i < request.size(); i++) {
 			price += pricesArray[java.util.Arrays.asList(condiments).indexOf(request.get(i))];
 		}
-		return price;
+		return ;
 	}
 	
 
