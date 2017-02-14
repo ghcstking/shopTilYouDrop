@@ -1,6 +1,7 @@
 package main;
 
 import frontEnd.MatthewMain;
+import frontEnd.SammyajitCustomerScreen;
 import gui6.GUIApplication;
 
 public class ShopTilYouDropGame extends GUIApplication {
@@ -18,8 +19,13 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
+<<<<<<< HEAD
+		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
 		setScreen(screen);
+=======
+		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
+		setScreen(screen); //cin
+>>>>>>> refs/heads/customer
 	}
 
 }
