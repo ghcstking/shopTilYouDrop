@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import gui6.components.Action;
 import gui6.components.Button;
+import gui6.components.ClickableGraphic;
 import gui6.components.MovingComponent;
 import gui6.components.TextArea;
 import gui6.components.TextLabel;
@@ -21,6 +22,7 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	private TextArea open;
 	private Button customer;
 	private Button worker;
+	private ClickableGraphic arrow;
 	private boolean cBool = false;
 	private boolean wBool = false;
 
@@ -58,10 +60,18 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.workerScreen);
 			}
 		});
+		arrow = new ClickableGraphic(250,1000,1.0,"resources/arrow.png");
+//		arrow.setAction(new Action(){
+//			public void act(){
+//				//MouseFollower.game.setScreen(MouseFollower.cs);
+//				arrow.setX(arrow.getX()+1);
+//				arrow.setY(arrow.getY()+0);
+//			}});
 		viewObjects.add(title);
 		viewObjects.add(open);
 		viewObjects.add(customer);
 		viewObjects.add(worker);
+		viewObjects.add(arrow);
 	}
 
 	public void update(Graphics2D g) {
@@ -73,27 +83,27 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(cBool = true){
-			//arrow over customer
-		}
-		if(wBool = true){
-			//arrow over worker
-		}
-		if(cBool = true && e.getKeyCode() == KeyEvent.VK_ENTER){
+		if(cBool==true && wBool==false && e.getKeyCode() == KeyEvent.VK_ENTER){
 			customer.act();
 			System.out.println("Enter Key Pressed. Go to customer screen");
 		}
-		if(wBool = true && e.getKeyCode() == KeyEvent.VK_ENTER){
+		else if(wBool == true && cBool == false && e.getKeyCode() == KeyEvent.VK_ENTER){
 			worker.act();
 			System.out.println("Enter Key pressed. Go to worker screen");
 		}
 		if(e.getKeyCode() == KeyEvent.VK_UP){ 
 			System.out.println("Up Arrow Key pressed");
-			customer.act();
+			cBool = true;
+			wBool = false;
+			arrow.setY(275);
+			//customer.act();
 		}
-		if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
+		 if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
 			System.out.println("Down Arrow Key pressed");
-			worker.act();
+			wBool = true;
+			cBool = false;
+			arrow.setY(350);
+			//worker.act();
 		}
 	}
 
