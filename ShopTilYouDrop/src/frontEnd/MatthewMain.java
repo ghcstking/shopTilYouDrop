@@ -9,6 +9,7 @@ import java.awt.event.KeyListener;
 import gui6.components.Action;
 import gui6.components.Button;
 import gui6.components.ClickableGraphic;
+import gui6.components.Graphic;
 import gui6.components.MovingComponent;
 import gui6.components.TextArea;
 import gui6.components.TextLabel;
@@ -19,6 +20,8 @@ import gui6.screens.ClickableScreen;
 public class MatthewMain extends ClickableScreen implements Runnable{
 
 	private TextLabel title;
+	private Graphic bg;
+	private Graphic white;
 	private TextArea open;
 	private Button customer;
 	private Button worker;
@@ -45,8 +48,9 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	public void initAllObjects(ArrayList<Visible> arg0) {
 		//		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
 		//		viewObjects.add(title);
-
-		title = new TextLabel(175, 100, 500, 40, "Shop Til You Drop");
+		bg = new Graphic(0,0,"resources/background.png");
+		white = new Graphic (90, 75, "resources/white.png");
+		title = new TextLabel(200, 100, 500, 40, "Shop Til You Drop");
 		title.setSize(45);
 		open = new TextArea(100, 175, 600, 300, "Welcome to the Mall! Please select an option using the up/down arrow keys.");
 		open.setSize(23);
@@ -67,6 +71,8 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 //				arrow.setX(arrow.getX()+1);
 //				arrow.setY(arrow.getY()+0);
 //			}});
+		viewObjects.add(bg);
+		viewObjects.add(white);
 		viewObjects.add(title);
 		viewObjects.add(open);
 		viewObjects.add(customer);
