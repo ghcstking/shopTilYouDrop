@@ -67,4 +67,10 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void cash() {
 		//cashamount =
 	}
+
+	@Override
+	public void displayPrice() {
+		// TODO Auto-generated method stub
+		
+	}
 }
