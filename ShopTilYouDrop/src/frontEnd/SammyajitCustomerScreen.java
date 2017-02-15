@@ -32,8 +32,6 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	}
 
-
-
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 
@@ -112,7 +110,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Books
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(100,185,40,40) {
 
 			@Override
 			public void act() {
@@ -125,7 +123,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	
 	//------Find coordinates for below------
 		//School Supplies
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(180,230,50,50) {
 
 			@Override
 			public void act() {
@@ -137,11 +135,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Lipstick
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(10,250,30,50) {
 
 			@Override
 			public void act() {
-				System.out.println("You purhcased some lipstick in case you find a girlfriend.");
+				System.out.println("You purchased some lipstick in case you find a girlfriend.");
 				//			addToCart("dress",200.0);
 
 			}
@@ -149,11 +147,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Makeup
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(50,250,30,50) {
 
 			@Override
 			public void act() {
-				System.out.println("You purchased some because you're ugly.");
+				System.out.println("You purchased some makeup because you're ugly.");
 				//			addToCart("dress",200.0);
 
 			}
@@ -161,7 +159,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Necklace
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(50,310,30,30) {
 
 			@Override
 			public void act() {
@@ -173,7 +171,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Ring
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(16,345,30,30) {
 
 			@Override
 			public void act() {
@@ -185,15 +183,25 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Chair
-		viewObjects.add(new ClickSpace(150,185,40,40) {
+		viewObjects.add(new ClickSpace(545,185,40,50) {
 
 			@Override
 			public void act() {
-				System.out.println("You purchased a chair that Goldilocks didn't sit on.");
+				System.out.println("You purchased a chair that Goldilocks didn't sit on and break.");
 				//			addToCart("dress",200.0);
 
 			}
 
+		});
+		
+		//Checkout
+		viewObjects.add(new ClickSpace(437,110,155,70) {
+			
+			@Override
+			public void act() {
+				System.out.println("Checkout");
+				//			addToCart("dress",200.0);
+			}
 		});
 	}
 	
