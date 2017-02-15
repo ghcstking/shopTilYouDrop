@@ -16,15 +16,7 @@ public class EdwinRequestGenerator implements VickiOrder {
 		double tip = (Math.random()*10);
 		return tip;
 	}
-	
-	public double price(ArrayList<String> request) {
-		double price = 0;
-		for (int i = 0; i < request.size(); i++) {
-			// match price with item
-		}
-		return price;
-	}
-
+	@Override
 	public void generate(WorkerInterface w) {
 		ArrayList<String> request = new ArrayList<String>();
 		request.add(0, condiments[0]);
@@ -39,4 +31,27 @@ public class EdwinRequestGenerator implements VickiOrder {
 		request.add(condiments[condiments.length-1]);
 		w.displayNewRequest(request);
 	}
+	
+//	public static void main(String[] args) {
+//		generate();
+//	}
+//	
+//	public static void generate() {
+//		ArrayList<String> request = new ArrayList<String>();
+//		request.add(0, condiments[0]);
+//		int numberCondiments = (int) (Math.random()*3)+3;
+//		for (int i = 0; i < numberCondiments; i++) {
+//			String condiment = condiments[(int)(Math.random()*condiments.length)];
+//			while(condiment == "top_bun" || condiment == "bottom_bun"){
+//				condiment = condiments[(int)(Math.random()*condiments.length)];
+//			}
+//			request.add(condiment);
+//		}
+//		request.add(condiments[condiments.length-1]);
+//		//w.displayNewRequest(request);
+//		//System.out.println(price(request));
+//		for (int i = 0; i < request.size(); i++) {
+//			System.out.println(request.get(i));
+//		}
+//	}
 }

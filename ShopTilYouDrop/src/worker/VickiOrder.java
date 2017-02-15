@@ -1,7 +1,9 @@
 package worker;
 
+import java.util.ArrayList;
+
 public interface VickiOrder {
 	double tip();
-	//double price();
+	void generate(WorkerInterface w);
 }
 

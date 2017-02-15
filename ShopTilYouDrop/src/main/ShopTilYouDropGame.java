@@ -2,6 +2,7 @@ package main;
 
 import frontEnd.IramWorkerScreen;
 import frontEnd.MatthewMain;
+import frontEnd.SammyajitCustomerScreen;
 import gui6.GUIApplication;
 
 public class ShopTilYouDropGame extends GUIApplication {
@@ -11,7 +12,7 @@ public class ShopTilYouDropGame extends GUIApplication {
 	}
 	
 	public static void main(String[] args) {
-		ShopTilYouDropGame game = new ShopTilYouDropGame(800, 500);
+		ShopTilYouDropGame game = new ShopTilYouDropGame(800, 600);
 		Thread app = new Thread(game);
 		app.start();
 	}
@@ -19,9 +20,9 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-//		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
-//		setScreen(screen); //cin
-		IramWorkerScreen screen = new IramWorkerScreen(getWidth(), getHeight());
+//		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
+//		setScreen(screen);
+		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
 		setScreen(screen); //cin
 	}
 

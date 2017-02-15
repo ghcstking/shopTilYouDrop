@@ -2,36 +2,46 @@ package customer;
 
 import java.awt.image.BufferedImage;
 
-public class Money implements MoneySpace {
+import gui6.components.Graphic;
+
+/**
+ * @author Daniel Quinde
+ *
+ */
+
+
+
+
+public class Money extends Graphic {
 	private static int value;
 	private static BufferedImage image;
-	
-	/**
-	 * @author Daniel Quinde
-	 *
-	 */
-	public Money(int value, BufferedImage image) {
-		this.value = value;
-		this.image = image; 
-		
-		
+	private static String imageLoc;
+
+	public Money(int x, int y, int w, int h, String imageLocation) {
+		super(x, y, w, h, imageLocation);
+		imageLocation = imageLoc;
+		x = DanielFreeMoney.getX();
+		y = DanielFreeMoney.getY();
 	}
 
-	public static int getValue() {
+	
+
+
+	public int getValue() {
 		return value;
 	}
 
-	public static void setValue(int value) {
+	public void setValue(int value) {
 		Money.value = value;
 	}
 
-	public static BufferedImage getImage() {
+	public BufferedImage getImage() {
 		return image;
 	}
 
-	public static void setImage(BufferedImage image) {
+	public void setImage(BufferedImage image) {
 		Money.image = image;
 	}
-	
+
 
 }
