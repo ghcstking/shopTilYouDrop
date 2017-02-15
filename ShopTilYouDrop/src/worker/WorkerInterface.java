@@ -7,4 +7,5 @@ public interface WorkerInterface {
 	void displayTime();
 	void displayBurger();
 	void cash();
+	void displayPrice();
 }
