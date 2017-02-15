@@ -55,7 +55,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchase a dress.");
-				//				addToCart("dress",200.0);
+				addToCart("dress",200.0);
 
 			}
 
@@ -67,7 +67,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a new pair of Yeezys.");
-				//				addToCart("dress",200.0);
+				addToCart("shoes",200.0);
 
 			}
 
@@ -79,7 +79,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a 60' flat screen TV.");
-				//			addToCart("dress",200.0);
+				addToCart("TV",200.0);
 
 			}
 
@@ -91,7 +91,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased one of those cheap TVs with antennaes that have no color.");
-				//			addToCart("dress",200.0);
+				addToCart("better TV",200.0);
 
 			}
 
@@ -103,7 +103,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased one of Kanye's new mixtapes.");
-				//			addToCart("dress",200.0);
+				addToCart("CDs",200.0);
 
 			}
 
@@ -115,20 +115,20 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a book from the Harry Potter series because you wanted to read it for the 10th time.");
-				//			addToCart("dress",200.0);
+				addToCart("book",200.0);
 
 			}
 
 		});
 	
-	//------Find coordinates for below------
+	//------Ryan coded below------
 		//School Supplies
 		viewObjects.add(new ClickSpace(180,230,50,50) {
 
 			@Override
 			public void act() {
 				System.out.println("You purchased some school supplies because it's Black Friday and they're cheap.");
-				//			addToCart("dress",200.0);
+				addToCart("dress",200.0);
 
 			}
 
@@ -140,7 +140,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased some lipstick in case you find a girlfriend.");
-				//			addToCart("dress",200.0);
+				addToCart("dress",200.0);
 
 			}
 
@@ -152,7 +152,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased some makeup because you're ugly.");
-				//			addToCart("dress",200.0);
+				addToCart("makeup",200.0);
 
 			}
 
@@ -164,7 +164,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a necklace that's totally real. It's not made in China.");
-				//			addToCart("dress",200.0);
+				addToCart("necklace",200.0);
 
 			}
 
@@ -176,7 +176,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a 25 karot diamond ring.");
-				//			addToCart("dress",200.0);
+				addToCart("ring",200.0);
 
 			}
 
@@ -188,7 +188,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a chair that Goldilocks didn't sit on and break.");
-				//			addToCart("dress",200.0);
+				addToCart("chair",200.0);
 
 			}
 
@@ -200,26 +200,22 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("Checkout");
-				//			addToCart("dress",200.0);
+				
 			}
 		});
 	}
 	
-	
 	private void addToCart(String string, double d) {
 		cart.addItem(new StoreItem(){
-
-			@Override
-			public double getPrice() {
-				// TODO Auto-generated method stub
-				return d;
-			}
-
 			@Override
 			public String getDescription() {
-				// TODO Auto-generated method stub
 				return string;
 			}
+			
+			@Override
+			public double getPrice() {
+				return d;
+			}	
 		});
 	}
 }
