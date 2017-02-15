@@ -1,5 +1,6 @@
 package main;
 
+import frontEnd.IramWorkerScreen;
 import frontEnd.MatthewMain;
 import gui6.GUIApplication;
 
@@ -18,9 +19,10 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
+//		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
+//		setScreen(screen); //cin
+		IramWorkerScreen screen = new IramWorkerScreen(getWidth(), getHeight());
 		setScreen(screen); //cin
-		
 	}
 
 }
