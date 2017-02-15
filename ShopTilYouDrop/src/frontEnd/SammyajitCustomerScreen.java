@@ -51,74 +51,153 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		//g.setSize();
 
 
+		//Dress
 		viewObjects.add(new ClickSpace(14,114,55,60) {
 
 			@Override
 			public void act() {
-				System.out.println("Clicked on dress.");
+				System.out.println("You purchase a dress.");
 				//				addToCart("dress",200.0);
 
 			}
 
 		});
-
+		
+		//Shoes
 		viewObjects.add(new ClickSpace(83,115,40,30) {
 
 			@Override
 			public void act() {
-				System.out.println("Clicked on shoes.");
+				System.out.println("You purchased a new pair of Yeezys.");
 				//				addToCart("dress",200.0);
 
 			}
 
 		});
 
-
-
+		//TV
 		viewObjects.add(new ClickSpace(155,110,115,40) {
 
 			@Override
 			public void act() {
-				System.out.println("Clicked on tVs.");
+				System.out.println("You purchased a 60' flat screen TV.");
 				//			addToCart("dress",200.0);
 
 			}
 
 		});
 
+		//TV 2
 		viewObjects.add(new ClickSpace(285,110,115,40) {
 
 			@Override
 			public void act() {
-				System.out.println("Clicked on TVs.");
+				System.out.println("You purchased one of those cheap TVs with antennaes that have no color.");
 				//			addToCart("dress",200.0);
 
 			}
 
 		});
 		
+		//CDS
 		viewObjects.add(new ClickSpace(18,185,40,40) {
 
 			@Override
 			public void act() {
-				System.out.println("Clicked on CD.");
+				System.out.println("You purchased one of Kanye's new mixtapes.");
 				//			addToCart("dress",200.0);
 
 			}
 
 		});
 		
+		//Books
 		viewObjects.add(new ClickSpace(150,185,40,40) {
 
 			@Override
 			public void act() {
-				System.out.println("Clicked on books.");
+				System.out.println("You purchased a book from the Harry Potter series because you wanted to read it for the 10th time.");
+				//			addToCart("dress",200.0);
+
+			}
+
+		});
+	
+	//------Find coordinates for below------
+		//School Supplies
+		viewObjects.add(new ClickSpace(150,185,40,40) {
+
+			@Override
+			public void act() {
+				System.out.println("You purchased some school supplies because it's Black Friday and they're cheap.");
+				//			addToCart("dress",200.0);
+
+			}
+
+		});
+		
+		//Lipstick
+		viewObjects.add(new ClickSpace(150,185,40,40) {
+
+			@Override
+			public void act() {
+				System.out.println("You purhcased some lipstick in case you find a girlfriend.");
+				//			addToCart("dress",200.0);
+
+			}
+
+		});
+		
+		//Makeup
+		viewObjects.add(new ClickSpace(150,185,40,40) {
+
+			@Override
+			public void act() {
+				System.out.println("You purchased some because you're ugly.");
+				//			addToCart("dress",200.0);
+
+			}
+
+		});
+		
+		//Necklace
+		viewObjects.add(new ClickSpace(150,185,40,40) {
+
+			@Override
+			public void act() {
+				System.out.println("You purchased a necklace that's totally real. It's not made in China.");
+				//			addToCart("dress",200.0);
+
+			}
+
+		});
+		
+		//Ring
+		viewObjects.add(new ClickSpace(150,185,40,40) {
+
+			@Override
+			public void act() {
+				System.out.println("You purchased a 25 karot diamond ring.");
+				//			addToCart("dress",200.0);
+
+			}
+
+		});
+		
+		//Chair
+		viewObjects.add(new ClickSpace(150,185,40,40) {
+
+			@Override
+			public void act() {
+				System.out.println("You purchased a chair that Goldilocks didn't sit on.");
 				//			addToCart("dress",200.0);
 
 			}
 
 		});
 	}
+	
+	
 	private void addToCart(String string, double d) {
 		cart.addItem(new StoreItem(){
 
