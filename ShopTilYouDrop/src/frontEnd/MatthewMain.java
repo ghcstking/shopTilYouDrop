@@ -21,6 +21,8 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	private TextArea open;
 	private Button customer;
 	private Button worker;
+	private boolean cBool = false;
+	private boolean wBool = false;
 
 	public MatthewMain(int width, int height) {
 		super(width, height);
@@ -71,21 +73,30 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		if(cBool = true){
+			//arrow over customer
+		}
+		if(wBool = true){
+			//arrow over worker
+		}
+		if(cBool = true && e.getKeyCode() == KeyEvent.VK_ENTER){
+			customer.act();
+			System.out.println("Enter Key Pressed. Go to customer screen");
+		}
+		if(wBool = true && e.getKeyCode() == KeyEvent.VK_ENTER){
+			worker.act();
+			System.out.println("Enter Key pressed. Go to worker screen");
+		}
 		if(e.getKeyCode() == KeyEvent.VK_UP){ 
 			System.out.println("Up Arrow Key pressed");
-			if(e.getKeyCode() == KeyEvent.VK_ENTER){
-				System.out.println("Enter Key pressed");
-
-				customer.act();sdad
-			}
-		}else if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
+			customer.act();
+		}
+		if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
 			System.out.println("Down Arrow Key pressed");
 			worker.act();
-			if(e.getKeyCode() == KeyEvent.VK_ENTER){
-				System.out.println("Enter Key pressed");
-			}
 		}
 	}
+
 
 	@Override
 	public void keyReleased(KeyEvent e) {
