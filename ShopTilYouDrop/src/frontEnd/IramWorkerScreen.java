@@ -58,6 +58,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(tomato);
 		viewObjects.add(lettuce);
 		viewObjects.add(patty);
+		viewObjects.add(orders);
 	}
 
 	@Override
