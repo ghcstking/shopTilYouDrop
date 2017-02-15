@@ -1,5 +1,6 @@
 package frontEnd;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +47,24 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 		viewObjects.add(g);
 		//g.setSize();
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
  
 }
