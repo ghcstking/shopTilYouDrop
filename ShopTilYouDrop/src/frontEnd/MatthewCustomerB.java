@@ -46,7 +46,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
-		button = new Button(225,325,300,100,"Back",Color.blue, new Action(){
+		button = new Button(225,325,300,100,"CHome",Color.blue, new Action(){
 			public void act(){
 				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
 			}
