@@ -1,6 +1,7 @@
 package worker;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EdwinRequestGenerator implements VickiOrder {
 
@@ -17,15 +18,36 @@ public class EdwinRequestGenerator implements VickiOrder {
 		return tip;
 	}
 	
-	public double price(ArrayList<String> request) {
+	private static double price(ArrayList<String> request) {
 		double price = 0;
 		for (int i = 0; i < request.size(); i++) {
-			// match price with item
+			price += pricesArray[java.util.Arrays.asList(condiments).indexOf(request.get(i))];
 		}
-		return price;
+		return ;
 	}
+	
 
-	public void generate(WorkerInterface w) {
+//	public void generate(WorkerInterface w) {
+//		ArrayList<String> request = new ArrayList<String>();
+//		request.add(0, condiments[0]);
+//		int numberCondiments = (int) (Math.random()*3)+3;
+//		for (int i = 0; i < numberCondiments; i++) {
+//			String condiment = condiments[(int)(Math.random()*condiments.length)];
+//			while(condiment == "top_bun" || condiment == "bottom_bun"){
+//				condiment = condiments[(int)(Math.random()*condiments.length)];
+//			}
+//			request.add(condiment);
+//		}
+//		request.add(condiments[condiments.length-1]);
+//		w.displayNewRequest(request);
+//		price(request);
+//	}
+	
+	public static void main(String[] args) {
+		generate();
+	}
+	
+	public static void generate() {
 		ArrayList<String> request = new ArrayList<String>();
 		request.add(0, condiments[0]);
 		int numberCondiments = (int) (Math.random()*3)+3;
@@ -37,6 +59,10 @@ public class EdwinRequestGenerator implements VickiOrder {
 			request.add(condiment);
 		}
 		request.add(condiments[condiments.length-1]);
-		w.displayNewRequest(request);
+		//w.displayNewRequest(request);
+		System.out.println(price(request));
+		for (int i = 0; i < request.size(); i++) {
+			System.out.println(request.get(i));
+		}
 	}
 }
