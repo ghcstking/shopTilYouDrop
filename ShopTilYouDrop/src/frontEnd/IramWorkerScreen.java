@@ -1,5 +1,8 @@
 package frontEnd;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
@@ -24,12 +27,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		super(width, height);
 		Thread screen = new Thread(this);
 		screen.start();
-		orders = new ArrayList<TextLabel>();
-		bottomBun = new ClickableGraphic(50, 50, "resources/bottom_bun.PNG");
-		topBun = new ClickableGraphic(50, 70, "resources/top_bun.PNG");
-		tomato = new ClickableGraphic(50, 90, "resources/tomato.PNG");
-		patty = new ClickableGraphic(50, 110, "resources/patty.PNG");
-		lettuce = new ClickableGraphic(50, 130, "resources/lettuce.PNG");
 	}
 
 	@Override
@@ -47,8 +44,14 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	}
 
 	@Override
-	public void initAllObjects(ArrayList<Visible> arg0) {
+	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325,50,300,40,"Burger Maker!");
+		orders = new ArrayList<TextLabel>();
+		bottomBun = new ClickableGraphic(50, 50, "resources/bottom_bun.PNG");
+		topBun = new ClickableGraphic(50, 70, "resources/top_bun.PNG");
+		tomato = new ClickableGraphic(50, 90, "resources/tomato.PNG");
+		patty = new ClickableGraphic(50, 110, "resources/patty.PNG");
+		lettuce = new ClickableGraphic(50, 130, "resources/lettuce.PNG");
 		viewObjects.add(title);
 		viewObjects.add(bottomBun);
 		viewObjects.add(topBun);
@@ -62,7 +65,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		for(int i = 0; i < r.size(); i++){
 			orders.add(new TextLabel(100+i*50,50,200,40,r.get(i)));
 		}
-		update();
 	}
 
 	@Override
@@ -87,21 +89,4 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		
 	}
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 }
