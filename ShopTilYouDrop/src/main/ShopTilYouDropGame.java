@@ -19,13 +19,10 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-<<<<<<< HEAD
+
 		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
 		setScreen(screen);
-=======
-		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
-		setScreen(screen); //cin
->>>>>>> refs/heads/customer
+
 	}
 
 }
