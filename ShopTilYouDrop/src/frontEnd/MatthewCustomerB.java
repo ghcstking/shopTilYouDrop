@@ -10,12 +10,16 @@ import java.util.ArrayList;
 import gui6.Screen;
 import gui6.components.Action;
 import gui6.components.Button;
+import gui6.components.Graphic;
+import gui6.components.TextLabel;
 import gui6.components.Visible;
 
 public class MatthewCustomerB extends Screen implements MouseMotionListener,MouseListener{
 
-
 	private Button button;
+	private Graphic bg;
+	private Graphic white;
+	private TextLabel role;
 
 	public MatthewCustomerB(int width, int height) {
 		super(width, height);
@@ -46,11 +50,18 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
-		button = new Button(225,325,300,100,"CHome",Color.blue, new Action(){
+		
+		bg = new Graphic(0,0,"resources/background.png");
+		white = new Graphic (90, 75, "resources/white.png");
+		role = new TextLabel(225, 150, 300, 100, "Customer");
+		button = new Button(225,325,300,100,"Main Menu",Color.blue, new Action(){
 			public void act(){
 				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
 			}
 		});
+		viewObjects.add(bg);
+		viewObjects.add(white);
+		viewObjects.add(role);
 		viewObjects.add(button);
 	}
 
