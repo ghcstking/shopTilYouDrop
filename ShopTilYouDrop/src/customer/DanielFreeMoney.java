@@ -18,7 +18,7 @@ public class DanielFreeMoney {
 	public static void placeMoney(){
 		game = new SammyajitCustomerScreen(100, 100);
 		moneyAvailable = new ArrayList<Money>();
-		int[] values = {5,10,20,50,100};
+		int[] values = {5,5,5,5,5,10,10,10,10,20,20,20,50,50,100};
 		int time = 5;
 
 				
@@ -28,7 +28,7 @@ public class DanielFreeMoney {
 				double rand1 = Math.random();
 				int x = (int) ((double)game.getWidth() * rand);
 				int y = (int) ((double)game.getHeight() * rand1);
-				int newValue = (int) (5 * rand);
+				int newValue = (int) (values.length * rand);
 				Money newMon = new Money( x, y, 10, 10, "coin.png");		
 				newMon.setValue(values[newValue]);
 				moneyAvailable.add(newMon);
