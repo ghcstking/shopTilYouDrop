@@ -1,13 +1,14 @@
 package customer;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-import java.util.List;
+//import java.util.List;
 
 import customer.components.Stranger;
-import gui6.components.Action;
-import gui6.components.TextLabel;
+//import gui6.components.Action;
+//import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
-import gui6.components.ClickableGraphic;
+//import gui6.components.ClickableGraphic;
 
 
 public class AliStrangerDanger extends ClickableScreen implements Runnable {
@@ -41,6 +42,24 @@ public class AliStrangerDanger extends ClickableScreen implements Runnable {
 		strangers.add(new Stranger(demo, 40,40,20,20));
 		viewObjects.add(demo);
 		viewObjects.addAll(strangers);
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
