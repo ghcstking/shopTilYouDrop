@@ -71,7 +71,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
 			}
 		});
-		play = new Button(515, 375, 300, 100, "Play", Color.blue, new Action() {
+		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
 			public void act() {
 				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.customerGame);
 			}
@@ -107,6 +107,9 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 	public void mouseClicked(MouseEvent e) {
 		if(button.isHovered(e.getX(), e.getY())){
 			button.act();
+		}
+		if (play.isHovered(e.getX(), e.getY())) {
+			play.act();
 		}
 	}
 
