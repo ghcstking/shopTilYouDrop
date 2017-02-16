@@ -21,6 +21,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic patty;
 	private ClickableGraphic lettuce;
 	private int countdown;
+	private TextLabel timeLabel;
 	private int cashamount;
 	
 	public IramWorkerScreen(int width, int height) {
@@ -41,11 +42,15 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				e.printStackTrace();
 			}
 		}
+		timeLabel.setText(""+(int)(countdown));
+		
+
 	}
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325,50,300,40,"Burger Maker!");
+		timeLabel = new TextLabel(60,50, 120, 60, "");
 		orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(50, 500, "resources/bottom_bun.PNG");
 		topBun = new ClickableGraphic(220, 500, "resources/top_bun.PNG");
@@ -58,12 +63,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(tomato);
 		viewObjects.add(lettuce);
 		viewObjects.add(patty);
+		viewObjects.add(timeLabel);
 	}
 
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for(int i = 0; i < r.size(); i++){
-			orders.add(new TextLabel(100+i*50,50,200,40,r.get(i)));
+			this.addObjects(new TextLabel(100+i*50,50,200,40,r.get(i)));
 		}
 	}
 
