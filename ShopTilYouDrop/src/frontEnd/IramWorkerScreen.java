@@ -28,8 +28,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
-		Thread screen = new Thread(this);
-		screen.start();
+//		Thread screen = new Thread(this);
+//		screen.start();
 	}
 
 	@Override
@@ -47,8 +47,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			}
 		}
 		
-		
-
 	}
 
 	@Override
@@ -94,6 +92,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayPrice() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayTime() {
 		// TODO Auto-generated method stub
 		
 	}
