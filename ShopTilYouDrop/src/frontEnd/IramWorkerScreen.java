@@ -70,7 +70,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		//viewObjects.add(orders);
+		////viewObjects.add(orders);
 	}
 
 	@Override
