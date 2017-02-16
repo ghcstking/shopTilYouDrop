@@ -22,7 +22,7 @@ public class ShopTilYouDropGame extends GUIApplication {
 	public void initScreen() {
 //		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
 //		setScreen(screen);
-		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
+		IramWorkerScreen screen = new IramWorkerScreen(getWidth(), getHeight());
 		setScreen(screen); //cin
 	}
 

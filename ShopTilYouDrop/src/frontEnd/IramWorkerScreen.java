@@ -1,5 +1,8 @@
 package frontEnd;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
@@ -17,7 +20,10 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic topBun;
 	private ClickableGraphic patty;
 	private ClickableGraphic lettuce;
+	private ClickableGraphic cheese;
+	private ClickableGraphic pickles;
 	private int countdown;
+	private TextLabel timeLabel;
 	private int cashamount;
 	
 	public IramWorkerScreen(int width, int height) {
@@ -36,31 +42,39 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				e.printStackTrace();
 			}
 		}
+		timeLabel.setText(""+(int)(countdown));
+		
+
 	}
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325,50,300,40,"Burger Maker!");
+		timeLabel = new TextLabel(60,50, 120, 60, "");
 		orders = new ArrayList<TextLabel>();
-		bottomBun = new ClickableGraphic(50, 50, "resources/bottom_bun.PNG");
-		topBun = new ClickableGraphic(50, 70, "resources/top_bun.PNG");
-		tomato = new ClickableGraphic(50, 90, "resources/tomato.PNG");
-		patty = new ClickableGraphic(50, 110, "resources/patty.PNG");
-		lettuce = new ClickableGraphic(50, 130, "resources/lettuce.PNG");
+		bottomBun = new ClickableGraphic(225,500,100, 100, "resources/bottom_bun.png");
+		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
+		tomato = new ClickableGraphic(450,500,100,100, "resources/tomato.png");
+		patty = new ClickableGraphic(550, 500,100,100, "resources/patty.png");
+		lettuce = new ClickableGraphic(675, 500,100,100, "resources/lettuce.png");
+		cheese = new ClickableGraphic(325, 500,100,100, "resources/cheese.png");
+		pickles = new ClickableGraphic(125, 500,100,100, "resources/pickles.png");
 		viewObjects.add(title);
 		viewObjects.add(bottomBun);
 		viewObjects.add(topBun);
 		viewObjects.add(tomato);
 		viewObjects.add(lettuce);
 		viewObjects.add(patty);
+		viewObjects.add(cheese);
+		viewObjects.add(pickles);
+		viewObjects.add(timeLabel);
 	}
 
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for(int i = 0; i < r.size(); i++){
-			orders.add(new TextLabel(100+i*50,50,200,40,r.get(i)));
+			this.addObjects(new TextLabel(100+i*50,50,200,40,r.get(i)));
 		}
-		update();
 	}
 
 	@Override
@@ -85,21 +99,4 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		
 	}
 
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
 }
