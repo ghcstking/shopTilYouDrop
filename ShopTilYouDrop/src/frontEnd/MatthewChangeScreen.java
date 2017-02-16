@@ -16,6 +16,8 @@ public class MatthewChangeScreen extends GUIApplication {
 	public static MatthewChangeScreen game;//only one exists (no one plays three of the same game at the same time)
 	public static MatthewCustomerB customerScreen;
 	public static MatthewWorkerB workerScreen;
+	public static IramWorkerScreen workerGame;
+	public static SammyajitCustomerScreen customerGame;
 
 	@Override
 	public void initScreen() {
@@ -23,6 +25,8 @@ public class MatthewChangeScreen extends GUIApplication {
 		setScreen(mm);
 		customerScreen = new MatthewCustomerB(getWidth(), getHeight());
 		workerScreen = new MatthewWorkerB(getWidth(), getHeight());
+		customerGame = new SammyajitCustomerScreen(getWidth(), getHeight());
+		// workerGame = new IramWorkerScreen(getWidth(), getHeight());
 	}
 	public static void main(String[] args){
 		game = new MatthewChangeScreen(800,600);
