@@ -30,7 +30,7 @@ public class RyanCart extends ClickableGraphic {
 	}
 	
 	private void generateBudget(){
-		budget = ;
+		// budget = ;
 		//generate a budget that will consist of different arrangements of the item prices,
 		//so that the customer can match the prices of the items exactly with the budget
 	}

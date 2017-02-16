@@ -22,14 +22,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
-		Thread screen = new Thread(this);
-		screen.start();
-		orders = new ArrayList<TextLabel>();
-		bottomBun = new ClickableGraphic(50, 50, "resources/bottom_bun.PNG");
-		topBun = new ClickableGraphic(50, 70, "resources/top_bun.PNG");
-		tomato = new ClickableGraphic(50, 90, "resources/tomato.PNG");
-		patty = new ClickableGraphic(50, 110, "resources/patty.PNG");
-		lettuce = new ClickableGraphic(50, 130, "resources/lettuce.PNG");
 	}
 
 	@Override
@@ -47,8 +39,14 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	}
 
 	@Override
-	public void initAllObjects(ArrayList<Visible> arg0) {
+	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325,50,300,40,"Burger Maker!");
+		orders = new ArrayList<TextLabel>();
+		bottomBun = new ClickableGraphic(50, 50, "resources/bottom_bun.PNG");
+		topBun = new ClickableGraphic(50, 70, "resources/top_bun.PNG");
+		tomato = new ClickableGraphic(50, 90, "resources/tomato.PNG");
+		patty = new ClickableGraphic(50, 110, "resources/patty.PNG");
+		lettuce = new ClickableGraphic(50, 130, "resources/lettuce.PNG");
 		viewObjects.add(title);
 		viewObjects.add(bottomBun);
 		viewObjects.add(topBun);
