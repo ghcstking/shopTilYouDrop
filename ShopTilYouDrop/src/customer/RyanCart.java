@@ -39,7 +39,7 @@ public class RyanCart extends ClickableGraphic {
 		if(isFull(shoppingCart) == true){
 			//if full, item cannot be purchased
 		}else{
-			shoppingCart.add();
+			//shoppingCart.add();
 		}
 	}
 	
@@ -47,7 +47,7 @@ public class RyanCart extends ClickableGraphic {
 		if(isEmpty(shoppingCart) == true){
 			//if empty, nothing will happen
 		}else{ 
-			shoppingCart.remove();
+			//shoppingCart.remove();
 		}
 	}
 	

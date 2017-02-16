@@ -17,7 +17,7 @@ import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
 
-public class MatthewMain extends ClickableScreen implements Runnable{
+public class MatthewMain extends ClickableScreen implements Runnable, KeyListener{
 
 	private TextLabel title;
 	private Graphic bg;
@@ -46,8 +46,6 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 	}
 
 	public void initAllObjects(ArrayList<Visible> arg0) {
-		//		title = new TextLabel(325,50,300,40,"Shop Til You Drop");
-		//		viewObjects.add(title);
 		bg = new Graphic(0,0,"resources/background.png");
 		white = new Graphic (90, 75, "resources/white.png");
 		title = new TextLabel(200, 100, 500, 40, "Shop Til You Drop");
@@ -65,12 +63,6 @@ public class MatthewMain extends ClickableScreen implements Runnable{
 			}
 		});
 		arrow = new ClickableGraphic(250,1000,1.0,"resources/arrow.png");
-//		arrow.setAction(new Action(){
-//			public void act(){
-//				//MouseFollower.game.setScreen(MouseFollower.cs);
-//				arrow.setX(arrow.getX()+1);
-//				arrow.setY(arrow.getY()+0);
-//			}});
 		viewObjects.add(bg);
 		viewObjects.add(white);
 		viewObjects.add(title);
