@@ -28,8 +28,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
-		Thread screen = new Thread(this);
-		screen.start();
 	}
 
 	@Override
