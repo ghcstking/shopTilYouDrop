@@ -28,12 +28,16 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
+		Thread screen = new Thread(this);
+		screen.start();
 	}
 
 	@Override
 	public void run() {
+		countdown = 15;
 		while (countdown > 0) {
 			countdown--;
+			timeLabel.setText(""+countdown);
 			System.out.println(countdown);
 			try {
 				Thread.sleep(1000);
@@ -42,7 +46,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				e.printStackTrace();
 			}
 		}
-		timeLabel.setText(""+(int)(countdown));
+		
 		
 
 	}
@@ -68,6 +72,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
+		//viewObjects.add(orders);
 	}
 
 	@Override
@@ -75,12 +80,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		for(int i = 0; i < r.size(); i++){
 			this.addObjects(new TextLabel(100+i*50,50,200,40,r.get(i)));
 		}
-	}
-
-	@Override
-	public void displayTime() {
-		countdown = 15;
-		new Thread(this).start();
 	}
 
 	@Override
