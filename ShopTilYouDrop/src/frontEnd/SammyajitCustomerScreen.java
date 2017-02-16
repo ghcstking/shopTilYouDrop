@@ -54,7 +54,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void act() {
-				System.out.println("You purchase a Valentino dress.");
+				System.out.println("You purchased a Valentino dress.");
 //				addToCart("dress",200.0);
 
 			}
