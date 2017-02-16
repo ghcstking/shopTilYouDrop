@@ -51,7 +51,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
-		title = new TextLabel(325,50,300,40,"Burger Maker!");
+		title = new TextLabel(325,50,300,100,"Burger Maker!");
 		timeLabel = new TextLabel(60,50, 120, 60, "");
 		orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(225,500,100, 100, "resources/bottom_bun.png");

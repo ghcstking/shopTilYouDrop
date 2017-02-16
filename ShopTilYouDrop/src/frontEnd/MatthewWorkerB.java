@@ -41,7 +41,7 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 		role = new TextLabel(325, 15, 300, 100, "Worker");
 		instructions = new TextArea(100, 125, 600, 400, 
 				"You work at a burger place."
-				+ "Make the customer's order EXACTLY as shown to earn money!");
+				+ " Make the customer's order EXACTLY as shown to earn money!");
 		instructions.setSize(30);
 		button = new Button(25,375,300,100,"Main Menu",Color.blue, new Action(){
 			public void act(){
