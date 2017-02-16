@@ -36,7 +36,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 
-		t = new TextLabel(10, 50, 500, 40, "You are a customer. Pick items to put in cart.");
+		t = new TextLabel(10, 50, 800, 40, "You are a customer. Pick items to put in cart.");
 		//		cart= new RyanCart(300,50);
 
 		viewObjects.add(t);
@@ -203,6 +203,20 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				System.out.println("Checkout");
 				
 			}
+		});
+	}
+	
+	private void addToCart(String string, double d) {
+		cart.addItem(new StoreItem(){
+			@Override
+			public String getDescription() {
+				return string;
+			}
+			
+			@Override
+			public double getPrice() {
+				return d;
+			}	
 		});
 	}
 }
