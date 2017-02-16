@@ -22,7 +22,6 @@ public class StrangerDemo extends GUIApplication {
 	 */
 	public StrangerDemo(int width, int height) {
 		super(width, height);
-		// TODO Auto-generated constructor stub
 	}
 
 	/* (non-Javadoc)
