@@ -47,18 +47,17 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325,50,300,40,"Burger Maker!");
 		orders = new ArrayList<TextLabel>();
-		bottomBun = new ClickableGraphic(50, 50, "resources/bottom_bun.PNG");
-		topBun = new ClickableGraphic(50, 70, "resources/top_bun.PNG");
-		tomato = new ClickableGraphic(50, 90, "resources/tomato.PNG");
-		patty = new ClickableGraphic(50, 110, "resources/patty.PNG");
-		lettuce = new ClickableGraphic(50, 130, "resources/lettuce.PNG");
+		bottomBun = new ClickableGraphic(50, 500, "resources/bottom_bun.PNG");
+		topBun = new ClickableGraphic(220, 500, "resources/top_bun.PNG");
+		tomato = new ClickableGraphic(380, 500, "resources/tomato.PNG");
+		patty = new ClickableGraphic(500, 500, "resources/patty.PNG");
+		lettuce = new ClickableGraphic(650, 500, "resources/lettuce.PNG");
 		viewObjects.add(title);
 		viewObjects.add(bottomBun);
 		viewObjects.add(topBun);
 		viewObjects.add(tomato);
 		viewObjects.add(lettuce);
 		viewObjects.add(patty);
-		viewObjects.add(orders);
 	}
 
 	@Override
