@@ -26,7 +26,7 @@ public class MatthewChangeScreen extends GUIApplication {
 		customerScreen = new MatthewCustomerB(getWidth(), getHeight());
 		workerScreen = new MatthewWorkerB(getWidth(), getHeight());
 		customerGame = new SammyajitCustomerScreen(getWidth(), getHeight());
-		// workerGame = new IramWorkerScreen(getWidth(), getHeight());
+		workerGame = new IramWorkerScreen(getWidth(), getHeight());
 	}
 	public static void main(String[] args){
 		game = new MatthewChangeScreen(800,600);
