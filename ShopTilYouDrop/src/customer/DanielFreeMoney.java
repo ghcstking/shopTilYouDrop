@@ -4,57 +4,38 @@ import java.util.ArrayList;
 
 import frontEnd.SammyajitCustomerScreen;
 
-public class DanielFreeMoney implements MoneySpace {
+public class DanielFreeMoney {
 
 	private static ArrayList<Money> moneyAvailable;
 	private static int[] values;
-	private static int x;
-	private static int y;
-
 
 	public static void main(String[] args){
 		int[] values = {5,10,20,50,100};
 
 	}
 
-	
-	public static int getX() {
-		return x;
-	}
-
-
-	public static void setX(int x) {
-		DanielFreeMoney.x = x;
-	}
-
-
-	public static int getY() {
-		return y;
-	}
-
-
-	public static void setY(int y) {
-		DanielFreeMoney.y = y;
-	}
-
-
-	public static void placeMoney(MoneySpace[][] area){
+	public static void placeMoney(SammyajitCustomerScreen screen){
 		double rand = Math.random();
 		int newValue = (int) (values.length * rand);
+		int x = (int) ((double)screen.getWidth() * rand);
+		int y = (int) ((double)screen.getHeight() * rand);
+
 		try {
-			Thread.sleep((long)(2000));
-			moneyAvailable.remove(0);
-			Money newMon = new Money( x, y, 10, 10, " ");
+			Money newMon = new Money( x, y, 10, 10, "coin.png");		
 			newMon.setValue(values[newValue]);
 			moneyAvailable.add(newMon);
+			Thread.sleep((long)(2000));
+			moneyAvailable.remove(0);
 		} catch (InterruptedException e) { 
 			e.printStackTrace();
 		}
 		
-		
+	 
 		
 	
 
 	}
 
+	
+	
 }

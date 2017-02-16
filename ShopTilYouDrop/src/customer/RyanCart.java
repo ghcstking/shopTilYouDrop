@@ -2,13 +2,14 @@ package customer;
 
 import java.util.ArrayList;
 
+import frontEnd.CartInterface;
 import gui6.components.ClickableGraphic;
 import gui6.components.Component;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
-public class RyanCart extends ClickableGraphic {
+public class RyanCart extends ClickableGraphic implements CartInterface{
 
 	private ArrayList<Component> shoppingCart;
 	private int numberOfItems;
@@ -67,6 +68,12 @@ public class RyanCart extends ClickableGraphic {
 
 	public ArrayList<Component> getCartItems() {
 		return shoppingCart;
+	}
+
+	@Override
+	public void addItem(StoreItem i) {
+		// TODO Auto-generated method stub
+		
 	}
 }
 
