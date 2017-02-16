@@ -17,7 +17,7 @@ import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
 
-public class MatthewMain extends ClickableScreen implements Runnable{
+public class MatthewMain extends ClickableScreen implements Runnable, KeyListener{
 
 	private TextLabel title;
 	private Graphic bg;
