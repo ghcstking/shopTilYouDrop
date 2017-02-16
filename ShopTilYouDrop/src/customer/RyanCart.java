@@ -25,10 +25,10 @@ public class RyanCart extends ClickableGraphic implements CartInterface{
 		//and clicking an image in the cart to remove it
 	}
 	
-	private void initializePrices(){
-		//16 items
-		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-	}
+//	private void initializePrices(){
+//		//16 items
+//		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+//	}
 	
 	private void generateBudget(){
 		//budget = ;
