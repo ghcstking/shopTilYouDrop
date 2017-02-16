@@ -59,7 +59,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		white = new Graphic (90, 75, "resources/white.png");
 		role = new TextLabel(325, 15, 300, 100, "Customer");
 		instructions = new TextArea(100, 125, 600, 400, 
-				"You’re given a certain time limit to shop for goods that are on sale. "
+				"Youâ€™re given a certain time limit to shop for goods that are on sale. "
 				+ "Click on items on the shelves to add them to the cart.");
 		instructions.setSize(25);
 		tips = new TextArea(100, 225, 600, 300, "Strangers may appear on goods! If you click on them, "
@@ -71,9 +71,9 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
 			}
 		});
-		play = new Button(550, 375, 300, 100, "Play", Color.blue, new Action() {
+		play = new Button(515, 375, 300, 100, "Play", Color.blue, new Action() {
 			public void act() {
-				setScreen(SammyajitCustomerScreen);
+				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.customerGame);
 			}
 		});
 		viewObjects.add(bg);
@@ -82,6 +82,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		viewObjects.add(instructions);
 		viewObjects.add(tips);
 		viewObjects.add(button);
+		viewObjects.add(play);
 	}
 
 	public MouseListener getMouseListener(){
