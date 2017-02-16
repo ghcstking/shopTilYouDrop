@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import gui6.components.Visible;
@@ -21,5 +22,23 @@ public class MatthewShopTilYouDropScreen extends ClickableScreen implements Runn
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

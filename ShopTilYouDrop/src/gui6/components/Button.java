@@ -30,15 +30,15 @@ public class Button extends TextLabel implements Clickable{
 	public void update(Graphics2D g){
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
 				RenderingHints.VALUE_ANTIALIAS_ON);
-		g.setColor(color);
-		g.fillRoundRect(0, 0, getWidth(), getHeight(), 35, 25);
-		g.setColor(Color.black);
-		g.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, 35, 25);
+		//g.setColor(color);
+		//g.fillRoundRect(0, 0, getWidth(), getHeight(), 35, 25);
+		//g.setColor(Color.black);
+		//g.drawRoundRect(0, 0, getWidth()-1, getHeight()-1, 35, 25);
 		g.setFont(new Font(getFont(),Font.PLAIN,getSize()));
 		FontMetrics fm = g.getFontMetrics();
-		
+		//above is commented out in order to draw blank text
 		if(getText()!= null){
-			g.setColor(Color.white);
+			g.setColor(color);//formerly Color.white
 			String t = getText();
 			//just in case text is too wide, cut off
 			int cutoff = t.length();

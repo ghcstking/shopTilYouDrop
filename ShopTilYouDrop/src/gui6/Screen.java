@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 import gui6.components.Visible;
 
-public abstract class Screen implements Runnable{
+public abstract class Screen implements Runnable, KeyListener{
 
 	private BufferedImage image;
 	protected ArrayList<Visible> viewObjects;
