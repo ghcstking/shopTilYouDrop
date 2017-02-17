@@ -11,7 +11,7 @@ import gui6.components.MovingComponent;
 public class Stranger extends Graphic {
 	private Victim victim;
 	public Stranger(Victim victim, int x, int y, int w, int h) {
-		super(x, y, w, h,"");
+		super(x, y, w, h,"resources/Strangerr.png");
 		this.victim= victim;
 		
 	}
