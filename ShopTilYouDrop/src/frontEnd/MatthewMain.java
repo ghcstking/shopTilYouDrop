@@ -61,6 +61,7 @@ public class MatthewMain extends ClickableScreen implements Runnable, KeyListene
 		worker = new Button(225, 325, 300, 100, "Worker", Color.blue, new Action(){
 			public void act(){
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerScreen);
+				
 			}
 		});
 		arrow = new ClickableGraphic(250,1000,1.0,"resources/arrow.png");

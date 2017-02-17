@@ -2,6 +2,7 @@ package frontEnd;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -15,7 +16,6 @@ import worker.WorkerInterface;
 
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
 	private TextLabel title;
-	private ArrayList<TextLabel> orders;
 	private ClickableGraphic bottomBun;
 	private ClickableGraphic tomato;
 	private ClickableGraphic topBun;
@@ -29,10 +29,15 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
-		Thread screen = new Thread(this);
-		screen.start();
 	}
 
+	public void begin(){
+		Thread screen = new Thread(this);
+		screen.start();
+		
+	}
+	
+	
 	@Override
 	public void run() {
 		countdown = 15;
@@ -72,8 +77,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
 		//viewObjects.add(orders);
+		ArrayList<String> test =  new ArrayList<String>();
+		test.add("bun");
+		displayNewRequest(test);
 	}
 
+
+	
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for (int i = 0; i < r.size(); i++) {

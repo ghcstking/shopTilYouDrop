@@ -52,6 +52,7 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
 			public void act() {
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerGame);
+				ShopTilYouDropGame.workerGame.begin();
 			}
 		});
 		viewObjects.add(bg);
