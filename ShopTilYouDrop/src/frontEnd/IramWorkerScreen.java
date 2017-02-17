@@ -97,10 +97,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	}
 
-	@Override
-	public void displayTime() {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 }
