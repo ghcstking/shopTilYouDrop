@@ -10,6 +10,7 @@ import gui6.components.ClickableGraphic;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
+import worker.EdwinRequestGenerator;
 import worker.WorkerInterface;
 
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
@@ -53,7 +54,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
 		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		orders = new ArrayList<TextLabel>();
+		//orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
 		tomato = new ClickableGraphic(450, 500, 100, 100, "resources/tomato.png");
@@ -70,7 +71,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		// viewObjects.add(orders);
+		//viewObjects.add(orders);
 	}
 
 	@Override
