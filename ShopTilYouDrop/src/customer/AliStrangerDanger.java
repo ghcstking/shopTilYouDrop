@@ -38,7 +38,9 @@ public class AliStrangerDanger extends ClickableScreen implements Runnable {
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		DemoPlayer demo = new DemoPlayer(100,300,100,20);
 		strangers = new ArrayList<Stranger>();
-		strangers.add(new Stranger(demo, 40,40,20,20));
+		strangers.add(new Stranger(demo, 40,100,50,50));
+		//we have coordinates, so we'll add more 
+		//strangers at the coordinates of items
 		viewObjects.add(demo);
 		viewObjects.addAll(strangers);
 		
