@@ -14,6 +14,7 @@ import gui6.components.Graphic;
 import gui6.components.TextArea;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
+import main.ShopTilYouDropGame;
 
 public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseListener{
 
@@ -50,7 +51,7 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 		});
 		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
 			public void act() {
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.workerGame);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerGame);
 			}
 		});
 		viewObjects.add(bg);

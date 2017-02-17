@@ -15,6 +15,7 @@ import gui6.components.TextArea;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
+import main.ShopTilYouDropGame;
 
 
 public class MatthewMain extends ClickableScreen implements Runnable, KeyListener{
@@ -54,12 +55,12 @@ public class MatthewMain extends ClickableScreen implements Runnable, KeyListene
 		open.setSize(23);
 		customer = new Button(225, 250, 300, 100, "Customer", Color.blue, new Action(){
 			public void act(){
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.customerScreen);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.customerScreen);
 			}
 		});
 		worker = new Button(225, 325, 300, 100, "Worker", Color.blue, new Action(){
 			public void act(){
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.workerScreen);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerScreen);
 			}
 		});
 		arrow = new ClickableGraphic(250,1000,1.0,"resources/arrow.png");

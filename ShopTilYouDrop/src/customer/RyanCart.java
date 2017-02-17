@@ -1,5 +1,6 @@
 package customer;
 
+import java.awt.Graphics2D;
 import java.util.ArrayList;
 
 import frontEnd.CartInterface;
@@ -36,6 +37,17 @@ public class RyanCart extends ClickableGraphic implements CartInterface{
 		//so that the customer can match the prices of the items exactly with the budget
 	}
 
+	public void update(){
+		super.update();
+		Graphics2D g = getImage().createGraphics();
+		int y = 10;
+		for(Component c: shoppingCart){
+			g.drawImage(c.getImage(), 5, y, null);
+			y += 10;
+		}
+		
+	}
+	
 	private void addItem(){
 		if(isFull(shoppingCart) == true){
 			//if full, item cannot be purchased
