@@ -9,46 +9,46 @@ import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
 
-public class RyanCart extends ClickableGraphic implements CartInterface{
+public class RyanCart implements CartInterface{
 
 	private ArrayList<Component> shoppingCart;
 	private int numberOfItems;
 	private TextLabel label;
 	private double timeLeft;
-	private int budget;
+	private double budget;
 	
 	
 	public RyanCart(int x, int y) {
-		super(x, y, .5, "resources/sampleImages/cart.png");	
+		super();	
 		shoppingCart = new ArrayList<Component>();
 		//screen should incorporate clicking an image to add an item to the cart
 		//and clicking an image in the cart to remove it
 	}
 	
-//	private void initializePrices(){
-//		//16 items
-//		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-//	}
+	private void initializePrices(){
+		//16 items
+		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+	}
 	
 	private void generateBudget(){
-		//budget = ;
+		budget = 100.00;
 		//generate a budget that will consist of different arrangements of the item prices,
 		//so that the customer can match the prices of the items exactly with the budget
 	}
 
-	private void addItem(){
-		if(isFull(shoppingCart) == true){
-			//if full, item cannot be purchased
+	private void addItem(ArrayList a){
+		if(isFull(a) == true){
+			System.out.println("Your cart is full. You cannot purchase any more items.");
 		}else{
-			//shoppingCart.add();
+			a.add(new String("item"));
 		}
 	}
 	
-	private void removeItem(){
-		if(isEmpty(shoppingCart) == true){
-			//if empty, nothing will happen
+	private void removeItem(ArrayList a){
+		if(isEmpty(a) == true){
+			System.out.println("You have nothing in your cart. You'd better go shopping!");
 		}else{ 
-			//shoppingCart.remove();
+			a.remove(a.size());
 		}
 	}
 	
