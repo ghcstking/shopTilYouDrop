@@ -36,10 +36,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 
-		t = new TextLabel(10, 50, 500, 40, "You are a customer. Pick items to put in cart.");
+		t = new TextLabel(10, 50, 1000, 40, "You are a customer. Pick items to put in cart.");
 		//		cart= new RyanCart(300,50);
 
 		viewObjects.add(t);
+		//t.setSize(.5);
 
 
 		g=new Graphic(5,100,.82,"resources/CustomerBackground.png");
@@ -205,6 +206,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			}
 		});
 	}
+
+
+
+
+
 
 	
 	private void addToCart(String string, double d) {
