@@ -205,7 +205,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			}
 		});
 	}
-<<<<<<< HEAD
+
 	
 	private void addToCart(String string, double d) {
 		cart.addItem(new StoreItem(){
@@ -220,7 +220,6 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			}	
 		});
 	}
-=======
 
 	@Override
 	public void keyTyped(KeyEvent e) {
@@ -240,5 +239,5 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		
 	}
  
->>>>>>> refs/remotes/origin/develop
+
 }
