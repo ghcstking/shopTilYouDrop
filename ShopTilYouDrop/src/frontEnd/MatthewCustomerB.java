@@ -52,7 +52,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		tips.setSize(25);
 		button = new Button(25,375,300,100,"Main Menu",Color.blue, new Action(){
 			public void act(){
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
 		});
 		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
