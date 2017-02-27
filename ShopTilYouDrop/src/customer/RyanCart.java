@@ -11,7 +11,7 @@ import gui6.screens.ClickableScreen;
 
 public class RyanCart implements CartInterface{
 
-	public static ArrayList<Component> shoppingCart;
+	public static ArrayList<String> shoppingCart;
 	private int numberOfItems;
 	private TextLabel label;
 	private double timeLeft;
@@ -20,14 +20,9 @@ public class RyanCart implements CartInterface{
 	
 	public RyanCart(int x, int y) {
 		super();	
-		shoppingCart = new ArrayList<Component>();
+		shoppingCart = new ArrayList<String>();
 		//screen should incorporate clicking an image to add an item to the cart
 		//and clicking an image in the cart to remove it
-	}
-	
-	private void initializePrices(){
-		//16 items
-		double[] itemPrices = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	}
 	
 	private void generateBudget(){
@@ -40,7 +35,7 @@ public class RyanCart implements CartInterface{
 		if(isFull(a) == true){
 			System.out.println("Your cart is full. You cannot purchase any more items.");
 		}else{
-			a.add(new String("item"));
+			
 		}
 	}
 	
@@ -48,7 +43,7 @@ public class RyanCart implements CartInterface{
 		if(isEmpty(a) == true){
 			System.out.println("You have nothing in your cart. You'd better go shopping!");
 		}else{ 
-			a.remove(a.size());
+			
 		}
 	}
 	
@@ -66,7 +61,7 @@ public class RyanCart implements CartInterface{
 		return false;
 	}
 
-	public ArrayList<Component> getCartItems() {
+	public ArrayList<String> getCartItems() {
 		return shoppingCart;
 	}
 
