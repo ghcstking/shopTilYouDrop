@@ -17,8 +17,8 @@ import gui6.screens.ClickableScreen;
 public class SammyajitCustomerScreen extends ClickableScreen implements Runnable {
 	private TextLabel t;
 	private ClickableGraphic cg;
-	private CartInterface cart;
-
+	private ViewableCart cart;
+	
 	private Graphic g;
 
 
@@ -35,7 +35,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
-
+		cart=new ViewableCart(600,150,new RyanCart(10,50));
 		t = new TextLabel(10, 50, 1000, 40, "You are a customer. Pick items to put in cart.");
 		//		cart= new RyanCart(300,50);
 
@@ -57,7 +57,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void act() {
 				System.out.println("You purchased a Valentino dress.");
-//				addToCart("dress",200.0);
+				addToCart("dress",200.0);
 
 			}
 
@@ -205,6 +205,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				
 			}
 		});
+		viewObjects.add(cart);
 	}
 
 
@@ -225,6 +226,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				return d;
 			}	
 		});
+		cart.update();
 	}
 
 	@Override
