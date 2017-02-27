@@ -66,7 +66,7 @@ public class AliStrangerDanger extends ClickableScreen implements Runnable {
 		// TODO Auto-generated method stub
 
 	} 
-	//d
+	//dd
 
 	@Override
 	public void keyTyped(KeyEvent e) {
