@@ -11,7 +11,7 @@ import gui6.screens.ClickableScreen;
 
 public class RyanCart implements CartInterface{
 
-	public ArrayList<Component> shoppingCart;
+	public static ArrayList<Component> shoppingCart;
 	private int numberOfItems;
 	private TextLabel label;
 	private double timeLeft;
