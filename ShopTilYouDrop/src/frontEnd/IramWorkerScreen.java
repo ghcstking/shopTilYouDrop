@@ -26,6 +26,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private int countdown;
 	private TextLabel timeLabel;
 	private int cashamount;
+	private WorkerInterface test;
+	private EdwinRequestGenerator thing;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -34,7 +36,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void begin(){
 		Thread screen = new Thread(this);
 		screen.start();
-		
 	}
 	
 	
@@ -52,7 +53,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	@Override
@@ -77,9 +77,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
 		//viewObjects.add(orders);
-		ArrayList<String> test =  new ArrayList<String>();
-		test.add("bun");
-		displayNewRequest(test);
+		thing = new EdwinRequestGenerator();
+		thing.generate(test);
 	}
 
 
