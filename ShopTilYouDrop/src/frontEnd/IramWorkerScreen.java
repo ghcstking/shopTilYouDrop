@@ -77,8 +77,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
 		//viewObjects.add(orders);
-		thing = new EdwinRequestGenerator();
-		thing.generate(test);
 	}
 
 
