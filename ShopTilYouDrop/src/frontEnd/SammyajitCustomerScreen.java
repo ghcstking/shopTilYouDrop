@@ -56,8 +56,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void act() {
-				System.out.println("You purchased a Valentino dress.");
-				addToCart("dress",200.0);
+				
+				StoreItem s = createItem("Valentino Dress",200.0);
+				addToCart(s);
+				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
 
 			}
 
@@ -214,19 +216,30 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 
 	
-	private void addToCart(String string, double d) {
-		cart.addItem(new StoreItem(){
+	private void addToCart(StoreItem s) {
+		cart.addItem(s);
+		RyanCart.shoppingCart.add(s.getDescription());
+		cart.update();
+		System.out.println(RyanCart.shoppingCart);
+	}
+	
+	public StoreItem createItem(String str, double d){
+		StoreItem s = new StoreItem(){
+
 			@Override
 			public String getDescription() {
-				return string;
+				// TODO Auto-generated method stub
+				return str;
 			}
-			
+
 			@Override
 			public double getPrice() {
+				// TODO Auto-generated method stub
 				return d;
-			}	
-		});
-		cart.update();
+			}
+			
+		};
+		return s;
 	}
 
 	@Override
