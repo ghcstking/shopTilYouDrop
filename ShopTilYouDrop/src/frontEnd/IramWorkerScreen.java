@@ -35,19 +35,20 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private int cashamount;
 	private EdwinRequestGenerator gen;
 	private ArrayList<String> request;
+	private ArrayList<String> burger;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
 	}
 
-	public void begin(){
+	public void begin() {
 		Thread screen = new Thread(this);
 		screen.start();
 	}
-	
-	
+
 	@Override
 	public void run() {
+		resetBurger();
 		countdown = 15;
 		while (countdown > 0) {
 			countdown--;
@@ -62,23 +63,99 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		}
 	}
 
+	public void resetBurger() {
+		burger = new ArrayList<String>();
+	}
+
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
 		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		//orders = new ArrayList<TextLabel>();
+		// orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
+		bottomBun.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("bottom_bun");
+				ClickableGraphic btbn = bottomBun = new ClickableGraphic(300, 400 -(burger.size() * 10), 100, 100,
+						"resources/bottom_bun.png");
+				addObjects(btbn);
+			}
+
+		});
+
 		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
+		topBun.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("top_bun");
+				ClickableGraphic tpbn = new ClickableGraphic(300, 400 -(burger.size() * 10), 100, 100, "resources/top_bun.png");
+				addObjects(tpbn);
+			}
+
+		});
 		tomato = new ClickableGraphic(450, 500, 100, 100, "resources/tomato.png");
+		tomato.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("tomato");
+				ClickableGraphic tmto = new ClickableGraphic(300, 400 -(burger.size() * 10), 100, 100, "resources/tomato.png");
+				addObjects(tmto);
+			}
+
+		});
 		patty = new ClickableGraphic(550, 500, 100, 100, "resources/patty.png");
+		patty.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("patty");
+				ClickableGraphic ptty = patty = new ClickableGraphic(300, 400 -(burger.size() * 10), 100, 100, "resources/patty.png");
+				addObjects(ptty);
+			}
+
+		});
 		lettuce = new ClickableGraphic(675, 500, 100, 100, "resources/lettuce.png");
+		lettuce.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("lettuce");
+				ClickableGraphic lttc = lettuce = new ClickableGraphic(300,400 -(burger.size() * 10), 100, 100, "resources/lettuce.png");
+				addObjects(lttc);
+			}
+
+		});
 		cheese = new ClickableGraphic(325, 500, 100, 100, "resources/cheese.png");
+		cheese.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("cheese");
+				ClickableGraphic chse = cheese = new ClickableGraphic(300, 400 -(burger.size() * 10), 100, 100, "resources/cheese.png");
+				addObjects(chse);
+			}
+
+		});
 		pickles = new ClickableGraphic(125, 500, 100, 100, "resources/pickles.png");
+		pickles.setAction(new Action() {
+
+			@Override
+			public void act() {
+				burger.add("pickles");
+				ClickableGraphic pkls = pickles = new ClickableGraphic(300, 400 -(burger.size() * 10), 100, 100, "resources/pickles.png");
+				addObjects(pkls);
+			}
+
+		});
 		gen = new EdwinRequestGenerator();
 		request = gen.generate(this);
 		submitBurger = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
 			public void act() {
-				VickiProgressChecker.checkBurger(request, /*** another arraylist string of users product ***/));
+				VickiProgressChecker.checkBurger(request, burger);
 			}
 		});
 		viewObjects.add(title);
@@ -92,23 +169,22 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(timeLabel);
 	}
 
-
-	
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
+		this.request = r;
 		for (int i = 0; i < r.size(); i++) {
-			this.addObjects(new TextLabel(600,100+ i*50, 200, 40, r.get(i)));
+			this.addObjects(new TextLabel(600, 100 + i * 50, 200, 40, r.get(i)));
 		}
 	}
 
 	@Override
 	public void displayBurger() {
-		
+
 	}
 
 	@Override
 	public void cash() {
-		//cashamount =
+		// cashamount =
 	}
 
 	@Override
@@ -120,7 +196,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	@Override
 	public void submitBurger() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
