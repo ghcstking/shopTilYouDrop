@@ -27,12 +27,16 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic lettuce;
 	private ClickableGraphic cheese;
 	private ClickableGraphic pickles;
-	private Button submitBurger;
+	private ClickableGraphic submitBurger;
 	private int countdown;
 	private TextLabel timeLabel;
 	private int cashamount;
 	private EdwinRequestGenerator gen;
+	private VickiProgressChecker progress;
 	private ArrayList<String> request;
+	private ArrayList<String> test;
+	private int score;
+	private TextLabel priceLabel;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -62,9 +66,9 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
+		score = 0;
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
-		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		//orders = new ArrayList<TextLabel>();
+		timeLabel = new TextLabel(25, 25, 120, 60, "");
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
 		tomato = new ClickableGraphic(450, 500, 100, 100, "resources/tomato.png");
@@ -73,10 +77,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		cheese = new ClickableGraphic(325, 500, 100, 100, "resources/cheese.png");
 		pickles = new ClickableGraphic(125, 500, 100, 100, "resources/pickles.png");
 		gen = new EdwinRequestGenerator();
+		progress = new VickiProgressChecker();
 		request = gen.generate(this);
-		submitBurger = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
+		priceLabel = new TextLabel(100, 50, 120, 60, "Price: " + Double.toString(progress.price(request)));
+		submitBurger = new ClickableGraphic(600, 400, 100, 100, "resources/THINGY.png"); 
+		submitBurger.setAction(new Action(){
 			public void act() {
-				VickiProgressChecker.checkBurger(request, /*** another arraylist string of users product ***/));
+				submitBurger();
 			}
 		});
 		viewObjects.add(title);
@@ -88,6 +95,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
+		viewObjects.add(priceLabel);
+		viewObjects.add(submitBurger);
 	}
 
 
@@ -95,7 +104,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for (int i = 0; i < r.size(); i++) {
-			this.addObjects(new TextLabel(600,100+ i*50, 200, 40, r.get(i)));
+			this.addObjects(new TextLabel(600,50+ i*50, 200, 40, r.get(i)));
 		}
 	}
 
@@ -110,15 +119,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	}
 
 	@Override
-	public void displayPrice() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void submitBurger() {
-		// TODO Auto-generated method stub
-		
+		if(true) {
+			score += progress.price(request);
+			score += gen.tip();
+			run();
+		}		
 	}
 
 }

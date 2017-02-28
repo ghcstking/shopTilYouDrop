@@ -13,7 +13,7 @@ public class VickiProgressChecker implements EdwinProgress {
 		
 	}
 
-	private boolean checkBurger(ArrayList<String> order, ArrayList<String> product) {
+	public static boolean checkBurger(ArrayList<String> order, ArrayList<String> product) {
 		if (order.size() == product.size()) {
 			for (int i = 0; i < order.size(); i++) {
 				if (order.get(i).equals(product.get(i))) {
@@ -25,7 +25,6 @@ public class VickiProgressChecker implements EdwinProgress {
 		return false;
 	}
 
-	@Override
 	public double price(ArrayList<String> order) {
 		double price = 0;
 		for (int i = 0; i < order.size(); i++) {
