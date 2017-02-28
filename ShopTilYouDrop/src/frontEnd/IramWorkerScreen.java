@@ -8,11 +8,15 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
+import gui6.components.Action;
+import gui6.components.Button;
 import gui6.components.ClickableGraphic;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
+import main.ShopTilYouDropGame;
 import worker.EdwinRequestGenerator;
+import worker.VickiProgressChecker;
 import worker.WorkerInterface;
 
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface, Runnable {
@@ -24,12 +28,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic lettuce;
 	private ClickableGraphic cheese;
 	private ClickableGraphic pickles;
+	private Button submitBurger;
 	private int countdown;
 	private TextLabel timeLabel;
 	private ArrayList<BufferedImage> images;
 	private int cashamount;
-	private WorkerInterface test;
-	private EdwinRequestGenerator ed;
+	private EdwinRequestGenerator gen;
+	private ArrayList<String> request;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -69,7 +74,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		lettuce = new ClickableGraphic(675, 500, 100, 100, "resources/lettuce.png");
 		cheese = new ClickableGraphic(325, 500, 100, 100, "resources/cheese.png");
 		pickles = new ClickableGraphic(125, 500, 100, 100, "resources/pickles.png");
-		ed = new EdwinRequestGenerator();
+		gen = new EdwinRequestGenerator();
+		request = gen.generate(this);
+		submitBurger = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
+			public void act() {
+				VickiProgressChecker.checkBurger(request, /*** another arraylist string of users product ***/));
+			}
+		});
 		viewObjects.add(title);
 		viewObjects.add(bottomBun);
 		viewObjects.add(topBun);
@@ -79,7 +90,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		ed.generate(this);
 	}
 
 
@@ -105,6 +115,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void displayPrice() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void submitBurger() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
