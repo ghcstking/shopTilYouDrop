@@ -33,7 +33,6 @@ public class DanielFreeMoney {
 				Thread.sleep((long)(5000));
 				if(moneyAvailable.get(0) != null){
 					moneyAvailable.remove(0);
-					
 				}
 				time--;
 			} catch (InterruptedException e) { 
