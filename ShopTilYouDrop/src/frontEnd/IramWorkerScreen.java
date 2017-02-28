@@ -88,7 +88,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		});
 
 		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
-		topBun.setAction(new Action() {
+		topBun.setAction(new Action() {//
 
 			@Override
 			public void act() {
