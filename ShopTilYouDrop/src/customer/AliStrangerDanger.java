@@ -4,10 +4,10 @@ import java.util.ArrayList;
 //import java.util.List;
 
 import customer.components.Stranger;
-import frontEnd.ClickSpace;
+//import frontEnd.ClickSpace;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
-import gui6.components.ClickableGraphic;
+//import gui6.components.ClickableGraphic;
 
 
 public class AliStrangerDanger extends ClickableScreen implements Runnable {
@@ -66,25 +66,24 @@ public class AliStrangerDanger extends ClickableScreen implements Runnable {
 		// TODO Auto-generated method stub
 
 	} 
-	//dd
 
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 
 	}
-	DemoPlayer demo = new DemoPlayer(100,300,100,20);
-	viewObjects.add(demo);
-	for(int i=0;i<viewObjects.size();i++){
-		if(viewObjects.get(i) instanceof ClickSpace){
-			if(Math.random()>.5){
-				ClickSpace c = (ClickSpace) viewObjects.get(i);
-				Stranger s = new Stranger(demo,c.getX(),c.getY(),25,20);
-				viewObjects.add(s);
-			}
-			
-		}
-	}
+//	DemoPlayer demo = new DemoPlayer(100,300,100,20);
+//	viewObjects.add(demo);
+//	for(int i=0;i<viewObjects.size();i++){
+//		if(viewObjects.get(i) instanceof ClickSpace){
+//			if(Math.random()>.5){
+//				ClickSpace c = (ClickSpace) viewObjects.get(i);
+//				Stranger s = new Stranger(demo,c.getX(),c.getY(),25,20);
+//				viewObjects.add(s);
+//			}
+//			
+//		}
+//	}
 
 }
 
