@@ -123,6 +123,10 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		if(true) {
 			score += progress.price(request);
 			score += gen.tip();
+			request.clear();
+			request = gen.generate(this);
+			update();
+			countdown = 0;
 			run();
 		}		
 	}
