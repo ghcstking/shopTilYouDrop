@@ -4,8 +4,10 @@ import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+import customer.DemoPlayer;
 import customer.RyanCart;
 import customer.StoreItem;
+import customer.components.Stranger;
 import gui6.components.ClickableGraphic;
 import gui6.components.Graphic;
 import gui6.components.TextLabel;
@@ -205,7 +207,21 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				
 			}
 		});
-		viewObjects.add(cart);
+
+		DemoPlayer demo = new DemoPlayer(100,300,100,20);
+		viewObjects.add(demo);
+		for(int i=0;i<viewObjects.size();i++){
+			if(viewObjects.get(i) instanceof ClickSpace){
+				if(Math.random()>.5){
+					ClickSpace c = (ClickSpace) viewObjects.get(i);
+					Stranger s = new Stranger(demo,c.getX(),c.getY(),25,20);
+					c.setStranger(s);
+					viewObjects.add(s);
+				}
+				
+			}
+		}
+
 	}
 
 

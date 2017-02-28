@@ -18,19 +18,19 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 
 	@Override
-<<<<<<< HEAD
+
 	public void initScreen() {
 
 		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
 		setScreen(screen);
-
-=======
-	public void initScreen() {
-//		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
-//		setScreen(screen);
-		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
-		setScreen(screen); //cin
->>>>>>> refs/remotes/origin/develop
 	}
+
+//	public void initScreen() {
+////		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
+////		setScreen(screen);
+//		MatthewMain screen = new MatthewMain(getWidth(), getHeight());
+//		setScreen(screen); //cin
+//>>>>>>> refs/remotes/origin/develop
+//	}
 
 }
