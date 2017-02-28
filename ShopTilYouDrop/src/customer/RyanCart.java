@@ -70,5 +70,24 @@ public class RyanCart implements CartInterface{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public StoreItem createItem(String str, double d){
+		StoreItem s = new StoreItem(){
+
+			@Override
+			public String getDescription() {
+				// TODO Auto-generated method stub
+				return str;
+			}
+
+			@Override
+			public double getPrice() {
+				// TODO Auto-generated method stub
+				return d;
+			}
+			
+		};
+		return s;
+	}
 }
 
