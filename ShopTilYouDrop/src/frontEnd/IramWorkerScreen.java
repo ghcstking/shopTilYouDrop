@@ -71,14 +71,19 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		ed.generate(this);
+//		ed.generate(this);
 	}
 
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
-		for (int i = 0; i < r.size(); i++) {
-			this.addObjects(new TextLabel(150,100+ i*50, 200, 40, r.get(i)));
+//		for (int i = 0; i < r.size(); i++) {
+//			this.addObjects(new TextLabel(150,100+ i*50, 200, 40, r.get(i)));
+//		}
+		String kek = "";
+		for(int i = 0; i < r.size(); i++){
+			kek+= r.get(i)+"\n";
 		}
+		this.addObjects(new TextLabel(150,150,200,40,kek));
 	}
 
 	@Override
