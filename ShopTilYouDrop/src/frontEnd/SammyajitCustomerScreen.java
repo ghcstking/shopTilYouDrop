@@ -35,7 +35,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
-		cart=new ViewableCart(600,150,new RyanCart(10,50));
+		cart=new ViewableCart(10,400,new RyanCart(10,50));
 		t = new TextLabel(10, 50, 1000, 40, "You are a customer. Pick items to put in cart.");
 		//		cart= new RyanCart(300,50);
 

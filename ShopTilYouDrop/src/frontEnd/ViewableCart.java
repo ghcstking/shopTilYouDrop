@@ -10,7 +10,7 @@ import customer.StoreItem;
 import gui6.components.Component;
 
 /**
- * @author Student6
+ * @author Sammyajit Kapuria
  *
  */
 public class ViewableCart extends Component {
@@ -24,7 +24,7 @@ public class ViewableCart extends Component {
 	
 	private CartInterface cart;
 	public ViewableCart(int x, int y, CartInterface cart) {
-		super(x, y, 200, 250);
+		super(x, y, 800, 200);
 		this.cart=cart;
 	}
 
