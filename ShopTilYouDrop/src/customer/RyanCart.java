@@ -92,7 +92,7 @@ public class RyanCart implements CartInterface{
 		return s;
 	}
 	
-	private void addToCart(StoreItem s) {
+	public void addToCart(StoreItem s) {
 		cart.addItem(s);
 		RyanCart.shoppingCart.add(s.getDescription());
 		cart.update();
