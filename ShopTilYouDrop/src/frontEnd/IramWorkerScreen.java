@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import gui6.components.ClickableGraphic;
@@ -16,6 +17,8 @@ import worker.WorkerInterface;
 
 public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
 	private TextLabel title;
+	private ArrayList<TextLabel> orders;
+	private ArrayList<BufferedImage> images;
 	private ClickableGraphic bottomBun;
 	private ClickableGraphic tomato;
 	private ClickableGraphic topBun;
@@ -59,7 +62,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
 		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		//orders = new ArrayList<TextLabel>();
+		orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
 		tomato = new ClickableGraphic(450, 500, 100, 100, "resources/tomato.png");
@@ -76,10 +79,9 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		//viewObjects.add(orders);
-		ArrayList<String> test =  new ArrayList<String>();
-		test.add("bun");
-		displayNewRequest(test);
+//		viewObjects.add(orders);
+//		ArrayList<String> test =  new ArrayList<String>();
+		//displayNewRequest(orders);
 	}
 
 
@@ -93,7 +95,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayBurger() {
-
+		
 	}
 
 	@Override
