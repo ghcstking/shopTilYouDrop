@@ -19,7 +19,7 @@ public class EdwinRequestGenerator implements VickiOrder {
 	}
 	
 	@Override
-	public void generate(WorkerInterface w) {
+	public ArrayList<String> generate(WorkerInterface w) {
 		ArrayList<String> request = new ArrayList<String>();
 		request.add(0, condiments[0]);
 		int numberCondiments = (int) (Math.random()*3)+3;
@@ -32,6 +32,7 @@ public class EdwinRequestGenerator implements VickiOrder {
 		}
 		request.add(condiments[condiments.length-1]);
 		w.displayNewRequest(request);
+		return request;
 	}
 	
 //	public static void main(String[] args) {
