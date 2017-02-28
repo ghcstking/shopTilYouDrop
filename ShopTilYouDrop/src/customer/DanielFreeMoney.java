@@ -31,7 +31,7 @@ public class DanielFreeMoney {
 				moneyAvailable.add(newMon);
 				System.out.println(" X: " + moneyAvailable.get(0).getX() + " Y:  " + moneyAvailable.get(0).getY()+" Value: " + moneyAvailable.get(0).getValue());
 				Thread.sleep((long)(5000));
-				if(moneyAvailable.get(0) != null){
+				if(moneyAvailable.size() > 0 ){
 					moneyAvailable.remove(0);
 				}
 				time--;
