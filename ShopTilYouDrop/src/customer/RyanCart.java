@@ -3,6 +3,7 @@ package customer;
 import java.util.ArrayList;
 
 import frontEnd.CartInterface;
+import frontEnd.ViewableCart;
 import gui6.components.ClickableGraphic;
 import gui6.components.Component;
 import gui6.components.TextLabel;
@@ -16,6 +17,7 @@ public class RyanCart implements CartInterface{
 	private TextLabel label;
 	private double timeLeft;
 	private double budget;
+	private ViewableCart cart;
 	
 	
 	public RyanCart(int x, int y) {
@@ -89,6 +91,14 @@ public class RyanCart implements CartInterface{
 		};
 		return s;
 	}
+	
+	private void addToCart(StoreItem s) {
+		cart.addItem(s);
+		RyanCart.shoppingCart.add(s.getDescription());
+		cart.update();
+		System.out.println(RyanCart.shoppingCart);
+	}
+	
 	
 }
 
