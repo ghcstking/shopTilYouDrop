@@ -26,7 +26,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private int countdown;
 	private TextLabel timeLabel;
 	private int cashamount;
-	private WorkerInterface order;
+	private EdwinRequestGenerator ed;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -55,7 +55,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
 		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		orders = new ArrayList<TextLabel>();
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
 		tomato = new ClickableGraphic(450, 500, 100, 100, "resources/tomato.png");
@@ -72,13 +71,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		//viewObjects.add(orders);
+		ed.generate(this);
 	}
 
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for (int i = 0; i < r.size(); i++) {
-			this.addObjects(new TextLabel(100 + i * 50, 50, 200, 40, r.get(i)));
+			this.addObjects(new TextLabel(150,100+ i*50, 200, 40, r.get(i)));
 		}
 	}
 
@@ -97,9 +96,5 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		// TODO Auto-generated method stub
 
 	}
-	
-//	private WorkerInterface newOrder() {
-//		return new WorkerInterface();
-//	}
 
 }
