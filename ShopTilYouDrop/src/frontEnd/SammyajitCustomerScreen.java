@@ -19,6 +19,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	private ClickableGraphic cg;
 	private ViewableCart cart;
 	
+	private TextLabel name;
+	private TextLabel price;
+	private TextLabel desc;
+	
 	private Graphic g;
 
 
@@ -35,6 +39,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
+		name = new TextLabel(515,103,100,40,"Item");
+		price = new TextLabel(515,158,100,40,"Price");
+		desc = new TextLabel(515,210,200,40,"Description");
+		
 		cart=new ViewableCart(10,400,new RyanCart(10,50));
 		t = new TextLabel(10, 50, 1000, 40, "You are a customer. Pick items to put in cart.");
 		//		cart= new RyanCart(300,50);
@@ -208,14 +216,13 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			}
 		});
 		viewObjects.add(cart);
+		viewObjects.add(name);
+		viewObjects.add(price);
+		viewObjects.add(desc);
 	}
 
 
 
-
-
-
-	
 	private void addToCart(StoreItem s) {
 		cart.addItem(s);
 		RyanCart.shoppingCart.add(s.getDescription());
