@@ -27,7 +27,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private TextLabel timeLabel;
 	private int cashamount;
 	private WorkerInterface test;
-	private EdwinRequestGenerator thing;
+	private EdwinRequestGenerator ed;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -67,6 +67,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		lettuce = new ClickableGraphic(675, 500, 100, 100, "resources/lettuce.png");
 		cheese = new ClickableGraphic(325, 500, 100, 100, "resources/cheese.png");
 		pickles = new ClickableGraphic(125, 500, 100, 100, "resources/pickles.png");
+		ed = new EdwinRequestGenerator();
 		viewObjects.add(title);
 		viewObjects.add(bottomBun);
 		viewObjects.add(topBun);
@@ -76,7 +77,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
-		//viewObjects.add(orders);
+		ed.generate(this);
 	}
 
 
@@ -84,7 +85,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		for (int i = 0; i < r.size(); i++) {
-			this.addObjects(new TextLabel(100 + i * 50, 50, 200, 40, r.get(i)));
+			this.addObjects(new TextLabel(600,100+ i*50, 200, 40, r.get(i)));
 		}
 	}
 
