@@ -17,7 +17,7 @@ public class RyanCart implements CartInterface{
 	private TextLabel label;
 	private double timeLeft;
 	private double budget;
-	private ViewableCart cart;
+	private static ViewableCart cart;
 	
 	
 	public RyanCart(int x, int y) {
@@ -92,7 +92,7 @@ public class RyanCart implements CartInterface{
 		return s;
 	}
 	
-	public void addToCart(StoreItem s) {
+	public static void addToCart(StoreItem s) {
 		cart.addItem(s);
 		RyanCart.shoppingCart.add(s.getDescription());
 		cart.update();
