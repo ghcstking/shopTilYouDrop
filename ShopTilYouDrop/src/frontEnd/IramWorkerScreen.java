@@ -5,6 +5,7 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import gui6.components.ClickableGraphic;
@@ -14,7 +15,7 @@ import gui6.screens.ClickableScreen;
 import worker.EdwinRequestGenerator;
 import worker.WorkerInterface;
 
-public class IramWorkerScreen extends ClickableScreen implements WorkerInterface {
+public class IramWorkerScreen extends ClickableScreen implements WorkerInterface, Runnable {
 	private TextLabel title;
 	private ClickableGraphic bottomBun;
 	private ClickableGraphic tomato;
@@ -25,6 +26,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic pickles;
 	private int countdown;
 	private TextLabel timeLabel;
+	private ArrayList<BufferedImage> images;
 	private int cashamount;
 	private WorkerInterface test;
 	private EdwinRequestGenerator ed;
@@ -91,12 +93,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void displayBurger() {
-
+		
 	}
 
 	@Override
 	public void cash() {
-		// cashamount =
+		//cashamount =
 	}
 
 	@Override
