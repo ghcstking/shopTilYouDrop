@@ -14,6 +14,7 @@ import gui6.components.Graphic;
 import gui6.components.TextArea;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
+import main.ShopTilYouDropGame;
 
 public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseListener{
 
@@ -32,6 +33,7 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 		// TODO Auto-generated method stub
 		
 	}
+
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
 		
@@ -40,16 +42,17 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 		role = new TextLabel(325, 15, 300, 100, "Worker");
 		instructions = new TextArea(100, 125, 600, 400, 
 				"You work at a burger place."
-				+ "Make the customer's order EXACTLY as shown to earn money!");
+				+ " Make the customer's order EXACTLY as shown to earn money!");
 		instructions.setSize(30);
 		button = new Button(25,375,300,100,"Main Menu",Color.blue, new Action(){
 			public void act(){
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
 		});
 		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
 			public void act() {
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.workerGame);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerGame);
+				ShopTilYouDropGame.workerGame.begin();
 			}
 		});
 		viewObjects.add(bg);

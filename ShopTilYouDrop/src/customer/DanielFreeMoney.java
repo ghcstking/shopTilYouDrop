@@ -4,57 +4,51 @@ import java.util.ArrayList;
 
 import frontEnd.SammyajitCustomerScreen;
 
-public class DanielFreeMoney implements MoneySpace {
+public class DanielFreeMoney {
 
 	private static ArrayList<Money> moneyAvailable;
 	private static int[] values;
-	private static int x;
-	private static int y;
-
-
+	private static SammyajitCustomerScreen game;
 	public static void main(String[] args){
-		int[] values = {5,10,20,50,100};
+
+		placeMoney();
 
 	}
 
-	
-	public static int getX() {
-		return x;
-	}
+	public static void placeMoney(){
+		game = new SammyajitCustomerScreen(100, 100);
+		moneyAvailable = new ArrayList<Money>();
+		int[] values = {5,5,5,5,5,10,10,10,10,20,20,20,50,50,100};
+		int time = 5;
 
+				
+		while(time >0){
+			try {
+				double rand = Math.random();
+				double rand1 = Math.random();
+				int x = (int) ((double)game.getWidth() * rand);
+				int y = (int) ((double)game.getHeight() * rand1);
+				int newValue = (int) (values.length * rand);
+				Money newMon = new Money( x, y, 10, 10, "coin.png");		
+				newMon.setValue(values[newValue]);
+				moneyAvailable.add(newMon);
+				System.out.println(" X: " + moneyAvailable.get(0).getX() + " Y:  " + moneyAvailable.get(0).getY()+" Value: " + moneyAvailable.get(0).getValue());
+				Thread.sleep((long)(2000));
 
-	public static void setX(int x) {
-		DanielFreeMoney.x = x;
-	}
+				moneyAvailable.remove(0);
+				time--;
+			} catch (InterruptedException e) { 
+				e.printStackTrace();
+			}
 
-
-	public static int getY() {
-		return y;
-	}
-
-
-	public static void setY(int y) {
-		DanielFreeMoney.y = y;
-	}
-
-
-	public static void placeMoney(MoneySpace[][] area){
-		double rand = Math.random();
-		int newValue = (int) (values.length * rand);
-		try {
-			Thread.sleep((long)(2000));
-			moneyAvailable.remove(0);
-			Money newMon = new Money( x, y, 10, 10, " ");
-			newMon.setValue(values[newValue]);
-			moneyAvailable.add(newMon);
-		} catch (InterruptedException e) { 
-			e.printStackTrace();
 		}
-		
-		
-		
-	
+
+
+
+
 
 	}
+
+
 
 }

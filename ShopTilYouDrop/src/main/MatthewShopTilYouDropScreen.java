@@ -23,5 +23,4 @@ public class MatthewShopTilYouDropScreen extends ClickableScreen implements Runn
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
 	}
-
 }

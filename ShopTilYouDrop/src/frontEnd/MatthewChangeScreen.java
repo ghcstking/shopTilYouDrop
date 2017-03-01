@@ -18,6 +18,7 @@ public class MatthewChangeScreen extends GUIApplication {
 	public static MatthewWorkerB workerScreen;
 	public static IramWorkerScreen workerGame;
 	public static SammyajitCustomerScreen customerGame;
+	public static MatthewMain mainScreen;
 
 	@Override
 	public void initScreen() {

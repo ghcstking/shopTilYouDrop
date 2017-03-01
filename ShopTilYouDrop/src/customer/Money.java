@@ -19,9 +19,6 @@ public class Money extends Graphic {
 
 	public Money(int x, int y, int w, int h, String imageLocation) {
 		super(x, y, w, h, imageLocation);
-		imageLocation = imageLoc;
-		x = DanielFreeMoney.getX();
-		y = DanielFreeMoney.getY();
 	}
 
 	

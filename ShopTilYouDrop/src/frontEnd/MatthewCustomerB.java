@@ -14,6 +14,7 @@ import gui6.components.Graphic;
 import gui6.components.TextArea;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
+import main.ShopTilYouDropGame;
 
 public class MatthewCustomerB extends Screen implements MouseMotionListener,MouseListener{
 
@@ -33,6 +34,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		// TODO Auto-generated method stub
 		
 	}
+	
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
 		
@@ -40,7 +42,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		white = new Graphic (90, 75, "resources/white.png");
 		role = new TextLabel(325, 15, 300, 100, "Customer");
 		instructions = new TextArea(100, 125, 600, 400, 
-				"You’re given a certain time limit to shop for goods that are on sale. "
+				"You're given a certain time limit to shop for goods that are on sale. "
 				+ "Click on items on the shelves to add them to the cart.");
 		instructions.setSize(25);
 		tips = new TextArea(100, 225, 600, 300, "Strangers may appear on goods! If you click on them, "
@@ -49,12 +51,12 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		tips.setSize(25);
 		button = new Button(25,375,300,100,"Main Menu",Color.blue, new Action(){
 			public void act(){
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
 		});
 		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
 			public void act() {
-				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.customerGame);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.customerGame);
 			}
 		});
 		viewObjects.add(bg);
