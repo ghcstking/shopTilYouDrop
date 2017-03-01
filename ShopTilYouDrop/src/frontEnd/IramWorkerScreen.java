@@ -190,10 +190,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	}
 
 	@Override
-	public double cash() {
-		cashamount += progress.price(request);
-		cashamount += gen.tip();
-		return cashamount;
+	public double getScore() {
+		return score;
 	}
 
 	@Override
