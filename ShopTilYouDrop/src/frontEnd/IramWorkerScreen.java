@@ -82,7 +82,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				burger.add("bottom_bun");
 				ClickableGraphic btbn = bottomBun = new ClickableGraphic(300, 400 -(burger.size() * 3), 150, 150,
 						"resources/bottom_bun.png");
-				addObjects(btbn);
+				addObjects(btbn);//
 			}
 
 		});
