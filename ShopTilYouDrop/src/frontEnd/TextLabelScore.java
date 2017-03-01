@@ -79,6 +79,11 @@ public class TextLabelScore extends Component implements HighScoreInterface {
 	public void setUsername(String user) {
 		this.user = user;
 	}
+	
+	@Override
+	public String getUsername() {
+		return user;
+	}
 
 	@Override
 	public void setScore(int score) {

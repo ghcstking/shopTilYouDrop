@@ -16,7 +16,7 @@ public class ShopTilYouDropGame extends GUIApplication {
 	public static IramWorkerScreen workerGame;
 	public static SammyajitCustomerScreen customerGame;
 	public static MatthewMain mainScreen;
-	private MatthewHighScoreScreen highscorescreen;
+	public static MatthewHighScoreScreen highscorescreen;
 	
 	public ShopTilYouDropGame(int width, int height) {
 		super(width, height);
@@ -38,7 +38,7 @@ public class ShopTilYouDropGame extends GUIApplication {
 		mainScreen = new MatthewMain(getWidth(), getHeight());
 		highscorescreen = new MatthewHighScoreScreen(getWidth(), getHeight());
 //		setScreen(highscorescreen);
-		setScreen(workerScreen);
+		setScreen(mainScreen);
 	}
 
 }
