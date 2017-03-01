@@ -11,11 +11,11 @@ public class DanielFreeMoney {
 	private static SammyajitCustomerScreen game;
 
 	public static void main(String[] args){
+		game = new SammyajitCustomerScreen(100, 100);
 		placeMoney();
 	}
 
 	public static void placeMoney(){
-		game = new SammyajitCustomerScreen(100, 100);
 		moneyAvailable = new ArrayList<Money>();
 		int[] values = {5,5,5,5,5,10,10,10,10,20,20,20,50,50,100};
 		int time = 5;			
