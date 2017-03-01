@@ -1,3 +1,4 @@
+
 package frontEnd;
 /**@author Iram Shahed
  **/
@@ -213,6 +214,4 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			run();
 		}		
 	}
-
-
 }
