@@ -14,11 +14,8 @@ public class RyanCart implements CartInterface{
 
 	public static ArrayList<String> shoppingCart;
 	private int numberOfItems;
-	private TextLabel label;
 	private double timeLeft;
 	private double budget;
-	private static ViewableCart cart;
-	
 	
 	public RyanCart(int x, int y) {
 		super();	
@@ -33,14 +30,6 @@ public class RyanCart implements CartInterface{
 		//so that the customer can match the prices of the items exactly with the budget
 	}
 
-	private void addItem(ArrayList a){
-		if(isFull(a) == true){
-			System.out.println("Your cart is full. You cannot purchase any more items.");
-		}else{
-			
-		}
-	}
-	
 	private void removeItem(ArrayList a){
 		if(isEmpty(a) == true){
 			System.out.println("You have nothing in your cart. You'd better go shopping!");
@@ -92,13 +81,21 @@ public class RyanCart implements CartInterface{
 		return s;
 	}
 	
-	public static void addToCart(StoreItem s) {
-		cart.addItem(s);
+	public static void addToCart(ViewableCart c, StoreItem s) {
+		c.addItem(s);
 		RyanCart.shoppingCart.add(s.getDescription());
-		cart.update();
+		c.update();
 		System.out.println(RyanCart.shoppingCart);
 	}
 	
-	
+	public static void changeText(TextLabel a, String string) {
+		a.setText(string);
+		try{
+			Thread.sleep(1000);
+		}catch(InterruptedException e){
+			e.printStackTrace();
+		}
+		
+	}
 }
 

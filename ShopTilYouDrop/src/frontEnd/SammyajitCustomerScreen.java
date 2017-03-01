@@ -63,13 +63,13 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 
 		//Dress
-		viewObjects.add(new ClickSpace(14,114,55,60) {
+		viewObjects.add(new ClickSpace(14,114,50,50) {
 
 			@Override
 			public void actOnClick() {
 				
 				StoreItem s = createItem("Valentino Dress",200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Dress");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -80,12 +80,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Shoes
-		viewObjects.add(new ClickSpace(83,115,40,30) {
+		viewObjects.add(new ClickSpace(65,110,40,30) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Yeezys", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Yeezys");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -95,12 +95,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 
 		//TV
-		viewObjects.add(new ClickSpace(155,110,115,40) {
+		viewObjects.add(new ClickSpace(125,110,105,30) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Flat Screen TV", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Flat Screen TV");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -109,12 +109,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 
 		//TV 2
-		viewObjects.add(new ClickSpace(285,110,115,40) {
+		viewObjects.add(new ClickSpace(230,110,105,30) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Cheap TV", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Cheap TV");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -122,12 +122,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//CDS
-		viewObjects.add(new ClickSpace(18,185,40,40) {
+		viewObjects.add(new ClickSpace(15,170,40,40) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Mixtape", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Mixtape");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -135,12 +135,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Books
-		viewObjects.add(new ClickSpace(100,185,40,40) {
+		viewObjects.add(new ClickSpace(80,170,40,40) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Harry Potter book", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Harry Potter book");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -149,12 +149,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	
 	//------Ryan coded below------
 		//School Supplies
-		viewObjects.add(new ClickSpace(180,230,50,50) {
+		viewObjects.add(new ClickSpace(150,200,40,40) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("School Supplies", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "School Supplies");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -162,12 +162,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Lipstick
-		viewObjects.add(new ClickSpace(10,250,30,50) {
+		viewObjects.add(new ClickSpace(10,220,30,50) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Lipstick", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Lipstick");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -176,12 +176,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Makeup
-		viewObjects.add(new ClickSpace(50,250,30,50) {
+		viewObjects.add(new ClickSpace(40,220,30,50) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Makeup", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Makeup");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -190,12 +190,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Necklace
-		viewObjects.add(new ClickSpace(50,310,30,30) {
+		viewObjects.add(new ClickSpace(40,270,30,30) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Necklace", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Necklace");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -204,12 +204,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Ring
-		viewObjects.add(new ClickSpace(16,345,30,30) {
+		viewObjects.add(new ClickSpace(10,290,30,30) {
 
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Diamond Ring", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Diamond Ring");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
@@ -223,7 +223,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void actOnClick() {
 				StoreItem s = createItem("Wooden Chair", 200.0);
-				addToCart(s);
+				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(name, "Wooden Chair");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
