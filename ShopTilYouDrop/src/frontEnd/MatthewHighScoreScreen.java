@@ -11,12 +11,11 @@ import gui6.screens.ClickableScreen;
 
 public class MatthewHighScoreScreen extends ClickableScreen implements Runnable, KeyListener{
 
-	private static HighScoreInterface[] scores;
+	private ArrayList <HighScoreInterface> scores;//instantiate elsewhere
 	private static int crank;
 	private static String user;
 	private static TextLabel title;
 	private static TextLabel username;
-	//place highscore screen here private static MatthewHighScoreScreen gameover;
 	
 	public MatthewHighScoreScreen(int width, int height) {
 		super(width, height);
@@ -52,21 +51,7 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(300, 50, 500, 40, "High Scores");
 		title.setSize(30);
-		int allscores = scores.length;
-		scores = new HighScoreInterface[allscores];
-		for(int i = 0; i < allscores; i++){
-			for(int k = 0; k< allscores; i++){
-				if(scores[k].getScore() < scores[k+1].getScore()){
-					HighScoreInterface tmp = scores[k];
-					scores[k] = scores[k+1];
-					scores[k+1] = tmp;
-				}
-			}
-			scores[i] = getPlayer();
-			scores[i].setUsername("User"+i);
-			//scores add score is set in vicki's thing list.set(index, Integer.valueof(9))
-			viewObjects.add(scores[i]);
-		}
+//		instantiate the arraylist somewhere else. push score from worker. add to TextLabelScore
 		viewObjects.add(title);
 	}
 

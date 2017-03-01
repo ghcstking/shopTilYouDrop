@@ -2,15 +2,19 @@ package frontEnd;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
+import gui6.components.Component;
 
-public class TextLabelScore implements HighScoreInterface {
+public class TextLabelScore extends Component implements HighScoreInterface {
 
+	private static final int WIDTH = 50;
+	private static final int HEIGHT = 50;
 	private String user;
 	private int score;
 
 	public TextLabelScore() {
-		// TODO Auto-generated constructor stub
+		super(0, 0, WIDTH, HEIGHT);
 	}
 
 	@Override
@@ -55,13 +59,11 @@ public class TextLabelScore implements HighScoreInterface {
 		
 	}
 
-	@Override
 	public int getWidth() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public int getHeight() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -88,11 +90,10 @@ public class TextLabelScore implements HighScoreInterface {
 		return this.score;
 	}
 
-	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
-	}
+	public void update(Graphics2D g) {
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g.setColor(Color.black);	
+	}	
 
 
 }
