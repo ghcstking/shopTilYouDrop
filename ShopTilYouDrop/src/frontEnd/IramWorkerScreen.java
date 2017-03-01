@@ -40,7 +40,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private VickiProgressChecker progress;
 	private ArrayList<String> request;
 	private ArrayList<String> burger;
-	private double score;
+	private static double score;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -190,7 +190,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	}
 
-	@Override
 	public double getScore() {
 		return score;
 	}
