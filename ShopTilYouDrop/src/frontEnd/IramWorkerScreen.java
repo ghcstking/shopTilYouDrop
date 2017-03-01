@@ -93,7 +93,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("top_bun");
-				ClickableGraphic tpbn = new ClickableGraphic(300, 300 -(burger.size() * 12), 150, 150, "resources/top_bun.png");
+				ClickableGraphic tpbn = new ClickableGraphic(300, 300 -(burger.size() * 15), 150, 150, "resources/top_bun.png");
 				addObjects(tpbn);
 			}
 
@@ -115,7 +115,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("patty");
-				ClickableGraphic ptty = patty = new ClickableGraphic(300, 300 -(burger.size() * 10), 150, 150, "resources/patty.png");
+				ClickableGraphic ptty = patty = new ClickableGraphic(300, 300 -(burger.size() * 5), 150, 150, "resources/patty.png");
 				addObjects(ptty);
 			}
 
