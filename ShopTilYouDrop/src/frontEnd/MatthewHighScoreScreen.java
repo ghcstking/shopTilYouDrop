@@ -1,5 +1,6 @@
 package frontEnd;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
@@ -10,14 +11,11 @@ import gui6.screens.ClickableScreen;
 
 public class MatthewHighScoreScreen extends ClickableScreen implements Runnable, KeyListener{
 
-	private static ArrayList<HighScoreInterface> scores;
+	private ArrayList <HighScoreInterface> scores;//instantiate elsewhere
 	private static int crank;
 	private static String user;
 	private static TextLabel title;
 	private static TextLabel username;
-	private int x = 200;
-	private int y = 100;
-	//place highscore screen here private static MatthewHighScoreScreen gameover;
 	
 	public MatthewHighScoreScreen(int width, int height) {
 		super(width, height);
@@ -53,8 +51,11 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(300, 50, 500, 40, "High Scores");
 		title.setSize(30);
-		int allscores = scores.size();
-		
+//		instantiate the arraylist somewhere else. push score from worker. add to TextLabelScore
 		viewObjects.add(title);
+	}
+
+	private HighScoreInterface getPlayer() {
+		return new TextLabelScore();
 	}
 }
