@@ -80,9 +80,9 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("bottom_bun");
-				ClickableGraphic btbn = bottomBun = new ClickableGraphic(300, 400 -(burger.size() * 5), 150, 150,
+				ClickableGraphic btbn = bottomBun = new ClickableGraphic(300, 300 -(burger.size() * 3), 150, 150,
 						"resources/bottom_bun.png");
-				addObjects(btbn);
+				addObjects(btbn);//
 			}
 
 		});
@@ -93,7 +93,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("top_bun");
-				ClickableGraphic tpbn = new ClickableGraphic(300, 400 -(burger.size() * 12), 150, 150, "resources/top_bun.png");
+				ClickableGraphic tpbn = new ClickableGraphic(300, 300 -(burger.size() * 12), 150, 150, "resources/top_bun.png");
 				addObjects(tpbn);
 			}
 
@@ -104,7 +104,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("tomato");
-				ClickableGraphic tmto = new ClickableGraphic(300, 400 -(burger.size() * 12), 150, 150, "resources/tomato.png");
+				ClickableGraphic tmto = new ClickableGraphic(300, 300 -(burger.size() * 12), 150, 150, "resources/tomato.png");
 				addObjects(tmto);
 			}
 
@@ -115,7 +115,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("patty");
-				ClickableGraphic ptty = patty = new ClickableGraphic(300, 400 -(burger.size() * 10), 150, 150, "resources/patty.png");
+				ClickableGraphic ptty = patty = new ClickableGraphic(300, 300 -(burger.size() * 10), 150, 150, "resources/patty.png");
 				addObjects(ptty);
 			}
 
@@ -126,7 +126,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("lettuce");
-				ClickableGraphic lttc = lettuce = new ClickableGraphic(300,400 -(burger.size() * 10),150, 150, "resources/lettuce.png");
+				ClickableGraphic lttc = lettuce = new ClickableGraphic(300,300 -(burger.size() * 10),150, 150, "resources/lettuce.png");
 				addObjects(lttc);
 			}
 
@@ -137,7 +137,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("cheese");
-				ClickableGraphic chse = cheese = new ClickableGraphic(300, 400 -(burger.size() * 10), 150, 150, "resources/cheese.png");
+				ClickableGraphic chse = cheese = new ClickableGraphic(300, 300 -(burger.size() * 10), 150, 150, "resources/cheese.png");
 				addObjects(chse);
 			}
 
@@ -148,7 +148,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("pickles");
-				ClickableGraphic pkls = pickles = new ClickableGraphic(300, 400 -(burger.size() * 10), 150, 150, "resources/pickles.png");
+				ClickableGraphic pkls = pickles = new ClickableGraphic(300, 300 -(burger.size() * 12), 150, 150, "resources/pickles.png");
 				addObjects(pkls);
 			}
 
