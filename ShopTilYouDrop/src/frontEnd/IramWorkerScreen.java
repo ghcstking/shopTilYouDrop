@@ -202,13 +202,14 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void submitBurger() {
+		countdown = 0;
 		if(true) {
 			score += progress.price(request);
 			score += gen.tip();
 			request.clear();
+			viewObjects.clear();
 			request = gen.generate(this);
 			update();
-			countdown = 0;
 			run();
 		}		
 	}
