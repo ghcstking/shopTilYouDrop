@@ -16,7 +16,6 @@ public class DanielFreeMoney {
 	}
 
 	public static void placeMoney(){
-		
 		moneyAvailable = new ArrayList<Money>();
 		int[] values = {5,5,5,5,5,10,10,10,10,20,20,20,50,50,100};
 		int time = 5;			
