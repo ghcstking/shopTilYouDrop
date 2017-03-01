@@ -31,10 +31,14 @@ public class ShopTilYouDropGame extends GUIApplication {
 
 	@Override
 	public void initScreen() {
-//		SammyajitCustomerScreen screen = new SammyajitCustomerScreen(getWidth(), getHeight());
-//		setScreen(screen);
-		IramWorkerScreen screen = new IramWorkerScreen(getWidth(), getHeight());
-		setScreen(screen); //cin
+		customerScreen = new MatthewCustomerB(getWidth(), getHeight());
+		workerScreen = new MatthewWorkerB(getWidth(), getHeight());
+		customerGame = new SammyajitCustomerScreen(getWidth(), getHeight());
+		workerGame = new IramWorkerScreen(getWidth(), getHeight());
+		mainScreen = new MatthewMain(getWidth(), getHeight());
+		highscorescreen = new MatthewHighScoreScreen(getWidth(), getHeight());
+//		setScreen(highscorescreen);
+		setScreen(workerScreen);
 	}
 
 }

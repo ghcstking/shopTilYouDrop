@@ -1,7 +1,4 @@
 package frontEnd;
-
-import java.awt.Color;
-import java.awt.Font;
 /**@author Iram Shahed
  **/
  
@@ -19,9 +16,8 @@ import gui6.components.ClickableGraphic;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
-import worker.EdwinRequestGenerator;
 import main.ShopTilYouDropGame;
-
+import worker.EdwinRequestGenerator;
 import worker.VickiProgressChecker;
 import worker.WorkerInterface;
 
@@ -34,14 +30,16 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic lettuce;
 	private ClickableGraphic cheese;
 	private ClickableGraphic pickles;
-	private Button submitBurger;
+	private ClickableGraphic submitBurger;
 	private int countdown;
 	private TextLabel timeLabel;
 	private ArrayList<BufferedImage> images;
 	private int cashamount;
 	private EdwinRequestGenerator gen;
+	private VickiProgressChecker progress;
 	private ArrayList<String> request;
 	private ArrayList<String> burger;
+	private double score;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -66,7 +64,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		}//
 	}
 
 	public void resetBurger() {
@@ -75,15 +73,9 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
+		score = 0;
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
 		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
-		topBun = new ClickableGraphic(10, 500, 100, 100, "resources/top_bun.png");
-		tomato = new ClickableGraphic(450, 500, 100, 100, "resources/tomato.png");
-		patty = new ClickableGraphic(550, 500, 100, 100, "resources/patty.png");
-		lettuce = new ClickableGraphic(675, 500, 100, 100, "resources/lettuce.png");
-		cheese = new ClickableGraphic(325, 500, 100, 100, "resources/cheese.png");
-		pickles = new ClickableGraphic(125, 500, 100, 100, "resources/pickles.png");
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		bottomBun.setAction(new Action() {
 
@@ -164,10 +156,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 		});
 		gen = new EdwinRequestGenerator();
+		progress = new VickiProgressChecker();
 		request = gen.generate(this);
-		submitBurger = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
+		submitBurger = new ClickableGraphic(600, 400, 100, 100, "resources/THINGY.png"); 
+		submitBurger.setAction(new Action(){
 			public void act() {
-				VickiProgressChecker.checkBurger(request, burger);
+				submitBurger();
 			}
 		});
 		viewObjects.add(title);
@@ -179,13 +173,14 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		viewObjects.add(cheese);
 		viewObjects.add(pickles);
 		viewObjects.add(timeLabel);
+		viewObjects.add(submitBurger);
 	}
 
 	@Override
 	public void displayNewRequest(ArrayList<String> r) {
 		this.request = r;
 		for (int i = 0; i < r.size(); i++) {
-			this.addObjects(new TextLabel(600, 100 + i * 50, 200, 40, r.get(i)));
+			this.addObjects(new TextLabel(600, 50 + i * 50, 200, 40, r.get(i)));
 		}
 	}
 
@@ -195,8 +190,10 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	}
 
 	@Override
-	public void cash() {
-		// cashamount =
+	public double cash() {
+		cashamount += progress.price(request);
+		cashamount += gen.tip();
+		return cashamount;
 	}
 
 	@Override
@@ -204,10 +201,18 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		// TODO Auto-generated method stub
 
 	}
-	
+
 	@Override
 	public void submitBurger() {
-		// TODO Auto-generated method stub
-
+		if(true) {
+			score += progress.price(request);
+			score += gen.tip();
+			request.clear();
+			request = gen.generate(this);
+			update();
+			countdown = 0;
+			run();
+		}		
 	}
+
 }
