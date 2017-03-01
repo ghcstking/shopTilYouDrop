@@ -33,8 +33,8 @@ public class ViewableCart extends Component {
 	 */
 	@Override
 	public void update(Graphics2D g) {
-		g.setColor(Color.black);
-		g.fillRect(0,0,getWidth(),getHeight());
+//		g.setColor(Color.black);
+//		g.fillRect(0,0,getWidth(),getHeight());
 		
 	}
 
