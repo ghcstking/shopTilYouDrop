@@ -203,6 +203,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 		});
 		
+		
 		//Ring
 		viewObjects.add(new ClickSpace(10,290,30,30) {
 
