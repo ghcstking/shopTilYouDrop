@@ -10,7 +10,7 @@ import customer.StoreItem;
 import gui6.components.Component;
 
 /**
- * @author Sammyajit Kapuria
+ * @author Sammyajit Kapuria, Ryan Situ
  *
  */
 public class ViewableCart extends Component {

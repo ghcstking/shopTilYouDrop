@@ -20,33 +20,21 @@ public class RyanCart implements CartInterface{
 	public RyanCart(int x, int y) {
 		super();	
 		shoppingCart = new ArrayList<String>();
-		//screen should incorporate clicking an image to add an item to the cart
-		//and clicking an image in the cart to remove it
 	}
 	
 	private void generateBudget(){
-		budget = 100.00;
-		//generate a budget that will consist of different arrangements of the item prices,
-		//so that the customer can match the prices of the items exactly with the budget
-	}
-
-	private void removeItem(ArrayList a){
-		if(isEmpty(a) == true){
-			System.out.println("You have nothing in your cart. You'd better go shopping!");
-		}else{ 
-			
-		}
+		budget = 4000.00;
 	}
 	
-	private boolean isFull(ArrayList cart){
-		if(cart.size() > 10){
+	private boolean areYouBroke(){
+		if(budget <= 0){
 			return true;
 		}
 		return false;
 	}
 	
-	private boolean isEmpty(ArrayList cart){
-		if(cart.size() == 0){
+	private boolean isEmpty(){
+		if(shoppingCart.size() == 0){
 			return true;
 		}
 		return false;
@@ -62,23 +50,10 @@ public class RyanCart implements CartInterface{
 		
 	}
 	
-	public StoreItem createItem(String str, double d){
-		StoreItem s = new StoreItem(){
-
-			@Override
-			public String getDescription() {
-				// TODO Auto-generated method stub
-				return str;
-			}
-
-			@Override
-			public double getPrice() {
-				// TODO Auto-generated method stub
-				return d;
-			}
-			
-		};
-		return s;
+	@Override
+	public void removeItem(StoreItem i) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	public static void addToCart(ViewableCart c, StoreItem s) {
@@ -105,11 +80,7 @@ public class RyanCart implements CartInterface{
 		
 	}
 
-	@Override
-	public void removeItem(StoreItem i) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 }
 
