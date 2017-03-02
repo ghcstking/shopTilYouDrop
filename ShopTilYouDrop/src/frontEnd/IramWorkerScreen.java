@@ -126,7 +126,8 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
 		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
 		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		scoreLabel = new TextLabel(60, 75, 120,60, "" + score);
+		scoreLabel = new TextLabel(60, 75, 120,60,"");
+		scoreLabel.setText(getScore());
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		bottomBun.setAction(new Action() {
 
@@ -146,7 +147,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("top_bun");
-				ClickableGraphic tpbn = new ClickableGraphic(300, 400 -(burger.size() * 12), 150, 150, "resources/top_bun.png");
+				ClickableGraphic tpbn = new ClickableGraphic(300, 400 -(burger.size() * 13), 150, 150, "resources/top_bun.png");
 				addObjects(tpbn);
 			}
 
@@ -157,7 +158,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("tomato");
-				ClickableGraphic tmto = new ClickableGraphic(300, 400 -(burger.size() * 12), 150, 150, "resources/tomato.png");
+				ClickableGraphic tmto = new ClickableGraphic(300, 400 -(burger.size() * 5), 150, 150, "resources/tomato.png");
 				addObjects(tmto);
 			}
 
@@ -179,7 +180,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("lettuce");
-				ClickableGraphic lttc = lettuce = new ClickableGraphic(300,400 -(burger.size() * 10),150, 150, "resources/lettuce.png");
+				ClickableGraphic lttc = lettuce = new ClickableGraphic(300,400 -(burger.size() * 5),150, 150, "resources/lettuce.png");
 				addObjects(lttc);
 			}
 
@@ -190,7 +191,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("cheese");
-				ClickableGraphic chse = cheese = new ClickableGraphic(300, 400 -(burger.size() * 10), 150, 150, "resources/cheese.png");
+				ClickableGraphic chse = cheese = new ClickableGraphic(300, 400 -(burger.size() * 5), 150, 150, "resources/cheese.png");
 				addObjects(chse);
 			}
 
@@ -238,14 +239,14 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			this.addObjects(new TextLabel(600, 50 + i * 50, 200, 40, test));
 		}
 	}
-
+	@Override
 	public String getScore() {
-		String scoreD = String.format( "%.2f", score);
+		String scoreD = String.format("%.2f", score);
 		return scoreD;
 	}
 
 	@Override
 	public void submitBurger() {
-		countdown = 0;
+		countdown = 0;		
 	}
 }

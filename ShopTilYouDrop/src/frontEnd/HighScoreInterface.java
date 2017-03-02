@@ -6,6 +6,6 @@ public interface HighScoreInterface extends Clickable{
 	
 	void setUsername(String user);
 	void setScore(double score);
-	int getScore();
+	double getScore();
 	String getUsername();
 }

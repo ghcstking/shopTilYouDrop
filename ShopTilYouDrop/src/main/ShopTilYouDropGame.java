@@ -36,8 +36,8 @@ public class ShopTilYouDropGame extends GUIApplication {
 		workerGame = new IramWorkerScreen(getWidth(), getHeight());
 		mainScreen = new MatthewMain(getWidth(), getHeight());
 	//	highscorescreen = new MatthewHighScoreScreen(getWidth(), getHeight());
-//		setScreen(highscorescreen);
 		setScreen(mainScreen);
+//		setScreen(mainScreen);
 	}
 
 }
