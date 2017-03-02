@@ -16,7 +16,7 @@ public class VickiProgressChecker implements EdwinProgress {
 	public static boolean checkBurger(ArrayList<String> order, ArrayList<String> product) {
 		if (order.size() == product.size()) {
 			for (int i = 0; i < order.size(); i++) {
-				if (order.get(i).equals(product.get(i))) {
+				if (!order.get(i).equals(product.get(i))) {
 					return false;
 				}
 			}
