@@ -51,10 +51,6 @@ public class DemoPlayer extends Component implements Victim {
 	 */
 	@Override
 	public void update(Graphics2D g) {
-		g.setColor(Color.white);
-		g.fillRect(0, 0, getWidth(), getHeight());
-		g.setColor(Color.BLACK);
-		g.drawString("player: "+status , 0, 18);
 
 	}
 

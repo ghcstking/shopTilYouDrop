@@ -3,9 +3,6 @@
  */
 package customer;
 
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-
 import gui6.GUIApplication;
 import gui6.Screen;
 
