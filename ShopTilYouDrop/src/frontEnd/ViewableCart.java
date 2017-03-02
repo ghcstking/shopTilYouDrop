@@ -43,5 +43,9 @@ public class ViewableCart extends Component {
 		this.cart.addItem(i);
 		
 	}
+	
+	public void removeItem(StoreItem i){
+		this.cart.removeItem(i);
+	}
 
 }

@@ -83,9 +83,16 @@ public class RyanCart implements CartInterface{
 	
 	public static void addToCart(ViewableCart c, StoreItem s) {
 		c.addItem(s);
-		RyanCart.shoppingCart.add(s.getDescription());
+		shoppingCart.add(s.getDescription());
 		c.update();
-		System.out.println(RyanCart.shoppingCart);
+		System.out.println(shoppingCart);
+	}
+	
+	public static void removeFromCart(ViewableCart c, StoreItem s){
+		c.removeItem(s);
+		shoppingCart.remove(s.getDescription());
+		c.update();
+		System.out.println(shoppingCart);
 	}
 	
 	public static void changeText(TextLabel a, String string) {
@@ -95,6 +102,12 @@ public class RyanCart implements CartInterface{
 		}catch(InterruptedException e){
 			e.printStackTrace();
 		}
+		
+	}
+
+	@Override
+	public void removeItem(StoreItem i) {
+		// TODO Auto-generated method stub
 		
 	}
 	
