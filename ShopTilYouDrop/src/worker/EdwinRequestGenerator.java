@@ -1,7 +1,6 @@
 package worker;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class EdwinRequestGenerator implements VickiOrder {
 

@@ -7,28 +7,21 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 
-import gui6.Screen;
 import gui6.components.Action;
 import gui6.components.Button;
-import gui6.components.Graphic;
-import gui6.components.TextArea;
-import gui6.components.TextLabel;
+import gui6.Screen;
 import gui6.components.Visible;
-import main.ShopTilYouDropGame;
 
-public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseListener{
+public class Testingpurposesonly extends Screen implements MouseMotionListener,MouseListener{
+
 
 	private Button button;
-	private Button play;
-	private Graphic bg;
-	private Graphic white;
-	private TextLabel role;
-	private TextArea instructions;
 
-	public MatthewWorkerB(int width, int height) {
+	public Testingpurposesonly(int width, int height) {
 		super(width, height);
 	}
 
+	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		
@@ -36,31 +29,12 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
-		
-		bg = new Graphic(0,0,"resources/background.png");
-		white = new Graphic (90, 75, "resources/white.png");
-		role = new TextLabel(325, 15, 300, 100, "Worker");
-		instructions = new TextArea(100, 125, 600, 400, 
-				"You work at a burger place."
-				+ " Make the customer's order EXACTLY as shown to earn money!");
-		instructions.setSize(30);
-		button = new Button(25,375,300,100,"Main Menu",Color.blue, new Action(){
+		button = new Button(40,50,100,30,"Button",new Color(0,76,153), new Action(){
 			public void act(){
-				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
+				MatthewChangeScreen.game.setScreen(MatthewChangeScreen.mm);
 			}
 		});
-		play = new Button(615, 375, 100, 100, "Play", Color.blue, new Action() {
-			public void act() {
-				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerGame);
-				ShopTilYouDropGame.workerGame.begin();
-			}
-		});
-		viewObjects.add(bg);
-		viewObjects.add(white);
-		viewObjects.add(role);
-		viewObjects.add(instructions);
 		viewObjects.add(button);
-		viewObjects.add(play);
 	}
 
 	public MouseListener getMouseListener(){
@@ -85,9 +59,6 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 	public void mouseClicked(MouseEvent e) {
 		if(button.isHovered(e.getX(), e.getY())){
 			button.act();
-		}
-		if(play.isHovered(e.getX(), e.getY())){
-			play.act();
 		}
 	}
 
@@ -114,5 +85,4 @@ public class MatthewWorkerB extends Screen implements MouseMotionListener,MouseL
 		// TODO Auto-generated method stub
 
 	}
-
 }

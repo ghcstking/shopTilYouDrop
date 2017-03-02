@@ -34,8 +34,7 @@ public class MatthewCustomerB extends Screen implements MouseMotionListener,Mous
 		// TODO Auto-generated method stub
 		
 	}
-
-
+	
 	@Override
 	public void initObjects(ArrayList<Visible> viewObjects) {
 		

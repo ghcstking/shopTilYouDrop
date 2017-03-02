@@ -1,3 +1,4 @@
+
 package frontEnd;
 /**@author Iram Shahed
  **/
@@ -184,10 +185,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	}
 
-	@Override
-	public void cash() {
-		// cashamount =
-	}
 
 	@Override
 	public void displayPrice() {
@@ -199,6 +196,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void submitBurger() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public double getScore() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
