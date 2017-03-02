@@ -69,11 +69,12 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				
 				StoreItem s = createItem("Valentino Dress",200.0);
-				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Dress");
-				RyanCart.changeText(price, "200.0");
-				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
-				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
+//				RyanCart.addToCart(cart,s);
+//				RyanCart.changeText(name, "Dress");
+//				RyanCart.changeText(price, "200.0");
+//				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+//				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
+				RyanCart.removeFromCart(cart, s);
 
 			}
 
@@ -219,6 +220,33 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Chair
+		viewObjects.add(new ClickSpace(440,170,40,40) {
+
+			@Override
+			public void actOnClick() {
+				StoreItem s = createItem("Wooden Chair", 200.0);
+				RyanCart.addToCart(cart,s);
+				RyanCart.changeText(name, "Wooden Chair");
+				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+		});
+		
+		//
+		viewObjects.add(new ClickSpace(440,170,40,40) {
+
+			@Override
+			public void actOnClick() {
+				StoreItem s = createItem("Wooden Chair", 200.0);
+				RyanCart.addToCart(cart,s);
+				RyanCart.changeText(name, "Wooden Chair");
+				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+		});
+		
 		viewObjects.add(new ClickSpace(440,170,40,40) {
 
 			@Override
