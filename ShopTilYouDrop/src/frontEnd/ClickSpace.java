@@ -6,6 +6,7 @@ package frontEnd;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
+import customer.Money;
 import customer.components.Stranger;
 import gui6.components.Clickable;
 import gui6.components.Component;
@@ -47,9 +48,12 @@ public abstract class ClickSpace extends Component implements Clickable {
 	public void act(){
 		//code for doing something with the stranger happens here
 		//stranger.
+		Money.value -= 100;
 		actOnClick();
+		System.out.println(Money.value);
 	}
 
+	
 
 
 	/* (non-Javadoc)
