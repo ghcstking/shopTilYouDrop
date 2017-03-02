@@ -12,10 +12,10 @@ public class DanielFreeMoney {
 
 	public static void main(String[] args){
 		game = new SammyajitCustomerScreen(100, 100);
-		placeMoney();
+		placeMoney(game);
 	}
 
-	public static void placeMoney(){
+	public static void placeMoney(SammyajitCustomerScreen game){
 		moneyAvailable = new ArrayList<Money>();
 		int[] values = {5,5,5,5,5,10,10,10,10,20,20,20,50,50,100};
 		int time = 5;			
