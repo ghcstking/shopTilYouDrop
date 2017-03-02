@@ -28,7 +28,6 @@ public class ShopTilYouDropGame extends GUIApplication {
 		app.start();
 	}
 
-
 	@Override
 	public void initScreen() {
 		customerScreen = new MatthewCustomerB(getWidth(), getHeight());
@@ -36,9 +35,15 @@ public class ShopTilYouDropGame extends GUIApplication {
 		customerGame = new SammyajitCustomerScreen(getWidth(), getHeight());
 		workerGame = new IramWorkerScreen(getWidth(), getHeight());
 		mainScreen = new MatthewMain(getWidth(), getHeight());
+<<<<<<< HEAD
 		highscorescreen = new MatthewHighScoreScreen(getWidth(), getHeight());
 		setScreen(highscorescreen);
 //		setScreen(mainScreen);
+=======
+	//	highscorescreen = new MatthewHighScoreScreen(getWidth(), getHeight());
+//		setScreen(highscorescreen);
+		setScreen(mainScreen);
+>>>>>>> branch 'develop' of https://github.com/ghcstking/shopTilYouDrop
 	}
 
 }
