@@ -219,7 +219,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		});
 		
 		//Chair
-		viewObjects.add(new ClickSpace(545,185,40,50) {
+		viewObjects.add(new ClickSpace(440,170,40,40) {
 
 			@Override
 			public void actOnClick() {
@@ -232,8 +232,9 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 		});
 		
+		
 		//Checkout
-		viewObjects.add(new ClickSpace(437,110,155,70) {
+		viewObjects.add(new ClickSpace(350,110,140,50) {
 			
 			@Override
 			public void actOnClick() {
@@ -268,12 +269,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 
 
-	private void addToCart(StoreItem s) {
-		cart.addItem(s);
-		RyanCart.shoppingCart.add(s.getDescription());
-		cart.update();
-		System.out.println(RyanCart.shoppingCart);
-	}
+	
 	
 	public StoreItem createItem(String str, double d){
 		StoreItem s = new StoreItem(){
