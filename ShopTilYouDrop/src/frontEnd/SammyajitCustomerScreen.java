@@ -74,7 +74,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 //				RyanCart.changeText(price, "200.0");
 //				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 //				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
-				RyanCart.removeFromCart(cart, s);
+				//RyanCart.removeFromCart(cart, );
 
 			}
 
@@ -233,33 +233,127 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 		});
 		
-		//
-		viewObjects.add(new ClickSpace(440,170,40,40) {
+		//Lock
+		viewObjects.add(new ClickSpace(445,220,40,40) {
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Wooden Chair", 200.0);
+				StoreItem s = createItem("Lock", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Wooden Chair");
+				RyanCart.changeText(name, "Lock");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
 		
-		viewObjects.add(new ClickSpace(440,170,40,40) {
+		//Cellphone
+		viewObjects.add(new ClickSpace(445,268,40,40) {
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Wooden Chair", 200.0);
+				StoreItem s = createItem("Cellphone", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Wooden Chair");
+				RyanCart.changeText(name, "Cellphone");
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
 		
+		//Skateboard
+		viewObjects.add(new ClickSpace(410,327,80,30) {
+
+			@Override
+			public void actOnClick() {
+				StoreItem s = createItem("Skateboard", 200.0);
+				RyanCart.addToCart(cart,s);
+				RyanCart.changeText(name, "Skateboard");
+				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+		});
+		
+		//Bike
+				viewObjects.add(new ClickSpace(305,243,45,85) {
+
+					@Override
+					public void actOnClick() {
+						StoreItem s = createItem("Bike", 200.0);
+						RyanCart.addToCart(cart,s);
+						RyanCart.changeText(name, "Bike");
+						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+				});
+				
+				//Toys
+				viewObjects.add(new ClickSpace(305,170,40,40) {
+
+					@Override
+					public void actOnClick() {
+						StoreItem s = createItem("Toys", 200.0);
+						RyanCart.addToCart(cart,s);
+						RyanCart.changeText(name, "Toys");
+						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+				});
+				
+				//Flowers
+				viewObjects.add(new ClickSpace(255,170,45,45) {
+
+					@Override
+					public void actOnClick() {
+						StoreItem s = createItem("Flowers", 200.0);
+						RyanCart.addToCart(cart,s);
+						RyanCart.changeText(name, "Flowers");
+						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+				});
+				
+				//Cactus
+				viewObjects.add(new ClickSpace(255,220,46,46) {
+
+					@Override
+					public void actOnClick() {
+						StoreItem s = createItem("Cactus", 200.0);
+						RyanCart.addToCart(cart,s);
+						RyanCart.changeText(name, "Cactus");
+						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+				});
+				
+				//Soccer Ball
+				viewObjects.add(new ClickSpace(255,270,46,46) {
+
+					@Override
+					public void actOnClick() {
+						StoreItem s = createItem("Soccer Ball", 200.0);
+						RyanCart.addToCart(cart,s);
+						RyanCart.changeText(name, "Soccer Ball");
+						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
+
+				});
+			
+				
+				viewObjects.add(new ClickSpace(570,370,140,50) {
+					
+					@Override
+					public void actOnClick() {
+						
+					}
+					
+				});
 		
 		//Checkout
 		viewObjects.add(new ClickSpace(350,110,140,50) {
