@@ -48,6 +48,7 @@ public abstract class ClickSpace extends Component implements Clickable {
 	public void act(){
 		//code for doing something with the stranger happens here
 		//stranger.
+		//
 		actOnClick();
 		if(stranger != null){
 			Money.value -= 100;
