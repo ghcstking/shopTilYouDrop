@@ -24,8 +24,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	private TextLabel name;
 	private TextLabel price;
 	private TextLabel desc;
+	private TextLabel vCart;
 	
 	private Graphic g;
+	
+	
 	
 
 
@@ -44,7 +47,9 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	public void initAllObjects(ArrayList<Visible> arg0) {
 		name = new TextLabel(515,103,300,40,"Item");
 		price = new TextLabel(515,158,100,40,"Price");
-		desc = new TextLabel(515,210,200,50,"Description");
+		desc = new TextLabel(515,210,200,100,"Description");
+		vCart = new TextLabel(10,350,600,200,"cart");
+		
 		
 		cart=new ViewableCart(10,400,new RyanCart(10,50));
 		t = new TextLabel(10, 50, 1000, 40, "You are a customer. Pick items to put in cart.");
@@ -55,6 +60,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 
 		g=new Graphic(5,100,.82,"resources/CustomerBackground.png");
+		
+
 
 
 
@@ -91,6 +98,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
+				//vCart.setText();
 			}
 
 		});
@@ -368,6 +376,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		viewObjects.add(name);
 		viewObjects.add(price);
 		viewObjects.add(desc);
+		viewObjects.add(vCart);
 
 
 
@@ -389,7 +398,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		
 	}
 
-
+//ADD REMOVE
 
 	
 	

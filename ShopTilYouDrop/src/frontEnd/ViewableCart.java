@@ -15,6 +15,8 @@ import gui6.components.Component;
  */
 public class ViewableCart extends Component {
 
+	
+	
 	/**
 	 * @param x
 	 * @param y
