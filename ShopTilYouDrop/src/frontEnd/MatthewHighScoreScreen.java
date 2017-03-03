@@ -19,7 +19,6 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 	private int y;
 	private Button restart;
 	private Button home;
-	private static String user;
 	private static TextLabel title;
 	
 	public MatthewHighScoreScreen(int width, int height) {
@@ -74,17 +73,17 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 			viewObjects.add(rank);
 			y+=50;
 		}
-//		restart = new Button(100, 700, 70, 70, "Play Again", Color.blue, new Action(){
-//			public void act(){
-//				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerScreen);
-//			}
-//		});
-//		home = new Button(700, 700, 70, 70, "Home", Color.blue, new Action(){
-//			public void act(){
-//				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
-//			}
-//		});
-//		viewObjects.add(restart);
-//		viewObjects.add(home);
+		restart = new Button(100, 700, 70, 70, "Play Again", Color.blue, new Action(){
+			public void act(){
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerScreen);
+			}
+		});
+		home = new Button(700, 700, 70, 70, "Home", Color.blue, new Action(){
+			public void act(){
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
+			}
+		});
+		viewObjects.add(restart);
+		viewObjects.add(home);
 	}
 }
