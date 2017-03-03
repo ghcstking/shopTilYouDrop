@@ -49,7 +49,7 @@ public abstract class ClickSpace extends Component implements Clickable {
 		//code for doing something with the stranger happens here
 		//stranger.
 
-		SammyajitCustomerScreen.bdget +=-500;
+		SammyajitCustomerScreen.bdget +=-500; 
 		actOnClick();
 		//System.out.println(SammyajitCustomerScreen.bdget);
 
