@@ -1,15 +1,20 @@
 package frontEnd;
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
+import customer.DanielFreeMoney;
 import customer.DemoPlayer;
 import customer.RyanCart;
 import customer.StoreItem;
 import customer.components.Stranger;
+import gui6.components.Action;
+import gui6.components.Button;
 import gui6.components.ClickableGraphic;
 import gui6.components.Graphic;
+import gui6.components.TextArea;
 import gui6.components.TextLabel;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
@@ -21,13 +26,17 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	private ClickableGraphic cg;
 	private ViewableCart cart;
 	
-	private TextLabel name;
+	private TextLabel budget;
 	private TextLabel price;
-	private TextLabel desc;
+	private TextArea desc;
 	private TextLabel vCart;
 	
 	private Graphic g;
 	
+	private ClickableGraphic button;
+	
+	//String scoreD = String.format("%.2f", score);
+	 public static double bdget=4000.0;
 	
 	
 
@@ -45,9 +54,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> arg0) {
-		name = new TextLabel(515,103,300,40,"Item");
+		
+		budget = new TextLabel(515,103,300,40,"$"+bdget);
 		price = new TextLabel(515,158,100,40,"Price");
-		desc = new TextLabel(515,210,200,100,"Description");
+		desc = new TextArea(515,210,300,195,"Description");
+		desc.setSize(20);
 		vCart = new TextLabel(10,350,600,200,"cart");
 		
 		
@@ -61,9 +72,16 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 		g=new Graphic(5,100,.82,"resources/CustomerBackground.png");
 		
+		button = new ClickableGraphic(600,375,140,50,"resources/button.png");
+		button.setAction(new Action() {
 
+			
+			@Override
+			public void act() {
+				RyanCart.removeFromCart(cart, RyanCart.shoppingCart.get(RyanCart.shoppingCart.size()-1));
+			}
 
-
+		});
 
 		viewObjects.add(g);
 		//g.setSize();
@@ -76,11 +94,11 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				
 				StoreItem s = createItem("Valentino Dress",200.0);
-//				RyanCart.addToCart(cart,s);
-//				RyanCart.changeText(name, "Dress");
-//				RyanCart.changeText(price, "200.0");
-//				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
-//				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
+				RyanCart.addToCart(cart,s);
+				RyanCart.changeText(budget, "$"+bdget);
+				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
 				//RyanCart.removeFromCart(cart, );
 
 			}
@@ -94,7 +112,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Yeezys", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Yeezys");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
@@ -110,7 +128,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Flat Screen TV", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Flat Screen TV");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
@@ -124,7 +142,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Cheap TV", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Cheap TV");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -137,7 +155,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Mixtape", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Mixtape");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -150,7 +168,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Harry Potter book", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Harry Potter book");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -163,7 +181,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("School Supplies", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "School Supplies");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -176,7 +194,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Lipstick", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Lipstick");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -190,7 +208,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Makeup", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Makeup");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -204,7 +222,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Necklace", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Necklace");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -219,7 +237,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Diamond Ring", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Diamond Ring");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -233,7 +251,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Wooden Chair", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Wooden Chair");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -247,7 +265,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Lock", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Lock");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -261,7 +279,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Cellphone", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Cellphone");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -275,7 +293,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				StoreItem s = createItem("Skateboard", 200.0);
 				RyanCart.addToCart(cart,s);
-				RyanCart.changeText(name, "Skateboard");
+				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -289,7 +307,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Bike", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Bike");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -303,7 +321,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Toys", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Toys");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -317,7 +335,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Flowers", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Flowers");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -331,7 +349,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Cactus", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Cactus");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -345,7 +363,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Soccer Ball", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Soccer Ball");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -360,7 +378,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Christmas tree", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Christmas tree");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -374,7 +392,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Volleyball", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Volleyball");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -388,7 +406,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Balloons", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Balloons");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -402,8 +420,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Balloons", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Balloons");
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(budget, "$"+bdget);
+					RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
@@ -416,7 +434,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Vacuum Cleaner", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Vacuum Cleaner");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -430,7 +448,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Medicine", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Medicine");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -444,7 +462,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Ketchup", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Ketchup");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -458,7 +476,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Frying pan", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Frying pan");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -472,7 +490,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 					public void actOnClick() {
 						StoreItem s = createItem("Purse", 200.0);
 						RyanCart.addToCart(cart,s);
-						RyanCart.changeText(name, "Purse");
+						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -481,14 +499,14 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				
 
 				
-				viewObjects.add(new ClickSpace(570,370,140,50) {
-					
-					@Override
-					public void actOnClick() {
-						
-					}
-					
-				});
+//				viewObjects.add(new ClickSpace(570,370,140,50) {
+//					
+//					@Override
+//					public void actOnClick() {
+//						
+//					}
+//					
+//				});
 		
 		//Checkout
 		viewObjects.add(new ClickSpace(350,110,140,50) {
@@ -500,13 +518,14 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			
 		});
 		viewObjects.add(cart);
-		viewObjects.add(name);
+		viewObjects.add(budget);
 		viewObjects.add(price);
 		viewObjects.add(desc);
 		viewObjects.add(vCart);
+		viewObjects.add(button);
 
 
-
+//
 		DemoPlayer demo = new DemoPlayer(100,300,100,20);
 		viewObjects.add(demo);
 		for(int i=0;i<viewObjects.size();i++){
@@ -520,6 +539,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				
 			}
 		}
+		
+		//DanielFreeMoney.placeMoney(410,327);
 
 
 		
