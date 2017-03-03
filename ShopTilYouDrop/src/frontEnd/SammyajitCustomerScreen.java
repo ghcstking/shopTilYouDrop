@@ -72,7 +72,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 		budget = new TextLabel(515,103,300,40,"$"+bdget);
 		price = new TextLabel(515,158,100,40,"Price");
-		desc = new TextArea(515,210,290,195,"Description");
+		desc = new TextArea(515,210,290,165,"Description");
 		desc.setSize(20);
 		vCart = new TextArea(10,240,600,200,"");
 
@@ -689,12 +689,6 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			}
 		}
-
-
-
-
-
-
 
 
 	}
