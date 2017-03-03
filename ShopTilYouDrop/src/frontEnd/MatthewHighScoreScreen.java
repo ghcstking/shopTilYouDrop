@@ -53,7 +53,7 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
-		title = new TextLabel(300, 50, 500, 40, "High Scores");
+		title = new TextLabel(300, 50, 500, 40, "GAME OVER");
 		viewObjects.add(title);
 		scores = new ArrayList<HighScoreInterface>();
 		scores.add(new Player("",0.0));

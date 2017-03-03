@@ -32,7 +32,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private TextLabel priceLabel;
 	private TextLabel gameOver;
 	private TextLabel timeLabel;
-	private ClickableGraphic highScoreB;
+	private Button highScoreB;
 	private ClickableGraphic bottomBun;
 	private ClickableGraphic tomato;
 	private ClickableGraphic topBun;
@@ -47,7 +47,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ArrayList<String> request;
 	private ArrayList<String> burger;
 	private int countdown;
-	private static double score;
+	public static double score;
 	public static double finalScore;
 
 	public IramWorkerScreen(int width, int height) {
@@ -73,7 +73,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}//
+		}
 		if(progress.checkBurger(request, reverseArrayList(burger))) {
 			score += progress.price(request);
 			score += gen.tip();
@@ -100,23 +100,31 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	}
 
 	public void gameOver() {
-		viewObjects.clear();
-		gameOver = new TextLabel(200, 0, 500, 300, "GAME OVER");
-		gameOver.setSize(75);
-		scoreLabel.setText("You scored $" + getScore());
-		scoreLabel.setX(310);
-		scoreLabel.setY(300);
+//		viewObjects.clear();
+//		gameOver = new TextLabel(200, 0, 500, 300, "GAME OVER");
+//		gameOver.setSize(75);
+//		scoreLabel.setText("You scored $" + getScore());
+//		scoreLabel.setX(310);
+//		scoreLabel.setY(300);
 		finalScore = score;
-		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
-		highScoreB.setAction(new Action() {
-			public void act() {
-				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
-			}
-		});
-		update();
-		viewObjects.add(gameOver);
-		viewObjects.add(scoreLabel);
-		viewObjects.add(highScoreB);
+		ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.highscorescreen);
+//		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
+//		highScoreB.setAction(new Action() {
+//			public void act() {
+//				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.highscorescreen);
+//			}
+//		});
+//		highScoreB = new Button(575, 400, 200, 100, "Restart", Color.blue, new Action(){
+//		viewObjects.add(submitBurger);
+//		submitBurger.setAction(new Action() {
+//			public void act(){
+//				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.highscorescreen);
+//			}
+//		});
+//		update();
+//		viewObjects.add(gameOver);
+//		viewObjects.add(scoreLabel);
+//		viewObjects.add(highScoreB);
 	}
 
 	public void resetBurger() {
