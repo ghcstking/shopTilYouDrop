@@ -69,7 +69,7 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 				}
 			}
 			scores.get(i).setUsername("User"+i);
-			scores.get(i).setScore(IramWorkerScreen.score);
+			scores.get(i).setScore(IramWorkerScreen.finalScore);
 			rank = new TextLabel(100, y, 600, 50, (0+1)+"            |            "+scores.get(0).getUsername()+"            |            "+scores.get(0).getScore());
 			viewObjects.add(rank);
 			y+=50;

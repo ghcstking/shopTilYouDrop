@@ -6,6 +6,7 @@ public class ClickableGraphic extends Graphic implements Clickable{
 	
 	public void setAction(Action a){
 		this.action = a;
+		update();
 	}
 	
 	public ClickableGraphic(int x, int y, String imageLocation) {
@@ -25,6 +26,7 @@ public class ClickableGraphic extends Graphic implements Clickable{
 	
 	public boolean isHovered(int x, int y){
 		return x>getX() && x<getX()+getWidth() && y > getY() && y<getY()+getHeight();
+		
 	}
 	
 	public void act(){

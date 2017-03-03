@@ -63,7 +63,7 @@ public class MatthewMain extends ClickableScreen implements Runnable, KeyListene
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerScreen);
 			}
 		});
-		arrow = new ClickableGraphic(250,1000,1.0,"resources/arrow.png");
+		arrow = new ClickableGraphic(250,275,1.0,"resources/arrow.png");
 		viewObjects.add(bg);
 		viewObjects.add(white);
 		viewObjects.add(title);
@@ -82,27 +82,24 @@ public class MatthewMain extends ClickableScreen implements Runnable, KeyListene
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_ENTER){
+			customer.act();
+		}
 		if(cBool==true && wBool==false && e.getKeyCode() == KeyEvent.VK_ENTER){
 			customer.act();
-			System.out.println("Enter Key Pressed. Go to customer screen");
 		}
 		else if(wBool == true && cBool == false && e.getKeyCode() == KeyEvent.VK_ENTER){
 			worker.act();
-			System.out.println("Enter Key pressed. Go to worker screen");
 		}
-		if(e.getKeyCode() == KeyEvent.VK_UP){ 
-			System.out.println("Up Arrow Key pressed");
+		if(e.getKeyCode() == KeyEvent.VK_UP){
 			cBool = true;
 			wBool = false;
 			arrow.setY(275);
-			//customer.act();
 		}
-		 if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
-			System.out.println("Down Arrow Key pressed");
+		if(e.getKeyCode() == KeyEvent.VK_DOWN){ 
 			wBool = true;
 			cBool = false;
 			arrow.setY(350);
-			//worker.act();
 		}
 	}
 
@@ -115,6 +112,5 @@ public class MatthewMain extends ClickableScreen implements Runnable, KeyListene
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		System.out.println("A key was typed!");
 	}
 }

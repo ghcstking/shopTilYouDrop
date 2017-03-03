@@ -45,7 +45,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ArrayList<String> burger;
 	private int countdown;
 	private static double score;
-	private static double finalScore;
+	public static double finalScore;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -105,15 +105,15 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		scoreLabel.setY(300);
 		finalScore = score;
 		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
-		update();
 		highScoreB.setAction(new Action() {
 
-			@Override
+			
 			public void act() {
-				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.highscorescreen);
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
 
 		});
+		update();
 		viewObjects.add(gameOver);
 		viewObjects.add(scoreLabel);
 		viewObjects.add(highScoreB);
@@ -248,11 +248,5 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	@Override
 	public void submitBurger() {
 		countdown = 0;		
-	}
-
-	@Override
-	public void finalScore() {
-		// TODO Auto-generated method stub
-		
 	}
 }
