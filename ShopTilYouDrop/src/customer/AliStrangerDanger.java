@@ -1,13 +1,12 @@
 package customer;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-//import java.util.List;
+
 
 import customer.components.Stranger;
-//import frontEnd.ClickSpace;
 import gui6.components.Visible;
 import gui6.screens.ClickableScreen;
-//import gui6.components.ClickableGraphic;
+
 
 
 public class AliStrangerDanger extends ClickableScreen implements Runnable {
@@ -46,13 +45,11 @@ public class AliStrangerDanger extends ClickableScreen implements Runnable {
 		strangers.add(new Stranger(demo, 120,100,25,20));
 		strangers.add(new Stranger(demo, 140,120,25,20));
 		strangers.add(new Stranger(demo, 160,100,25,20));
-		//we have coordinates, so we'll add more 
-		//strangers at the coordinates of items
+
 		viewObjects.add(demo);
 		viewObjects.addAll(strangers);
 		
-		// make a new clickable graphics here, in the constructor you need to pass in the image
-		// add it to viewObjects
+
 	}
 }
 
