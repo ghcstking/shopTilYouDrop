@@ -1,3 +1,4 @@
+
 package frontEnd;
 /**@author Iram Shahed
  **/
@@ -38,12 +39,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic pickles;
 	private ClickableGraphic submitBurger;
 	private ClickableGraphic clearBurger;
-	private int countdown;
-	private static double score;
 	private EdwinRequestGenerator gen;
 	private VickiProgressChecker progress;
 	private ArrayList<String> request;
 	private ArrayList<String> burger;
+	private int countdown;
+	private static double score;
+	private static double finalScore;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -101,16 +103,17 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		scoreLabel.setText("You scored $" + getScore());
 		scoreLabel.setX(310);
 		scoreLabel.setY(300);
+		finalScore = score;
 		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
 		update();
-//		highScoreB.setAction(new Action() {
-//
-//			@Override
-//			public void act() {
-//				// set screen
-//			}
-//
-//		});
+		highScoreB.setAction(new Action() {
+
+			@Override
+			public void act() {
+				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.highscorescreen);
+			}
+
+		});
 		viewObjects.add(gameOver);
 		viewObjects.add(scoreLabel);
 		viewObjects.add(highScoreB);
@@ -245,5 +248,11 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	@Override
 	public void submitBurger() {
 		countdown = 0;		
+	}
+
+	@Override
+	public void finalScore() {
+		// TODO Auto-generated method stub
+		
 	}
 }
