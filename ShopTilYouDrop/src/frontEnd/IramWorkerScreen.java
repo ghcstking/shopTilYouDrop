@@ -1,4 +1,3 @@
-
 package frontEnd;
 /**@author Iram Shahed
  **/
@@ -97,10 +96,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	public void gameOver() {
 		viewObjects.clear();
-		gameOver = new TextLabel(325, 30, 300, 300, "GAME OVER");
-		scoreLabel.setX(325);
-		scoreLabel.setY(340);
-		highScoreB = new ClickableGraphic(400, 425, 200, 100, "resources/hs.png");
+		gameOver = new TextLabel(200, 0, 500, 300, "GAME OVER");
+		gameOver.setSize(75);
+		scoreLabel.setText("You scored $" + getScore());
+		scoreLabel.setX(310);
+		scoreLabel.setY(300);
+		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
 		update();
 //		highScoreB.setAction(new Action() {
 //
@@ -124,10 +125,10 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		gen = new EdwinRequestGenerator();
 		progress = new VickiProgressChecker();
 		request = gen.generate(this);
-		title = new TextLabel(300, 5, 300, 75, "Burger Maker");
+		title = new TextLabel(300, 5, 300, 90, "Burger Maker");
 		timeLabel = new TextLabel(10, 50, 200, 75, "");
 		scoreLabel = new TextLabel(10, 80, 300, 75,"Money made: $" + getScore());
-		priceLabel = new TextLabel(10, 110, 200, 75, "Price: " + String.format( "%.2f",progress.price(request)));
+		priceLabel = new TextLabel(10, 110, 200, 75, "Price: $" + String.format( "%.2f",progress.price(request)));
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		bottomBun.setAction(new Action() {
 
@@ -185,7 +186,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			}
 
 		});
-		cheese = new ClickableGraphic(325, 500, 100, 100, "resources/cheese.png");
+		cheese = new ClickableGraphic(335, 500, 100, 100, "resources/cheese.png");
 		cheese.setAction(new Action() {
 
 			@Override
