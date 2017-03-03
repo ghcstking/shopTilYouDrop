@@ -57,7 +57,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		
 		budget = new TextLabel(515,103,300,40,"$"+bdget);
 		price = new TextLabel(515,158,100,40,"Price");
-		desc = new TextArea(515,210,300,195,"Description");
+		desc = new TextArea(515,210,290,195,"Description");
 		desc.setSize(20);
 		vCart = new TextArea(10,240,600,200,"");
 		
@@ -107,10 +107,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			public void actOnClick() {
 				
 				
-				StoreItem s = createItem("Valentino Dress",200.0);
+				StoreItem s = createItem("Valentino Dress",100.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "100.0");
 				RyanCart.changeText(desc, "An expensive Valentino dress that Kim Kardashian wore. That means it's worth less.");
 				String listString = String.join(", ", RyanCart.shoppingCart);
 				RyanCart.changeText(vCart,listString);
@@ -126,10 +126,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			
 			public void actOnClick() {
-				StoreItem s = createItem("Yeezys", 200.0);
+				StoreItem s = createItem("Yeezys", 300.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "300.0");
 				RyanCart.changeText(desc, "Shoes you couldn't afford at Foot Locker.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -144,10 +144,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Flat Screen TV", 200.0);
+				StoreItem s = createItem("Flat Screen TV", 500.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "500.0");
 				RyanCart.changeText(desc, "A fancy 60' TV to Netflix and chill.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -175,10 +175,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Mixtape", 200.0);
+				StoreItem s = createItem("Mixtape", 50.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "50.0");
 				RyanCart.changeText(desc, "Kanye's new mixtape. Actually, his only mixtape.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -190,10 +190,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Harry Potter book", 200.0);
+				StoreItem s = createItem("Harry Potter book", 30.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "30.0");
 				RyanCart.changeText(desc, "One of the books from the Harry Potter series to read for the 100th time.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -205,10 +205,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("School Supplies", 200.0);
+				StoreItem s = createItem("School Supplies", 100.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "100.0");
 				RyanCart.changeText(desc,"School Supplies that your child always seems to lose.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -220,10 +220,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Lipstick", 200.0);
+				StoreItem s = createItem("Lipstick", 50.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "50.0");
 				RyanCart.changeText(desc, "Lipstick in case you ever find a girlfriend.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -236,10 +236,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Makeup", 200.0);
+				StoreItem s = createItem("Makeup", 20.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "20.0");
 				RyanCart.changeText(desc,"Makeup because you're ugly." );
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -252,10 +252,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Necklace", 200.0);
+				StoreItem s = createItem("Necklace", 100.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "100.0");
 				RyanCart.changeText(desc, "A real necklace. Not made in China.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -269,10 +269,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Diamond Ring", 200.0);
+				StoreItem s = createItem("Diamond Ring", 600.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "600.0");
 				
 				RyanCart.changeText(desc, "24 karat magic in the air.");
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -285,10 +285,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Wooden Chair", 200.0);
+				StoreItem s = createItem("Wooden Chair", 140.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "140.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -301,10 +301,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Lock", 200.0);
+				StoreItem s = createItem("Lock", 20.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "20.0");
 				RyanCart.changeText(desc, "A Brooklyn Tech necessity - the infamous gym lock.");
 				
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -317,10 +317,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Cellphone", 200.0);
+				StoreItem s = createItem("Cellphone", 80.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "80.0");
 				
 				RyanCart.changeText(desc, "Is that a flip phone? What time period are you from?");
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -333,10 +333,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 			@Override
 			public void actOnClick() {
-				StoreItem s = createItem("Skateboard", 200.0);
+				StoreItem s = createItem("Skateboard", 90.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
-				RyanCart.changeText(price, "200.0");
+				RyanCart.changeText(price, "90.0");
 				
 				RyanCart.changeText(desc, "Skateboards make you look cooler. That's a fact.");
 				String listString = String.join(", ", RyanCart.shoppingCart);
@@ -349,10 +349,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Bike", 200.0);
+						StoreItem s = createItem("Bike", 90.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "90.0");
 						RyanCart.changeText(desc, "'Look, ma! No hands!' Those were your last words.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -365,10 +365,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Toys", 200.0);
+						StoreItem s = createItem("Toys", 30.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "30.0");
 						
 						RyanCart.changeText(desc, "You've got a friend in me!");
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -381,10 +381,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Flowers", 200.0);
+						StoreItem s = createItem("Flowers", 50.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "50.0");
 						
 						RyanCart.changeText(desc, "Flowers for your loved one. Smells...like a breakup.");
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -397,10 +397,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Cactus", 200.0);
+						StoreItem s = createItem("Cactus", 20.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "20.0");
 						RyanCart.changeText(desc, "Who the heck buys a cactus?");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -413,10 +413,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Soccer Ball", 200.0);
+						StoreItem s = createItem("Soccer Ball", 20.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "20.0");
 						RyanCart.changeText(desc, "A soccer ball. You're probably going to lose it.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -430,10 +430,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Christmas tree", 200.0);
+						StoreItem s = createItem("Christmas tree", 100.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "100.0");
 						RyanCart.changeText(desc, "It's never too early to buy a Christmas tree.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -446,10 +446,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Volleyball", 200.0);
+						StoreItem s = createItem("Volleyball", 70.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "70.0");
 						RyanCart.changeText(desc, "A colorful beach ball. In case you ever go to the beach. Or leave your house.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -462,10 +462,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Balloons", 200.0);
+						StoreItem s = createItem("Balloons", 60.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "60.0");
 						RyanCart.changeText(desc, "A bunch of balloons. Better let go of one to see how high it goes.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -478,10 +478,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Balloons", 200.0);
+						StoreItem s = createItem("Balloons", 20.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-					RyanCart.changeText(price, "200.0");
+					RyanCart.changeText(price, "20.0");
 						RyanCart.changeText(desc, "A bunch of balloons. Better let go of one to see how high it goes.");
 						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
@@ -493,10 +493,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Vacuum Cleaner", 200.0);
+						StoreItem s = createItem("Vacuum Cleaner", 100.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "100.0");
 						RyanCart.changeText(desc, "A vacuum cleaner. Time to go ghostbusting like Luigi.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -509,10 +509,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Medicine", 200.0);
+						StoreItem s = createItem("Medicine", 20.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "20.0");
 						RyanCart.changeText(desc, "Medicine. Yuck.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -525,10 +525,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Ketchup", 200.0);
+						StoreItem s = createItem("Ketchup", 10.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "10.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -541,10 +541,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Frying pan", 200.0);
+						StoreItem s = createItem("Frying pan", 20.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "20.0");
 						RyanCart.changeText(desc, "A frying pan - the most lethal weapon.");
 					
 						String listString = String.join(", ", RyanCart.shoppingCart);
@@ -557,10 +557,10 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 
 					@Override
 					public void actOnClick() {
-						StoreItem s = createItem("Purse", 200.0);
+						StoreItem s = createItem("Purse", 150.0);
 						RyanCart.addToCart(cart,s);
 						RyanCart.changeText(budget, "$"+bdget);
-						RyanCart.changeText(price, "200.0");
+						RyanCart.changeText(price, "150.0");
 						RyanCart.changeText(desc, "Don't get a lady angry, or she'll whack you with her purse.");
 						
 						String listString = String.join(", ", RyanCart.shoppingCart);
