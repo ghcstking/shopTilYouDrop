@@ -8,6 +8,9 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,7 +26,7 @@ import worker.EdwinRequestGenerator;
 import worker.VickiProgressChecker;
 import worker.WorkerInterface;
 
-public class IramWorkerScreen extends ClickableScreen implements WorkerInterface, Runnable {
+public class IramWorkerScreen extends ClickableScreen implements WorkerInterface, Runnable{
 	private TextLabel title;
 	private TextLabel scoreLabel;
 	private TextLabel priceLabel;
@@ -105,15 +108,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		scoreLabel.setY(300);
 		finalScore = score;
 		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
+		update();
 		highScoreB.setAction(new Action() {
-
-			
 			public void act() {
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
-
 		});
-		update();
 		viewObjects.add(gameOver);
 		viewObjects.add(scoreLabel);
 		viewObjects.add(highScoreB);
@@ -249,4 +249,5 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	public void submitBurger() {
 		countdown = 0;		
 	}
+
 }
