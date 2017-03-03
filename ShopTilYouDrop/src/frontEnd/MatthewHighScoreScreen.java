@@ -60,25 +60,26 @@ public class MatthewHighScoreScreen extends ClickableScreen implements Runnable,
 		int allscores = scores.size();
 		y = 100;
 		for(int i = 0; i < allscores; i++){
-//			for(int k = 0; k< allscores; i++){
-//				if(scores.get(k).getScore() < scores.get(k+1).getScore()){
-//					HighScoreInterface tmp = scores.get(k);
-//					scores.set(k, scores.get(k+1));
-//					scores.set(k+1, tmp);
-//				}
-//			}
+			for(int k = 0; k< allscores; i++){
+				if(allscores == 1)break;
+				if(scores.get(k).getScore() < scores.get(k+1).getScore()){
+					HighScoreInterface tmp = scores.get(k);
+					scores.set(k, scores.get(k+1));
+					scores.set(k+1, tmp);
+				}
+			}
 			scores.get(i).setUsername("User"+i);
-			scores.get(i).setScore(5.4);
+			scores.get(i).setScore(IramWorkerScreen.score);
 			rank = new TextLabel(100, y, 600, 50, (0+1)+"            |            "+scores.get(0).getUsername()+"            |            "+scores.get(0).getScore());
 			viewObjects.add(rank);
 			y+=50;
 		}
-		restart = new Button(100, 700, 70, 70, "Play Again", Color.blue, new Action(){
+		restart = new Button(65, 475, 100, 100, "Restart", Color.blue, new Action(){
 			public void act(){
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.workerScreen);
 			}
 		});
-		home = new Button(700, 700, 70, 70, "Home", Color.blue, new Action(){
+		home = new Button(650, 475, 100, 100, "Home", Color.blue, new Action(){
 			public void act(){
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
