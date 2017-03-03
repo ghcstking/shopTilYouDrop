@@ -33,7 +33,7 @@ public class RyanCart implements CartInterface{
 		return false;
 	}
 	
-	private boolean isEmpty(){
+	private static boolean isEmpty(){
 		if(shoppingCart.size() == 0){
 			return true;
 		}
@@ -50,11 +50,7 @@ public class RyanCart implements CartInterface{
 		
 	}
 	
-	@Override
-	public void removeItem(StoreItem i) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	
 	public static void addToCart(ViewableCart c, StoreItem s) {
 		c.addItem(s);
@@ -63,11 +59,15 @@ public class RyanCart implements CartInterface{
 		System.out.println(shoppingCart);
 	}
 	
-	public static void removeFromCart(ViewableCart c, StoreItem s){
+	public static void removeFromCart(ViewableCart c, String s){
+		if(!isEmpty()){
 		c.removeItem(s);
-		shoppingCart.remove(s.getDescription());
+		shoppingCart.remove(s);
 		c.update();
 		System.out.println(shoppingCart);
+	
+		
+	}
 	}
 	
 	public static void changeText(TextLabel a, String string) {
@@ -77,6 +77,12 @@ public class RyanCart implements CartInterface{
 		}catch(InterruptedException e){
 			e.printStackTrace();
 		}
+		
+	}
+
+	@Override
+	public void removeItem(String s) {
+		// TODO Auto-generated method stub
 		
 	}
 
