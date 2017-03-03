@@ -28,7 +28,6 @@ public class ShopTilYouDropGame extends GUIApplication {
 		app.start();
 	}
 
-	@Override
 	public void initScreen() {
 		customerScreen = new MatthewCustomerB(getWidth(), getHeight());
 		workerScreen = new MatthewWorkerB(getWidth(), getHeight());
@@ -38,5 +37,4 @@ public class ShopTilYouDropGame extends GUIApplication {
 		highscorescreen = new MatthewHighScoreScreen(getWidth(), getHeight());
 		setScreen(mainScreen);
 	}
-
 }

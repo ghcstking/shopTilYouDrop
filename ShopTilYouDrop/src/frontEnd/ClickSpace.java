@@ -6,6 +6,8 @@ package frontEnd;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
+import customer.Money;
+import customer.components.Stranger;
 import gui6.components.Clickable;
 import gui6.components.Component;
 
@@ -14,6 +16,8 @@ import gui6.components.Component;
  *
  */
 public abstract class ClickSpace extends Component implements Clickable {
+
+	private Stranger stranger;
 
 	/**
 	 * @param x
@@ -39,10 +43,25 @@ public abstract class ClickSpace extends Component implements Clickable {
 	/* (non-Javadoc)
 	 * @see gui6.components.Clickable#act()
 	 */
-	@Override
-	public abstract void act();
+	public abstract void actOnClick();
 
+	public void act(){
+		//code for doing something with the stranger happens here
+		//stranger.
 
+		SammyajitCustomerScreen.bdget +=-500;
+		actOnClick();
+		System.out.println(SammyajitCustomerScreen.bdget);
+
+		if(stranger != null){
+			SammyajitCustomerScreen.bdget += -100;
+			System.out.println("You got robbed by a stranger:"+ SammyajitCustomerScreen.bdget+"!");
+		}
+
+		
+	}
+
+	
 
 
 	/* (non-Javadoc)
@@ -52,6 +71,11 @@ public abstract class ClickSpace extends Component implements Clickable {
 	public void update(Graphics2D g) {
 		g.setColor(Color.red);
 		g.drawRect(0, 0, getWidth()-1, getHeight()-1);
+	}
+
+	public void setStranger(Stranger s) {
+		this.stranger = s;
+		
 	}
 
 }

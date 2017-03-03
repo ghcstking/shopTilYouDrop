@@ -3,9 +3,6 @@
  */
 package customer;
 
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-
 import gui6.GUIApplication;
 import gui6.Screen;
 
@@ -22,7 +19,6 @@ public class StrangerDemo extends GUIApplication {
 	 */
 	public StrangerDemo(int width, int height) {
 		super(width, height);
-		// TODO Auto-generated constructor stub
 	}
 
 	/* (non-Javadoc)
@@ -37,10 +33,10 @@ public class StrangerDemo extends GUIApplication {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		StrangerDemo wam = new StrangerDemo(800, 500);
-		Thread game = new Thread(wam);
-		game.start();
-	}
+//	public static void main(String[] args) {
+//		StrangerDemo wam = new StrangerDemo(800, 500);
+//		Thread game = new Thread(wam);
+//		game.start();
+//	}
 
 }
