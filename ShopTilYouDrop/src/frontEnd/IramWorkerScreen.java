@@ -28,6 +28,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private TextLabel scoreLabel;
 	private TextLabel priceLabel;
 	private TextLabel gameOver;
+	private TextLabel timeLabel;
 	private ClickableGraphic highScoreB;
 	private ClickableGraphic bottomBun;
 	private ClickableGraphic tomato;
@@ -37,16 +38,13 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 	private ClickableGraphic cheese;
 	private ClickableGraphic pickles;
 	private ClickableGraphic submitBurger;
+	private ClickableGraphic clearBurger;
 	private int countdown;
-	private TextLabel timeLabel;
-	private ArrayList<BufferedImage> images;
-	private int cashamount;
+	private static double score;
 	private EdwinRequestGenerator gen;
 	private VickiProgressChecker progress;
 	private ArrayList<String> request;
 	private ArrayList<String> burger;
-	private static double score;
-	private static double price;
 
 	public IramWorkerScreen(int width, int height) {
 		super(width, height);
@@ -64,8 +62,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		countdown = 15;
 		while (countdown > 0) {
 			countdown--;
-			timeLabel.setText("" + countdown);
-			System.out.println(countdown);
+			timeLabel.setText("Time left: " + countdown);
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -124,17 +121,20 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 
 	@Override
 	public void initAllObjects(ArrayList<Visible> viewObjects) {
-		title = new TextLabel(325, 50, 300, 40, "Burger Maker!");
-		timeLabel = new TextLabel(60, 50, 120, 60, "");
-		scoreLabel = new TextLabel(60, 75, 120,60,"");
-		scoreLabel.setText(getScore());
+		gen = new EdwinRequestGenerator();
+		progress = new VickiProgressChecker();
+		request = gen.generate(this);
+		title = new TextLabel(300, 5, 300, 75, "Burger Maker");
+		timeLabel = new TextLabel(10, 50, 200, 75, "");
+		scoreLabel = new TextLabel(10, 80, 300, 75,"Money made: $" + getScore());
+		priceLabel = new TextLabel(10, 110, 200, 75, "Price: " + String.format( "%.2f",progress.price(request)));
 		bottomBun = new ClickableGraphic(225, 500, 100, 100, "resources/bottom_bun.png");
 		bottomBun.setAction(new Action() {
 
 			@Override
 			public void act() {
 				burger.add("bottom_bun");
-				ClickableGraphic btbn = bottomBun = new ClickableGraphic(300, 400 -(burger.size() * 1)-5, 150, 150,
+				ClickableGraphic btbn = bottomBun = new ClickableGraphic(300, 400 -(burger.size() * 1), 150, 150,
 						"resources/bottom_bun.png");
 				addObjects(btbn);//
 			}
@@ -147,7 +147,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("top_bun");
-				ClickableGraphic tpbn = new ClickableGraphic(300, 400 -(burger.size() * 13)+20, 150, 150, "resources/top_bun.png");
+				ClickableGraphic tpbn = new ClickableGraphic(300, 400 -(burger.size() * 5)-15, 150, 150, "resources/top_bun.png");
 				addObjects(tpbn);
 			}
 
@@ -158,7 +158,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("tomato");
-				ClickableGraphic tmto = new ClickableGraphic(300, 400 -(burger.size() * 5), 150, 150, "resources/tomato.png");
+				ClickableGraphic tmto = new ClickableGraphic(300, 400 -(burger.size() * 3), 150, 150, "resources/tomato.png");
 				addObjects(tmto);
 			}
 
@@ -169,7 +169,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("patty");
-				ClickableGraphic ptty = patty = new ClickableGraphic(300, 400 -(burger.size() * 1)+10, 150, 150, "resources/patty.png");
+				ClickableGraphic ptty = patty = new ClickableGraphic(300, 400 -(burger.size() * 2), 150, 150, "resources/patty.png");
 				addObjects(ptty);
 			}
 
@@ -202,16 +202,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 			@Override
 			public void act() {
 				burger.add("pickles");
-				ClickableGraphic pkls = pickles = new ClickableGraphic(300, 400 -(burger.size() * 12)+25, 150, 150, "resources/pickles.png");
+				ClickableGraphic pkls = pickles = new ClickableGraphic(300, 400 -(burger.size() * 5)-5, 150, 150, "resources/pickles.png");
 				addObjects(pkls);
 			}
 
 		});
-		gen = new EdwinRequestGenerator();
-		progress = new VickiProgressChecker();
-		request = gen.generate(this);
-		priceLabel = new TextLabel(60, 100, 120, 60, "" + String.format( "%.2f",progress.price(request)));
-		submitBurger = new ClickableGraphic(600, 400, 100, 100, "resources/THINGY.png"); 
+		submitBurger = new ClickableGraphic(575, 400, 200, 100, "resources/submit.png"); 
 		submitBurger.setAction(new Action(){
 			public void act() {
 				submitBurger();
