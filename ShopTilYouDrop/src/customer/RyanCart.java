@@ -80,7 +80,8 @@ public class RyanCart implements CartInterface{
 		
 	}
 
-	public void removeItem(String s) {
+	@Override
+	public void removeItem(StoreItem i) {
 		// TODO Auto-generated method stub
 		
 	}
