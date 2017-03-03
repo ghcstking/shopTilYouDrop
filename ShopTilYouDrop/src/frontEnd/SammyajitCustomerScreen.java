@@ -29,7 +29,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 	private TextLabel budget;
 	private TextLabel price;
 	private TextArea desc;
-	private TextLabel vCart;
+	private TextArea vCart;
 	
 	private Graphic g;
 	
@@ -59,7 +59,15 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		price = new TextLabel(515,158,100,40,"Price");
 		desc = new TextArea(515,210,300,195,"Description");
 		desc.setSize(20);
-		vCart = new TextLabel(10,350,600,200,"cart");
+		vCart = new TextArea(10,240,600,200,"");
+		
+//		String listString = "";
+//
+//		for (String s : RyanCart.shoppingCart)
+//		{
+//		    listString += s + "\t";
+//		}
+		
 		
 		
 		cart=new ViewableCart(10,400,new RyanCart(10,50));
@@ -98,14 +106,16 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			@Override
 			public void actOnClick() {
 				
+				
 				StoreItem s = createItem("Valentino Dress",200.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
+				RyanCart.changeText(vCart,listString);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
-				//RyanCart.removeFromCart(cart, );
-
+				
 			}
 
 		});
@@ -114,12 +124,15 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		viewObjects.add(new ClickSpace(65,110,40,30) {
 
 			@Override
+			
 			public void actOnClick() {
 				StoreItem s = createItem("Yeezys", 200.0);
 				RyanCart.addToCart(cart,s);
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
 				//vCart.setText();
 			}
@@ -136,6 +149,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());
 			}
 		});
@@ -150,6 +165,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 		});
 		
@@ -163,6 +180,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 		});
 		
@@ -176,6 +195,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 		});
 	
@@ -189,6 +210,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 		});
 		
@@ -202,6 +225,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -216,6 +241,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -230,6 +257,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -245,6 +274,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -259,6 +290,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -273,6 +306,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -287,6 +322,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -301,6 +338,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 				RyanCart.changeText(budget, "$"+bdget);
 				RyanCart.changeText(price, "200.0");
 				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+				String listString = String.join(", ", RyanCart.shoppingCart);
 				System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 		});
@@ -315,6 +354,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -329,6 +370,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -343,6 +386,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -357,6 +402,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -371,6 +418,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -386,6 +435,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -400,6 +451,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -414,6 +467,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -428,6 +483,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 					RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -442,6 +499,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -456,6 +515,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -470,6 +531,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -484,6 +547,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
@@ -498,6 +563,8 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 						RyanCart.changeText(budget, "$"+bdget);
 						RyanCart.changeText(price, "200.0");
 						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						RyanCart.changeText(desc, "You purchased a "+s.getDescription());
+						String listString = String.join(", ", RyanCart.shoppingCart);
 						System.out.println("You purchased a "+s.getDescription()+". It cost "+s.getPrice());			}
 
 				});
