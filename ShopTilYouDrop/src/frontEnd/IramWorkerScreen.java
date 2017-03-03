@@ -108,12 +108,12 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		scoreLabel.setY(300);
 		finalScore = score;
 		highScoreB = new ClickableGraphic(295, 400, 300, 100, "resources/hs.png");
-		update();
 		highScoreB.setAction(new Action() {
 			public void act() {
 				ShopTilYouDropGame.game.setScreen(ShopTilYouDropGame.mainScreen);
 			}
 		});
+		update();
 		viewObjects.add(gameOver);
 		viewObjects.add(scoreLabel);
 		viewObjects.add(highScoreB);
