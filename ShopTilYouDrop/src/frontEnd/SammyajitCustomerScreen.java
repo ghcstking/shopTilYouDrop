@@ -675,7 +675,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		viewObjects.add(button);
 
 
-
+	//code below by Ali Eldeeb
 		DemoPlayer demo = new DemoPlayer(100,300,100,20);
 		viewObjects.add(demo);
 		for(int i=0;i<viewObjects.size();i++){
