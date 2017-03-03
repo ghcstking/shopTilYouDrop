@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import customer.DanielFreeMoney;
-import customer.DemoPlayer;
+import customer.DemoPlayer; 
 import customer.RyanCart;
 import customer.StoreItem;
-import customer.components.Stranger;
+import customer.components.Stranger; 
 import gui6.components.Action;
 import gui6.components.Button;
 import gui6.components.ClickableGraphic;
@@ -66,7 +66,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		t = new TextLabel(10, 50, 1000, 40, "You are a customer. Pick items to put in cart.");
 		//		cart= new RyanCart(300,50);
 
-		viewObjects.add(t);
+		viewObjects.add(t); 
 		//t.setSize(.5);
 
 
@@ -76,12 +76,17 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		button.setAction(new Action() {
 
 			
-			@Override
+	
 			public void act() {
 				RyanCart.removeFromCart(cart, RyanCart.shoppingCart.get(RyanCart.shoppingCart.size()-1));
 			}
 
+
 		});
+
+
+
+
 
 		viewObjects.add(g);
 		//g.setSize();
@@ -525,7 +530,7 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 		viewObjects.add(button);
 
 
-//
+
 		DemoPlayer demo = new DemoPlayer(100,300,100,20);
 		viewObjects.add(demo);
 		for(int i=0;i<viewObjects.size();i++){
@@ -540,10 +545,13 @@ public class SammyajitCustomerScreen extends ClickableScreen implements Runnable
 			}
 		}
 		
-		//DanielFreeMoney.placeMoney(410,327);
 
 
 		
+
+
+
+
 	}
 
 //ADD REMOVE
