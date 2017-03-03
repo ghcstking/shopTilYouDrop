@@ -48,13 +48,20 @@ public abstract class ClickSpace extends Component implements Clickable {
 	public void act(){
 		//code for doing something with the stranger happens here
 		//stranger.
+
+		SammyajitCustomerScreen.bdget +=-500;
 		actOnClick();
-		Money.value =-500;
-		actOnClick();
-		System.out.println(Money.value);
+		System.out.println(SammyajitCustomerScreen.bdget);
+
+		if(stranger != null){
+			SammyajitCustomerScreen.bdget += -100;
+			System.out.println("You got robbed by a stranger:"+ SammyajitCustomerScreen.bdget+"!");
+		}
+
 		
 	}
 
+	
 
 
 	/* (non-Javadoc)
