@@ -1,6 +1,9 @@
 package worker;
 
+import java.util.ArrayList;
+
 public interface VickiOrder {
-	int tip();
-	
+	double tip();
+	ArrayList<String> generate(WorkerInterface w);
 }
+

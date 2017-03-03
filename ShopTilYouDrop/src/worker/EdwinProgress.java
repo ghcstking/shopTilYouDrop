@@ -1,5 +1,7 @@
 package worker;
 
+import java.util.ArrayList;
+
 public interface EdwinProgress {
-	int score();
+	double price(ArrayList<String> order);
 }
