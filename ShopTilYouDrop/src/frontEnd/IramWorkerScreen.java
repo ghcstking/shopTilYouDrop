@@ -100,7 +100,7 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		gameOver = new TextLabel(325, 30, 300, 300, "GAME OVER");
 		scoreLabel.setX(325);
 		scoreLabel.setY(340);
-		highScoreB = new ClickableGraphic(400, 350, 100, 100, "resources/hs.png");
+		highScoreB = new ClickableGraphic(400, 425, 200, 100, "resources/hs.png");
 		update();
 //		highScoreB.setAction(new Action() {
 //
