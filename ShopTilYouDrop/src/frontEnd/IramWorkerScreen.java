@@ -76,7 +76,6 @@ public class IramWorkerScreen extends ClickableScreen implements WorkerInterface
 		}
 		if(progress.checkBurger(request, reverseArrayList(burger))) {
 			score += progress.price(request);
-			score += gen.tip();
 			request.clear();
 			viewObjects.clear();
 			initAllObjects(viewObjects);

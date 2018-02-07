@@ -30,6 +30,7 @@ public class VickiProgressChecker implements EdwinProgress {
 		double price = 0;
 		for (int i = 0; i < order.size(); i++) {
 			price += pricesArray[java.util.Arrays.asList(condiments).indexOf(order.get(i))];
+			System.out.println(price);
 		}
 		return price;
 	}
